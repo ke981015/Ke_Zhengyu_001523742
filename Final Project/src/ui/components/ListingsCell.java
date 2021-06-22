@@ -5,9 +5,15 @@
  */
 package ui.components;
 
+import Business.EcoSystem;
+import Business.Enterprise.Enterprise;
 import Business.Listings;
+import Business.Organization.Organization;
 import Business.Router;
+import Business.UserAccount.UserAccount;
 import Business.WorkQueue.AbstractQuestion;
+import javax.swing.JPanel;
+import ui.BuyerRole.BuyerWorkAreaJPanel2;
 import ui.MainJPanel;
 
 
@@ -18,12 +24,22 @@ import ui.MainJPanel;
 public class ListingsCell extends javax.swing.JPanel {
 
     private AbstractQuestion course;
+    private JPanel userProcessContainer;
+    private Organization organization;
+    private Enterprise enterprise;
+    private UserAccount userAccount;
+    private EcoSystem business;
     /**
      * Creates new form CourseCell
      */
-    public ListingsCell(AbstractQuestion course) {
+    public ListingsCell(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,AbstractQuestion course) {
         initComponents();
         this.course = course;
+        this.userProcessContainer = userProcessContainer;
+        this.organization = organization;
+        this.enterprise = enterprise;
+        this.userAccount = account;
+        this.business = business;
 
         titleLabel.setText(course.getMake());
     }
@@ -111,7 +127,7 @@ public class ListingsCell extends javax.swing.JPanel {
     private void click(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_click
        //User user = Global.getInstance().getUser();
 
-        Router.getInstance(null).go(new MainJPanel());
+        Router.getInstance(null).go(new BuyerWorkAreaJPanel2(userProcessContainer,userAccount,organization,enterprise,business));
         
     }//GEN-LAST:event_click
 

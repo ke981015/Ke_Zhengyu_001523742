@@ -11,6 +11,7 @@ import Business.Global;
 import Business.Network.Network;
 import Business.Organization.Organization;
 import Business.Role.BuyerRole;
+import Business.Role.SellerRole;
 import Business.Role.SystemAdminRole;
 import Business.Role.UserAdminRole;
 import Business.Router;
@@ -21,6 +22,7 @@ import ui.BuyerRole.BuyerRegisterJPanel;
 import ui.BuyerRole.BuyerWorkAreaJPanel;
 import ui.SellerRole.SellerRegisterJPanel;
 import ui.MainJPanel;
+import ui.SellerRole.SellerWorkAreaJPanel;
 import ui.SystemAdminRole.SystemAdminWorkAreaJPanel;
 import ui.UserAdminRole.UserAdminWorkAreaJPanel;
 
@@ -228,6 +230,10 @@ public class MainJFrame extends javax.swing.JFrame {
             }
             else if(userAccount.getRole() instanceof UserAdminRole){
                 UserAdminWorkAreaJPanel home = new UserAdminWorkAreaJPanel(container, system, inEnterprise);
+                Router.getInstance(null).go(home);
+            }
+            else if(userAccount.getRole() instanceof SellerRole){
+                SellerWorkAreaJPanel home = new SellerWorkAreaJPanel(container, userAccount, inOrganization, inEnterprise, system);
                 Router.getInstance(null).go(home);
             }
             else{

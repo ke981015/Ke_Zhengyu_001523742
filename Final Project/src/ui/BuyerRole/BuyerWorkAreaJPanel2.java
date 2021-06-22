@@ -6,6 +6,7 @@ package ui.BuyerRole;
 
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
+import Business.Global;
 import Business.Listings;
 import Business.ListingsDirectory;
 import Business.Organization.Organization;
@@ -56,23 +57,12 @@ public class BuyerWorkAreaJPanel2 extends javax.swing.JPanel {
     }
     
     private void initCourses(/*ListingsDirectory courseDir*/){
-        jPanel1.setLayout(new GridLayout(0,2));
-
-        int cell_H = jPanel1.getWidth() * 4 / 3;
 
         /*for (Listings course : courseDir){
             ListingsCell cell = new ListingsCell(course);
             jPanel1.add(cell);
             cell.setPreferredSize(new Dimension(jPanel1.getWidth(), cell_H));
         }*/
-        
-        for (AbstractQuestion request : business.getWorkQueue().getWorkRequestList()){
-            if(request.getMake()!=null){
-                ListingsCell cell = new ListingsCell(request);
-                jPanel1.add(cell);
-                cell.setPreferredSize(new Dimension(jPanel1.getWidth(), cell_H)); 
-            }
-        }
 
         //scrollPanel.setSize(contentPanel.getWidth(), cell_H * courseDir.getList().size() / 2 + 1);
 
@@ -111,53 +101,22 @@ public class BuyerWorkAreaJPanel2 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jSplitPane1 = new javax.swing.JSplitPane();
+        jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         workRequestJTable = new javax.swing.JTable();
+        SideBar = new javax.swing.JPanel();
+        nameLabel = new javax.swing.JLabel();
+        backButton = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
         jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        jButton5 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setLayout(null);
-
-        jButton1.setBackground(new java.awt.Color(255, 204, 204));
-        jButton1.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(102, 153, 255));
-        jButton1.setText("Q&A");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        add(jButton1);
-        jButton1.setBounds(570, 520, 270, 27);
-
-        jButton2.setBackground(new java.awt.Color(255, 204, 204));
-        jButton2.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(102, 153, 255));
-        jButton2.setText("after-sale warranty");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        add(jButton2);
-        jButton2.setBounds(570, 440, 270, 27);
-
-        jButton3.setBackground(new java.awt.Color(255, 204, 204));
-        jButton3.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(102, 153, 255));
-        jButton3.setText("View vehicle information");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        add(jButton3);
-        jButton3.setBounds(570, 200, 270, 27);
 
         workRequestJTable.setBackground(new java.awt.Color(204, 255, 204));
         workRequestJTable.setBorder(javax.swing.BorderFactory.createCompoundBorder());
@@ -189,8 +148,23 @@ public class BuyerWorkAreaJPanel2 extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(workRequestJTable);
 
-        add(jScrollPane1);
-        jScrollPane1.setBounds(160, 340, 358, 356);
+        jPanel3.add(jScrollPane1);
+
+        jSplitPane1.setRightComponent(jPanel3);
+
+        SideBar.setBackground(new java.awt.Color(33, 135, 251));
+        SideBar.setPreferredSize(new java.awt.Dimension(160, 666));
+
+        nameLabel.setFont(new java.awt.Font("Skia", 1, 18)); // NOI18N
+        nameLabel.setForeground(new java.awt.Color(255, 255, 255));
+        nameLabel.setText("name");
+
+        backButton.setText("Logout");
+        backButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonActionPerformed(evt);
+            }
+        });
 
         jButton4.setBackground(new java.awt.Color(255, 204, 204));
         jButton4.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
@@ -201,20 +175,6 @@ public class BuyerWorkAreaJPanel2 extends javax.swing.JPanel {
                 jButton4ActionPerformed(evt);
             }
         });
-        add(jButton4);
-        jButton4.setBounds(570, 330, 270, 27);
-
-        jButton5.setBackground(new java.awt.Color(255, 204, 204));
-        jButton5.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(102, 153, 255));
-        jButton5.setText("View the vehicle condition report");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        add(jButton5);
-        jButton5.setBounds(570, 260, 270, 27);
 
         jButton6.setBackground(new java.awt.Color(255, 204, 204));
         jButton6.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
@@ -225,10 +185,103 @@ public class BuyerWorkAreaJPanel2 extends javax.swing.JPanel {
                 jButton6ActionPerformed(evt);
             }
         });
-        add(jButton6);
-        jButton6.setBounds(570, 390, 271, 27);
-        add(jPanel1);
-        jPanel1.setBounds(0, 0, 1040, 720);
+
+        jButton5.setBackground(new java.awt.Color(255, 204, 204));
+        jButton5.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(102, 153, 255));
+        jButton5.setText("View the vehicle condition report");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setBackground(new java.awt.Color(255, 204, 204));
+        jButton2.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(102, 153, 255));
+        jButton2.setText("after-sale warranty");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setBackground(new java.awt.Color(255, 204, 204));
+        jButton3.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(102, 153, 255));
+        jButton3.setText("View vehicle information");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        jButton1.setBackground(new java.awt.Color(255, 204, 204));
+        jButton1.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(102, 153, 255));
+        jButton1.setText("Q&A");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout SideBarLayout = new javax.swing.GroupLayout(SideBar);
+        SideBar.setLayout(SideBarLayout);
+        SideBarLayout.setHorizontalGroup(
+            SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jSeparator1)
+            .addGroup(SideBarLayout.createSequentialGroup()
+                .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SideBarLayout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(SideBarLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton6))
+                    .addGroup(SideBarLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton1)
+                            .addComponent(backButton))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(SideBarLayout.createSequentialGroup()
+                .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jButton5)
+                        .addComponent(jButton4))
+                    .addComponent(jButton2)
+                    .addComponent(jButton3))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        SideBarLayout.setVerticalGroup(
+            SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SideBarLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(97, 97, 97)
+                .addComponent(jButton4)
+                .addGap(36, 36, 36)
+                .addComponent(jButton6)
+                .addGap(45, 45, 45)
+                .addComponent(jButton5)
+                .addGap(18, 18, 18)
+                .addComponent(jButton2)
+                .addGap(35, 35, 35)
+                .addComponent(jButton3)
+                .addGap(27, 27, 27)
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
+                .addComponent(backButton)
+                .addGap(47, 47, 47))
+        );
+
+        jSplitPane1.setLeftComponent(SideBar);
+
+        add(jSplitPane1);
+        jSplitPane1.setBounds(0, 0, 1150, 720);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -302,15 +355,24 @@ public class BuyerWorkAreaJPanel2 extends javax.swing.JPanel {
         layout.next(userProcessContainer);
     }//GEN-LAST:event_jButton6ActionPerformed
 
+    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
+        Global.getInstance().logout();
+    }//GEN-LAST:event_backButtonActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel SideBar;
+    private javax.swing.JButton backButton;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSplitPane jSplitPane1;
+    private javax.swing.JLabel nameLabel;
     private javax.swing.JTable workRequestJTable;
     // End of variables declaration//GEN-END:variables
 }

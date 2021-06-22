@@ -55,7 +55,7 @@ public class BuyerWorkAreaJPanel extends javax.swing.JPanel {
         }*/
         for (AbstractQuestion request : business.getWorkQueue().getWorkRequestList()){
             if(request.getMake()!=null){
-                ListingsCell cell = new ListingsCell(request);
+                ListingsCell cell = new ListingsCell(userProcessContainer,userAccount,organization,enterprise,business,request);
                 contentPanel.add(cell);
                 cell.setPreferredSize(new Dimension(contentPanel.getWidth(), cell_H)); 
             }

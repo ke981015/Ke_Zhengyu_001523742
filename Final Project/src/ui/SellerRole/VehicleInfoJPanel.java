@@ -5,7 +5,9 @@
  */
 package ui.SellerRole;
 
+import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
+import Business.Router;
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.WorkRequest;
 import static com.db4o.foundation.io.File4.copyFile;
@@ -35,16 +37,16 @@ public class VehicleInfoJPanel extends javax.swing.JPanel {
      */
     //Zhe Li
     public JPanel container;
-    public EcoSystem business;
+    public EcoSystem system;
     private UserAccount userAccount;
     String path1 ="";
     String path2 ="";
     String path3 ="";
     
-    public VehicleInfoJPanel(JPanel userProcessContainer, EcoSystem business, UserAccount userAccount) {
+    public VehicleInfoJPanel(JPanel userProcessContainer, EcoSystem system, UserAccount userAccount) {
         initComponents();
         this.container = userProcessContainer;
-        this.business = business;
+        this.system = system;
         this.userAccount = userAccount;
     }
     
@@ -418,7 +420,8 @@ public class VehicleInfoJPanel extends javax.swing.JPanel {
         car.setBackPicture(path2);
         car.setDashBoardPicture(path3);
         car.setSender(userAccount);
-        business.getWorkQueue().getWorkRequestList().add(car);
+        system.getWorkQueue().getWorkRequestList().add(car);
+        DB4OUtil.getInstance().storeSystem(system);
         JOptionPane.showMessageDialog(this, "Used car information saved.");
         
     }//GEN-LAST:event_btnSaveActionPerformed
@@ -496,9 +499,10 @@ public class VehicleInfoJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnDashBoardActionPerformed
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
-        container.remove(this);
+        /*container.remove(this);
         CardLayout layout = (CardLayout) container.getLayout();
-        layout.previous(container);
+        layout.previous(container);*/
+        Router.getInstance(null).back(0);
     }//GEN-LAST:event_backJButtonActionPerformed
 
 
