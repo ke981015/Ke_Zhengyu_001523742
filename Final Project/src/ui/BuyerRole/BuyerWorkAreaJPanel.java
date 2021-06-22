@@ -46,26 +46,13 @@ public class BuyerWorkAreaJPanel extends javax.swing.JPanel {
     private void initCourses(/*CourseDirectory courseDir*/){
         contentPanel.setLayout(new GridLayout(0,2));
 
-        int cell_H = contentPanel.getWidth() * 4 / 3;
-
-        /*for (Course course : courseDir){
-            CourseCell cell = new CourseCell(course);
-            contentPanel.add(cell);
-            cell.setPreferredSize(new Dimension(contentPanel.getWidth(), cell_H));
-        }*/
         for (AbstractQuestion request : business.getWorkQueue().getWorkRequestList()){
             if(request.getMake()!=null){
                 ListingsCell cell = new ListingsCell(userProcessContainer,userAccount,organization,enterprise,business,request);
                 contentPanel.add(cell);
-                cell.setPreferredSize(new Dimension(contentPanel.getWidth(), cell_H)); 
             }
         }
-
-        scrollPanel.setSize(contentPanel.getWidth(), cell_H * business.getWorkQueue().getWorkRequestList().size() / 2 + 1);
-
-        contentPanel.setSize(contentPanel.getWidth(), cell_H * business.getWorkQueue().getWorkRequestList().size() / 2 + 1);
-//
-        contentPanel.setPreferredSize(new Dimension(contentPanel.getWidth(), cell_H * business.getWorkQueue().getWorkRequestList().size() / 2 + 1));
+        
         updateUI();
     }
 
@@ -91,13 +78,16 @@ public class BuyerWorkAreaJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(1024, 768));
 
+        scrollPanel.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+        scrollPanel.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+
         contentPanel.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout contentPanelLayout = new javax.swing.GroupLayout(contentPanel);
         contentPanel.setLayout(contentPanelLayout);
         contentPanelLayout.setHorizontalGroup(
             contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 825, Short.MAX_VALUE)
+            .addGap(0, 829, Short.MAX_VALUE)
         );
         contentPanelLayout.setVerticalGroup(
             contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -168,7 +158,7 @@ public class BuyerWorkAreaJPanel extends javax.swing.JPanel {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 627, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(line))
-                    .addComponent(scrollPanel))
+                    .addComponent(scrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 836, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(

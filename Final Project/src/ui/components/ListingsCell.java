@@ -14,8 +14,6 @@ import Business.UserAccount.UserAccount;
 import Business.WorkQueue.AbstractQuestion;
 import javax.swing.JPanel;
 import ui.BuyerRole.BuyerWorkAreaJPanel2;
-import ui.MainJPanel;
-
 
 /**
  *

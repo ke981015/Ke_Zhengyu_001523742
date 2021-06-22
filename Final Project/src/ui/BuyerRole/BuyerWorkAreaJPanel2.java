@@ -52,7 +52,6 @@ public class BuyerWorkAreaJPanel2 extends javax.swing.JPanel {
         this.enterprise = enterprise;
         this.userAccount = account;
         this.business = business;
-        populateRequestTable();
         initCourses(/*business.getListingsDirectory()*/);
     }
     
@@ -72,24 +71,6 @@ public class BuyerWorkAreaJPanel2 extends javax.swing.JPanel {
         updateUI();*/
     }
     
-    public void populateRequestTable(){
-        DefaultTableModel model = (DefaultTableModel) workRequestJTable.getModel();
-        
-        model.setRowCount(0);
-
-        for (AbstractQuestion request : business.getWorkQueue().getWorkRequestList()){
-            if(request.getMake()!=null){
-                Object[] row = new Object[4];
-                row[0] = request.getMake();
-                row[1] = request.getModel();
-                row[2] = request.getCategory();
-                row[3] = request;
-
-                model.addRow(row);   
-            }
-        }
-    }
-    
 
     
     /**
@@ -102,9 +83,6 @@ public class BuyerWorkAreaJPanel2 extends javax.swing.JPanel {
     private void initComponents() {
 
         jSplitPane1 = new javax.swing.JSplitPane();
-        jPanel3 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        workRequestJTable = new javax.swing.JTable();
         SideBar = new javax.swing.JPanel();
         nameLabel = new javax.swing.JLabel();
         backButton = new javax.swing.JButton();
@@ -115,42 +93,9 @@ public class BuyerWorkAreaJPanel2 extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
 
         setLayout(null);
-
-        workRequestJTable.setBackground(new java.awt.Color(204, 255, 204));
-        workRequestJTable.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Make", "Model", "Category", "ID"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, true
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane1.setViewportView(workRequestJTable);
-
-        jPanel3.add(jScrollPane1);
-
-        jSplitPane1.setRightComponent(jPanel3);
 
         SideBar.setBackground(new java.awt.Color(33, 135, 251));
         SideBar.setPreferredSize(new java.awt.Dimension(160, 666));
@@ -280,6 +225,10 @@ public class BuyerWorkAreaJPanel2 extends javax.swing.JPanel {
 
         jSplitPane1.setLeftComponent(SideBar);
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(null);
+        jSplitPane1.setRightComponent(jPanel2);
+
         add(jSplitPane1);
         jSplitPane1.setBounds(0, 0, 1150, 720);
     }// </editor-fold>//GEN-END:initComponents
@@ -300,7 +249,7 @@ public class BuyerWorkAreaJPanel2 extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        int selectedRow = workRequestJTable.getSelectedRow();
+        /*int selectedRow = workRequestJTable.getSelectedRow();
         
         if (selectedRow < 0){
             JOptionPane.showMessageDialog(this,"Please choose a car!");
@@ -310,11 +259,11 @@ public class BuyerWorkAreaJPanel2 extends javax.swing.JPanel {
         WorkRequest car =  (WorkRequest)workRequestJTable.getValueAt(selectedRow, 3);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         userProcessContainer.add("QuestionJPanel", new ViewVehicleInfoJPanel(userProcessContainer,business,car));
-        layout.next(userProcessContainer);
+        layout.next(userProcessContainer);*/
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        int selectedRow = workRequestJTable.getSelectedRow();
+        /*int selectedRow = workRequestJTable.getSelectedRow();
         
         if (selectedRow < 0){
             JOptionPane.showMessageDialog(this,"Please choose a car!");
@@ -324,11 +273,11 @@ public class BuyerWorkAreaJPanel2 extends javax.swing.JPanel {
         WorkRequest car =  (WorkRequest)workRequestJTable.getValueAt(selectedRow, 3);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         userProcessContainer.add("QuestionJPanel", new ViewVehicleValuationJPanel(userProcessContainer,business,car));
-        layout.next(userProcessContainer);
+        layout.next(userProcessContainer);*/
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        int selectedRow = workRequestJTable.getSelectedRow();
+        /*int selectedRow = workRequestJTable.getSelectedRow();
         
         if (selectedRow < 0){
             JOptionPane.showMessageDialog(this,"Please choose a car!");
@@ -338,11 +287,11 @@ public class BuyerWorkAreaJPanel2 extends javax.swing.JPanel {
         WorkRequest car =  (WorkRequest)workRequestJTable.getValueAt(selectedRow, 3);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         userProcessContainer.add("QuestionJPanel", new ViewVehicleConditionReportJPanel(userProcessContainer,business,car));
-        layout.next(userProcessContainer);
+        layout.next(userProcessContainer);*/
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        int selectedRow = workRequestJTable.getSelectedRow();
+        /*int selectedRow = workRequestJTable.getSelectedRow();
         
         if (selectedRow < 0){
             JOptionPane.showMessageDialog(this,"Please choose a car!");
@@ -352,7 +301,7 @@ public class BuyerWorkAreaJPanel2 extends javax.swing.JPanel {
         WorkRequest car =  (WorkRequest)workRequestJTable.getValueAt(selectedRow, 3);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         userProcessContainer.add("QuestionJPanel", new BookAppointmentJPanel(userProcessContainer,business,car));
-        layout.next(userProcessContainer);
+        layout.next(userProcessContainer);*/
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
@@ -368,11 +317,9 @@ public class BuyerWorkAreaJPanel2 extends javax.swing.JPanel {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JLabel nameLabel;
-    private javax.swing.JTable workRequestJTable;
     // End of variables declaration//GEN-END:variables
 }

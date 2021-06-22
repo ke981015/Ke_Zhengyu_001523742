@@ -21,7 +21,7 @@ import javax.swing.JOptionPane;
 import ui.BuyerRole.BuyerRegisterJPanel;
 import ui.BuyerRole.BuyerWorkAreaJPanel;
 import ui.SellerRole.SellerRegisterJPanel;
-import ui.MainJPanel;
+import ui.SellerRole.SellerWorkAreaJPanel;
 import ui.SellerRole.SellerWorkAreaJPanel;
 import ui.SystemAdminRole.SystemAdminWorkAreaJPanel;
 import ui.UserAdminRole.UserAdminWorkAreaJPanel;
@@ -38,7 +38,6 @@ public class MainJFrame extends javax.swing.JFrame {
      */
     private EcoSystem system;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
-    MainJPanel mainJP = new MainJPanel();
 
     public MainJFrame() {
         initComponents();
