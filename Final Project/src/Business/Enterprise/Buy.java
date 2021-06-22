@@ -17,29 +17,24 @@ import java.util.ArrayList;
 
 public class Buy extends Enterprise {
     
-    //Zhe Li
-    private Organization buyerOrganization;
+    //private Organization buyerOrganization;
     
     public Buy(String name){
         super(name,EnterpriseType.Rent);
-        //Zhe Li
-        buyerOrganization = this.getOrganizationDirectory().createOrganization(Organization.Type.Buyer);
+        //buyerOrganization = this.getOrganizationDirectory().createOrganization(Organization.Type.Buyer);
     }
     
-    //Zhe Li
-    public UserAccount addBuyer(String username, String password) {
+    /*public UserAccount addBuyer(String username, String password) {
         return buyerOrganization.getUserAccountDirectory().createUserAccount(username, password, (Role)new BuyerRole());
     }
     
-    //Zhe Li
     public boolean checkBuyerName(String username) {
         return buyerOrganization.getUserAccountDirectory().checkIfUsernameIsUnique(username);
     }
 
-    //Zhe Li
     public Organization getBuyerOrganization() {
         return buyerOrganization;
-    }
+    }*/
     
     
     

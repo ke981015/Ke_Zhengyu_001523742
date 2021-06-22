@@ -19,7 +19,7 @@ public class UserAdminRole extends Role{
 
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
-        return new UserAdminWorkAreaJPanel(userProcessContainer, enterprise);
+        return new UserAdminWorkAreaJPanel(userProcessContainer, business, enterprise);
     }
 
     

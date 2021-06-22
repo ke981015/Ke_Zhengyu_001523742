@@ -4,15 +4,19 @@
  */
 package ui.UserAdminRole;
 
+import Business.DB4OUtil.DB4OUtil;
+import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Enterprise.Enterprise.EnterpriseType;
 import Business.Organization.Organization;
 import Business.Organization.Organization.Type;
 import Business.Organization.OrganizationDirectory;
+import Business.Router;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
+import ui.SystemAdminRole.SystemAdminWorkAreaJPanel;
 
 /**
  *
@@ -23,13 +27,15 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
     //private OrganizationDirectory directory;
     private JPanel userProcessContainer;
     private Enterprise enterprise;
+    EcoSystem system;
     
     /**
      * Creates new form ManageOrganizationJPanel
      */
-    public ManageOrganizationJPanel(JPanel userProcessContainer,Enterprise enterprise) {
+    public ManageOrganizationJPanel(JPanel userProcessContainer,EcoSystem system,Enterprise enterprise) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
+        this.system = system;
         this.enterprise = enterprise;
         
         populateCombo();
@@ -142,14 +148,13 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
 
         Type type = (Type) organizationJComboBox.getSelectedItem();
         enterprise.getOrganizationDirectory().createOrganization(type);
+        DB4OUtil.getInstance().storeSystem(system);
         JOptionPane.showMessageDialog(this,"Organization Created");
     }//GEN-LAST:event_addJButtonActionPerformed
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
-
-        userProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
+        //SystemAdminWorkAreaJPanel home = new SystemAdminWorkAreaJPanel(userProcessContainer, system);
+        Router.getInstance(null).back(0);
     }//GEN-LAST:event_backJButtonActionPerformed
 
     private void organizationJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_organizationJComboBoxActionPerformed

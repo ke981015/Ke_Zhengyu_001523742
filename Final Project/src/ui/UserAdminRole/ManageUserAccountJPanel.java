@@ -4,9 +4,12 @@
  */
 package ui.UserAdminRole;
 
+import Business.DB4OUtil.DB4OUtil;
+import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
 import Business.Role.Role;
+import Business.Router;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
@@ -23,10 +26,12 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
      */
     private JPanel container;
     private Enterprise enterprise;
+    EcoSystem system;
 
-    public ManageUserAccountJPanel(JPanel container, Enterprise enterprise) {
+    public ManageUserAccountJPanel(JPanel container, EcoSystem system,Enterprise enterprise) {
         initComponents();
         this.enterprise = enterprise;
+        this.system = system;
         this.container = container;
 
         popOrganizationComboBox();
@@ -36,14 +41,15 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
 
     public void popOrganizationComboBox() {
         organizationJComboBox.removeAllItems();
+        roleJComboBox.removeAllItems();
 
         for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
             organizationJComboBox.addItem(organization);
-        }      
+        }     
     }
     
     private void populateRoleComboBox(Organization organization){
-        roleJComboBox.removeAllItems();
+        //roleJComboBox.removeAllItems();
         for (Role role : organization.getSupportedRole()){
             roleJComboBox.addItem(role);
         }
@@ -203,15 +209,17 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         Role role = (Role) roleJComboBox.getSelectedItem();
         
         organization.getUserAccountDirectory().createUserAccount(userName, password, role);
+        DB4OUtil.getInstance().storeSystem(system);
         
         popData();
     }//GEN-LAST:event_createUserJButtonActionPerformed
 
     private void backjButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backjButton1ActionPerformed
         // TODO add your handling code here:
-        container.remove(this);
+        /*container.remove(this);
         CardLayout layout = (CardLayout) container.getLayout();
-        layout.previous(container);
+        layout.previous(container);*/
+        Router.getInstance(null).back(0);
     }//GEN-LAST:event_backjButton1ActionPerformed
 
     private void organizationJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_organizationJComboBoxActionPerformed

@@ -2,7 +2,10 @@
 
 package ui.UserAdminRole;
 
+import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
+import Business.Global;
+import Business.Router;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
@@ -14,10 +17,12 @@ public class UserAdminWorkAreaJPanel extends javax.swing.JPanel {
     
     JPanel userProcessContainer;
     Enterprise enterprise;
+    EcoSystem system;
     /** Creates new form AdminWorkAreaJPanel */
-    public UserAdminWorkAreaJPanel(JPanel userProcessContainer, Enterprise enterprise) {
+    public UserAdminWorkAreaJPanel(JPanel userProcessContainer, EcoSystem system, Enterprise enterprise) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
+        this.system = system;
         this.enterprise = enterprise;
         valueLabel.setText(enterprise.getName());
     }
@@ -35,6 +40,7 @@ public class UserAdminWorkAreaJPanel extends javax.swing.JPanel {
         manageOrganizationJButton = new javax.swing.JButton();
         enterpriseLabel = new javax.swing.JLabel();
         valueLabel = new javax.swing.JLabel();
+        backButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -72,29 +78,37 @@ public class UserAdminWorkAreaJPanel extends javax.swing.JPanel {
         valueLabel.setText("<value>");
         add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 130, -1));
 
+        backButton.setText("Logout");
+        backButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonActionPerformed(evt);
+            }
+        });
+        add(backButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 380, -1, -1));
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/6905b594d7eab2eafa12cd1d1022f3cd.jpeg"))); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1440, 820));
     }// </editor-fold>//GEN-END:initComponents
 
     private void userJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userJButtonActionPerformed
         // TODO add your handling code here:
-        ManageUserAccountJPanel muajp = new ManageUserAccountJPanel(userProcessContainer, enterprise);
-        userProcessContainer.add("ManageUserAccountJPanel", muajp);
-
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+        ManageUserAccountJPanel muajp = new ManageUserAccountJPanel(userProcessContainer, system, enterprise);
+        Router.getInstance(null).go(muajp);
     }//GEN-LAST:event_userJButtonActionPerformed
 
     private void manageOrganizationJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageOrganizationJButtonActionPerformed
 
-        ManageOrganizationJPanel manageOrganizationJPanel = new ManageOrganizationJPanel(userProcessContainer, enterprise);
-        userProcessContainer.add("manageOrganizationJPanel", manageOrganizationJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+        ManageOrganizationJPanel manageOrganizationJPanel = new ManageOrganizationJPanel(userProcessContainer, system, enterprise);
+        Router.getInstance(null).go(manageOrganizationJPanel);
     }//GEN-LAST:event_manageOrganizationJButtonActionPerformed
+
+    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
+        Global.getInstance().logout();
+    }//GEN-LAST:event_backButtonActionPerformed
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton backButton;
     private javax.swing.JLabel enterpriseLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

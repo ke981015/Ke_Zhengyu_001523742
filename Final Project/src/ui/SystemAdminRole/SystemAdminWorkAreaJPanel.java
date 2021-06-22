@@ -114,7 +114,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         nameLabel.setForeground(new java.awt.Color(255, 255, 255));
         nameLabel.setText("name");
 
-        backButton.setText("<< Back");
+        backButton.setText("Logout");
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backButtonActionPerformed(evt);
