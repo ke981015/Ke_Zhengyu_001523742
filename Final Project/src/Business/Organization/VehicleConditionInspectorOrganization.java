@@ -5,7 +5,7 @@
 package Business.Organization;
 
 import Business.Role.BuyerRole;
-import Business.Role.VehicleConditionInspectorRole;
+import Business.Role.InspectorRole;
 import Business.Role.Role;
 import java.util.ArrayList;
 
@@ -22,7 +22,7 @@ public class VehicleConditionInspectorOrganization extends Organization{
     @Override
     public ArrayList<Role> getSupportedRole() {
         ArrayList<Role> roles = new ArrayList();
-        roles.add(new VehicleConditionInspectorRole());
+        roles.add(new InspectorRole());
         return roles;
     }
      

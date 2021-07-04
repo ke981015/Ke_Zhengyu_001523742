@@ -11,6 +11,7 @@ import Business.Global;
 import Business.Network.Network;
 import Business.Organization.Organization;
 import Business.Role.BuyerRole;
+import Business.Role.InspectorRole;
 import Business.Role.SellerRole;
 import Business.Role.SystemAdminRole;
 import Business.Role.UserAdminRole;
@@ -19,12 +20,13 @@ import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import ui.BuyerRole.BuyerRegisterJPanel;
-import ui.BuyerRole.BuyerWorkAreaJPanel;
+import ui.BuyerRole.BuyerHome;
 import ui.SellerRole.SellerRegisterJPanel;
 import ui.SellerRole.SellerWorkAreaJPanel;
 import ui.SellerRole.SellerWorkAreaJPanel;
 import ui.SystemAdminRole.SystemAdminWorkAreaJPanel;
 import ui.UserAdminRole.UserAdminWorkAreaJPanel;
+import ui.VehicleConditionInspectorRole.InspectorWorkAreaJPanel2;
 
 
 /**
@@ -220,7 +222,7 @@ public class MainJFrame extends javax.swing.JFrame {
         }
         else{
             if(userAccount.getRole() instanceof BuyerRole){
-                BuyerWorkAreaJPanel home = new BuyerWorkAreaJPanel(container, userAccount, inOrganization, inEnterprise, system);
+                BuyerHome home = new BuyerHome(container, userAccount, inOrganization, inEnterprise, system);
                 Router.getInstance(null).go(home);
             }
             else if(userAccount.getRole() instanceof SystemAdminRole){
@@ -233,6 +235,10 @@ public class MainJFrame extends javax.swing.JFrame {
             }
             else if(userAccount.getRole() instanceof SellerRole){
                 SellerWorkAreaJPanel home = new SellerWorkAreaJPanel(container, userAccount, inOrganization, inEnterprise, system);
+                Router.getInstance(null).go(home);
+            }
+            else if(userAccount.getRole() instanceof InspectorRole){
+                InspectorWorkAreaJPanel2 home = new InspectorWorkAreaJPanel2(container, userAccount, inOrganization, inEnterprise, system);
                 Router.getInstance(null).go(home);
             }
             else{

@@ -11,7 +11,7 @@ import Business.Organization.SellerOrganization;
 import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
 import ui.AppraiserRole.AppraiserWorkAreaJPanel;
-import ui.BuyerRole.BuyerWorkAreaJPanel2;
+import ui.BuyerRole.BuyerWorkArea;
 
 /**
  *

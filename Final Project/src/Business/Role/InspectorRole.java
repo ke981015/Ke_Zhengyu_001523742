@@ -10,18 +10,19 @@ import Business.Organization.Organization;
 import Business.Organization.SellerOrganization;
 import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
-import ui.BuyerRole.BuyerWorkAreaJPanel2;
+import ui.BuyerRole.BuyerWorkArea;
 import ui.VehicleConditionInspectorRole.InspectorWorkAreaJPanel;
+import ui.VehicleConditionInspectorRole.InspectorWorkAreaJPanel2;
 
 /**
  *
  * @author raunak
  */
-public class VehicleConditionInspectorRole extends Role {
+public class InspectorRole extends Role {
 
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
-        return new InspectorWorkAreaJPanel(userProcessContainer, account, organization, enterprise, business);
+        return new InspectorWorkAreaJPanel2(userProcessContainer, account, organization, enterprise, business);
     }
     
 }

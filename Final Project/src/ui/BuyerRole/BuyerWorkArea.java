@@ -12,6 +12,7 @@ import Business.ListingsDirectory;
 import Business.Organization.Organization;
 import Business.Organization.SellerOrganization;
 import Business.Role.BuyerRole;
+import Business.Router;
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.WorkRequest;
 import Business.WorkQueue.AbstractQuestion;
@@ -33,17 +34,18 @@ import ui.components.ListingsCell;
  *
  * @author Ke
  */
-public class BuyerWorkAreaJPanel2 extends javax.swing.JPanel {
+public class BuyerWorkArea extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
     private Organization organization;
     private Enterprise enterprise;
     private UserAccount userAccount;
     private EcoSystem business;
+    private AbstractQuestion course;
     /**
      * Creates new form DoctorWorkAreaJPanel
      */
-    public BuyerWorkAreaJPanel2(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
+    public BuyerWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AbstractQuestion course) {
         initComponents();
         this.setSize(1024, 768);
         
@@ -52,6 +54,7 @@ public class BuyerWorkAreaJPanel2 extends javax.swing.JPanel {
         this.enterprise = enterprise;
         this.userAccount = account;
         this.business = business;
+        this.course = course;
         initCourses(/*business.getListingsDirectory()*/);
     }
     
@@ -288,6 +291,7 @@ public class BuyerWorkAreaJPanel2 extends javax.swing.JPanel {
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         userProcessContainer.add("QuestionJPanel", new ViewVehicleConditionReportJPanel(userProcessContainer,business,car));
         layout.next(userProcessContainer);*/
+        Router.getInstance(null).go(new ViewVehicleConditionReportJPanel(userProcessContainer,business,course));
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed

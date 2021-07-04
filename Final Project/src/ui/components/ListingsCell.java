@@ -7,13 +7,15 @@ package ui.components;
 
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
-import Business.Listings;
 import Business.Organization.Organization;
+import Business.Role.BuyerRole;
+import Business.Role.InspectorRole;
 import Business.Router;
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.AbstractQuestion;
 import javax.swing.JPanel;
-import ui.BuyerRole.BuyerWorkAreaJPanel2;
+import ui.BuyerRole.BuyerWorkArea;
+import ui.VehicleConditionInspectorRole.VehicleConditionReportJPanel;
 
 /**
  *
@@ -125,7 +127,12 @@ public class ListingsCell extends javax.swing.JPanel {
     private void click(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_click
        //User user = Global.getInstance().getUser();
 
-        Router.getInstance(null).go(new BuyerWorkAreaJPanel2(userProcessContainer,userAccount,organization,enterprise,business));
+        if(userAccount.getRole() instanceof BuyerRole){
+            Router.getInstance(null).go(new BuyerWorkArea(userProcessContainer,userAccount,organization,enterprise,business,course));
+        }
+        else if(userAccount.getRole() instanceof InspectorRole){
+            Router.getInstance(null).go(new VehicleConditionReportJPanel(userProcessContainer,business,course));
+        }
         
     }//GEN-LAST:event_click
 

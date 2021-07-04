@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ui.BuyerRole;
+package ui.VehicleConditionInspectorRole;
 
+import ui.BuyerRole.*;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Global;
@@ -24,7 +25,7 @@ import ui.components.ListingsCell;
  * @author Ke
  */
 
-public class BuyerWorkAreaJPanel extends javax.swing.JPanel {
+public class InspectorWorkAreaJPanel2 extends javax.swing.JPanel {
     private JPanel userProcessContainer;
     private Organization organization;
     private Enterprise enterprise;
@@ -33,7 +34,7 @@ public class BuyerWorkAreaJPanel extends javax.swing.JPanel {
     /**
      * Creates new form DoctorWorkAreaJPanel
      */
-    public BuyerWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
+    public InspectorWorkAreaJPanel2(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.organization = organization;

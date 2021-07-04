@@ -10,7 +10,7 @@ import Business.Organization.Organization;
 import Business.Organization.SellerOrganization;
 import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
-import ui.BuyerRole.BuyerWorkAreaJPanel;
+import ui.BuyerRole.BuyerHome;
 
 /**
  *
@@ -20,7 +20,7 @@ public class BuyerRole extends Role {
 
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
-        return new BuyerWorkAreaJPanel(userProcessContainer, account, organization, enterprise, business);
+        return new BuyerHome(userProcessContainer, account, organization, enterprise, business);
     }
     
 }

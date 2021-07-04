@@ -5,7 +5,10 @@
  */
 package ui.VehicleConditionInspectorRole;
 
+import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
+import Business.Router;
+import Business.WorkQueue.AbstractQuestion;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import java.awt.Component;
@@ -17,16 +20,17 @@ import ui.SystemAdminRole.SystemAdminWorkAreaJPanel;
 public class VehicleConditionReportJPanel extends javax.swing.JPanel {
     public JPanel container;
     public EcoSystem business;
-    WorkRequest car;
+    //WorkRequest car;
+    private AbstractQuestion course;
 
     /**
      * Creates new form VehicleConditionReportJPanel
      */
-    public VehicleConditionReportJPanel(JPanel userProcessContainer, EcoSystem business, WorkRequest car) {
+    public VehicleConditionReportJPanel(JPanel userProcessContainer, EcoSystem business, /*WorkRequest car*/AbstractQuestion course) {
         initComponents();
         this.container = userProcessContainer;
         this.business = business;
-        this.car = car;
+        this.course = course;
     }
     
 
@@ -227,24 +231,24 @@ public class VehicleConditionReportJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
-        container.remove(this);
-        CardLayout layout = (CardLayout) container.getLayout();
-        layout.previous(container);
+
+        Router.getInstance(null).back(0);
     }//GEN-LAST:event_backJButtonActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        car.setQ1(jTextField1.getText());
-        car.setQ2(jTextField2.getText());
-        car.setQ3(jTextField3.getText());
-        car.setQ4(jTextField4.getText());
-        car.setQ5(jTextField5.getText());
-        car.setQ6(jTextField6.getText());
-        car.setQ7(jTextField7.getText());
-        car.setQ8(jTextField8.getText());
-        car.setQ9(jTextField9.getText());
-        car.setQ10(jTextField10.getText());
-        car.setQ11(jTextField11.getText());
-        car.setQ12(jTextField12.getText());
+        course.setQ1(jTextField1.getText());
+        course.setQ2(jTextField2.getText());
+        course.setQ3(jTextField3.getText());
+        course.setQ4(jTextField4.getText());
+        course.setQ5(jTextField5.getText());
+        course.setQ6(jTextField6.getText());
+        course.setQ7(jTextField7.getText());
+        course.setQ8(jTextField8.getText());
+        course.setQ9(jTextField9.getText());
+        course.setQ10(jTextField10.getText());
+        course.setQ11(jTextField11.getText());
+        course.setQ12(jTextField12.getText());
+        DB4OUtil.getInstance().storeSystem(business);
         JOptionPane.showMessageDialog(this, "Saved.");
     }//GEN-LAST:event_jButton1ActionPerformed
 

@@ -6,6 +6,8 @@
 package ui.BuyerRole;
 
 import Business.EcoSystem;
+import Business.Router;
+import Business.WorkQueue.AbstractQuestion;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import java.awt.Component;
@@ -16,32 +18,33 @@ import ui.SystemAdminRole.SystemAdminWorkAreaJPanel;
 public class ViewVehicleConditionReportJPanel extends javax.swing.JPanel {
     public JPanel container;
     public EcoSystem business;
-    WorkRequest car;
+    //WorkRequest car;
+    private AbstractQuestion course;
 
     /**
      * Creates new form ViewVehicleConditionReportJPanel
      */
-    public ViewVehicleConditionReportJPanel(JPanel userProcessContainer, EcoSystem business, WorkRequest car) {
+    public ViewVehicleConditionReportJPanel(JPanel userProcessContainer, EcoSystem business, AbstractQuestion course) {
         initComponents();
         this.container = userProcessContainer;
         this.business = business;
-        this.car = car;
+        this.course = course;
         View();
     }
     
     public void View(){
-        jTextField1.setText(car.getQ1());
-        jTextField2.setText(car.getQ2());
-        jTextField3.setText(car.getQ3());
-        jTextField4.setText(car.getQ4());
-        jTextField5.setText(car.getQ5());
-        jTextField6.setText(car.getQ6());
-        jTextField7.setText(car.getQ7());
-        jTextField8.setText(car.getQ8());
-        jTextField9.setText(car.getQ9());
-        jTextField10.setText(car.getQ10());
-        jTextField11.setText(car.getQ11());
-        jTextField12.setText(car.getQ12());
+        jTextField1.setText(course.getQ1());
+        jTextField2.setText(course.getQ2());
+        jTextField3.setText(course.getQ3());
+        jTextField4.setText(course.getQ4());
+        jTextField5.setText(course.getQ5());
+        jTextField6.setText(course.getQ6());
+        jTextField7.setText(course.getQ7());
+        jTextField8.setText(course.getQ8());
+        jTextField9.setText(course.getQ9());
+        jTextField10.setText(course.getQ10());
+        jTextField11.setText(course.getQ11());
+        jTextField12.setText(course.getQ12());
     }
 
     /**
@@ -197,9 +200,8 @@ public class ViewVehicleConditionReportJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
-        container.remove(this);
-        CardLayout layout = (CardLayout) container.getLayout();
-        layout.previous(container);
+
+        Router.getInstance(null).back(0);
     }//GEN-LAST:event_backJButtonActionPerformed
 
 
