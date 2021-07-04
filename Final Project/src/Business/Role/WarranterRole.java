@@ -11,7 +11,7 @@ import Business.Organization.SellerOrganization;
 import Business.Organization.WarranterOrganization;
 import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
-import ui.BuyerRole.BuyerWorkArea;
+import ui.Buyer.BuyerWorkArea;
 import ui.WarranterRole.WarranterWorkAreaJPanel;
 
 /**

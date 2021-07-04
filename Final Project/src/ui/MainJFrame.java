@@ -10,6 +10,7 @@ import Business.Enterprise.Enterprise;
 import Business.Global;
 import Business.Network.Network;
 import Business.Organization.Organization;
+import Business.Role.AirQualityInspectorRole;
 import Business.Role.BuyerRole;
 import Business.Role.InspectorRole;
 import Business.Role.SellerRole;
@@ -19,14 +20,15 @@ import Business.Router;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
-import ui.BuyerRole.BuyerRegisterJPanel;
-import ui.BuyerRole.BuyerHome;
-import ui.SellerRole.SellerRegisterJPanel;
-import ui.SellerRole.SellerWorkAreaJPanel;
-import ui.SellerRole.SellerWorkAreaJPanel;
+import ui.AirQualityInspector.AirQualityInspectorHome;
+import ui.Buyer.BuyerRegisterJPanel;
+import ui.Buyer.BuyerHome;
+import ui.Seller.SellerRegisterJPanel;
+import ui.Seller.SellerWorkAreaJPanel;
+import ui.Seller.SellerWorkAreaJPanel;
 import ui.SystemAdminRole.SystemAdminWorkAreaJPanel;
 import ui.UserAdminRole.UserAdminWorkAreaJPanel;
-import ui.VehicleConditionInspectorRole.InspectorWorkAreaJPanel2;
+import ui.VehicleConditionInspectorRole.InspectorHome;
 
 
 /**
@@ -238,7 +240,11 @@ public class MainJFrame extends javax.swing.JFrame {
                 Router.getInstance(null).go(home);
             }
             else if(userAccount.getRole() instanceof InspectorRole){
-                InspectorWorkAreaJPanel2 home = new InspectorWorkAreaJPanel2(container, userAccount, inOrganization, inEnterprise, system);
+                InspectorHome home = new InspectorHome(container, userAccount, inOrganization, inEnterprise, system);
+                Router.getInstance(null).go(home);
+            }
+            else if(userAccount.getRole() instanceof AirQualityInspectorRole){
+                AirQualityInspectorHome home = new AirQualityInspectorHome(container, userAccount, inOrganization, inEnterprise, system);
                 Router.getInstance(null).go(home);
             }
             else{

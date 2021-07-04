@@ -10,7 +10,7 @@ import Business.Organization.Organization;
 import Business.Organization.SellerOrganization;
 import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
-import ui.BuyerRole.BuyerHome;
+import ui.Buyer.BuyerHome;
 
 /**
  *

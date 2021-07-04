@@ -16,9 +16,9 @@ import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
-import ui.BuyerRole.ViewVehicleConditionReportJPanel;
-import ui.BuyerRole.ViewVehicleInfoJPanel;
-import ui.BuyerRole.ViewVehicleValuationJPanel;
+import ui.Buyer.ViewVehicleConditionReportJPanel;
+import ui.Buyer.ViewVehicleInfoJPanel;
+import ui.Buyer.ViewVehicleValuationJPanel;
 
 /**
  *

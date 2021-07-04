@@ -8,14 +8,17 @@ package ui.components;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
+import Business.Role.AirQualityInspectorRole;
 import Business.Role.BuyerRole;
 import Business.Role.InspectorRole;
 import Business.Router;
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.AbstractQuestion;
 import javax.swing.JPanel;
-import ui.BuyerRole.BuyerWorkArea;
-import ui.VehicleConditionInspectorRole.VehicleConditionReportJPanel;
+import ui.AirQualityInspector.AirQualityInspectorHome;
+import ui.AirQualityInspector.AirQualityInspectorWorkArea;
+import ui.Buyer.BuyerWorkArea;
+import ui.VehicleConditionInspectorRole.InspectorWorkArea;
 
 /**
  *
@@ -131,7 +134,10 @@ public class ListingsCell extends javax.swing.JPanel {
             Router.getInstance(null).go(new BuyerWorkArea(userProcessContainer,userAccount,organization,enterprise,business,course));
         }
         else if(userAccount.getRole() instanceof InspectorRole){
-            Router.getInstance(null).go(new VehicleConditionReportJPanel(userProcessContainer,business,course));
+            Router.getInstance(null).go(new InspectorWorkArea(userProcessContainer,business,course));
+        }
+        else if(userAccount.getRole() instanceof AirQualityInspectorRole){
+            Router.getInstance(null).go(new AirQualityInspectorWorkArea(userProcessContainer,business,course));
         }
         
     }//GEN-LAST:event_click
