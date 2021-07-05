@@ -17,7 +17,6 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import ui.CustomerServiceRole.SellerQuestionJPanel;
 import ui.components.ListingsCell;
 
 

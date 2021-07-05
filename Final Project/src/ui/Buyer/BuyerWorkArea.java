@@ -93,7 +93,6 @@ public class BuyerWorkArea extends javax.swing.JPanel {
         jButton5 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        backJButton = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
 
         setLayout(null);
@@ -105,7 +104,7 @@ public class BuyerWorkArea extends javax.swing.JPanel {
         nameLabel.setForeground(new java.awt.Color(255, 255, 255));
         nameLabel.setText("name");
 
-        backButton.setText("Logout");
+        backButton.setText("<< Back");
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backButtonActionPerformed(evt);
@@ -162,16 +161,6 @@ public class BuyerWorkArea extends javax.swing.JPanel {
             }
         });
 
-        backJButton.setBackground(new java.awt.Color(255, 204, 204));
-        backJButton.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        backJButton.setForeground(new java.awt.Color(102, 153, 255));
-        backJButton.setText("<< Back");
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout SideBarLayout = new javax.swing.GroupLayout(SideBar);
         SideBar.setLayout(SideBarLayout);
         SideBarLayout.setHorizontalGroup(
@@ -195,10 +184,7 @@ public class BuyerWorkArea extends javax.swing.JPanel {
                         .addComponent(jButton6))
                     .addGroup(SideBarLayout.createSequentialGroup()
                         .addGap(30, 30, 30)
-                        .addComponent(backButton))
-                    .addGroup(SideBarLayout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(backJButton)))
+                        .addComponent(backButton)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         SideBarLayout.setVerticalGroup(
@@ -218,9 +204,7 @@ public class BuyerWorkArea extends javax.swing.JPanel {
                 .addComponent(jButton2)
                 .addGap(35, 35, 35)
                 .addComponent(jButton3)
-                .addGap(29, 29, 29)
-                .addComponent(backJButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 157, Short.MAX_VALUE)
                 .addComponent(backButton)
                 .addGap(47, 47, 47))
         );
@@ -290,20 +274,17 @@ public class BuyerWorkArea extends javax.swing.JPanel {
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         userProcessContainer.add("QuestionJPanel", new BookAppointmentJPanel(userProcessContainer,business,car));
         layout.next(userProcessContainer);*/
+        BookAppointmentJPanel report = new BookAppointmentJPanel(userProcessContainer,business,course);
+        jSplitPane1.setRightComponent(report);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
-        Global.getInstance().logout();
-    }//GEN-LAST:event_backButtonActionPerformed
-
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
         Router.getInstance(null).back(0);
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_backButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel SideBar;
     private javax.swing.JButton backButton;
-    private javax.swing.JButton backJButton;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;

@@ -186,7 +186,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         if (network == null || type == null) {
             JOptionPane.showMessageDialog(null, "Invalid Input!");
             return;
-        }
+        }DB4OUtil.getInstance().storeSystem(system);
 
         String name = nameJTextField.getText();
 

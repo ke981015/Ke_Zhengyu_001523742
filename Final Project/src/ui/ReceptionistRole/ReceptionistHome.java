@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ui.CustomerServiceRole;
+package ui.ReceptionistRole;
 
+import ui.CustomerServiceRole.*;
 import ui.Buyer.*;
 import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
@@ -17,6 +18,7 @@ import Business.WorkQueue.AbstractQuestion;
 import Business.WorkQueue.WorkRequest;
 import java.awt.GridLayout;
 import javax.swing.JPanel;
+import ui.components.AppointmentCell;
 import ui.components.QuestionCell;
 
 
@@ -24,14 +26,14 @@ import ui.components.QuestionCell;
  *
  * @author Ke
  */
-public class BuyerServiceWorkArea extends javax.swing.JPanel {
+public class ReceptionistHome extends javax.swing.JPanel {
     private JPanel userProcessContainer;
     private Organization organization;
     private Enterprise enterprise;
     private UserAccount userAccount;
     private EcoSystem business;
 
-    public BuyerServiceWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
+    public ReceptionistHome(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.organization = organization;
@@ -59,16 +61,12 @@ public class BuyerServiceWorkArea extends javax.swing.JPanel {
 
         contentPanel.setPreferredSize(new Dimension(contentPanel.getWidth(), cell_H * fileDir.getList().size() / 2 + 1));
         updateUI();*/
-        contentPanel.setLayout(new GridLayout(0,1));
+        contentPanel.setLayout(new GridLayout(0,2));
 
         for (AbstractQuestion request : business.getWorkQueue().getWorkRequestList()){
-            if(request.getSender() != null){
-                if(request.getSender().getRole() instanceof BuyerRole){
-                    if(request.getAnswer() == null){
-                        QuestionCell cell = new QuestionCell(userProcessContainer,userAccount,organization,enterprise,business,request);
-                        contentPanel.add(cell);    
-                    }
-                }
+            if(request.getDate() != null){
+                AppointmentCell cell = new AppointmentCell(userProcessContainer,userAccount,organization,enterprise,business,request);
+                contentPanel.add(cell);    
             }
         }
         updateUI();
@@ -120,7 +118,7 @@ public class BuyerServiceWorkArea extends javax.swing.JPanel {
 
         jLabel10.setFont(new java.awt.Font("Skia", 1, 24)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(99, 148, 249));
-        jLabel10.setText("Questions to be answered");
+        jLabel10.setText("Pending appointment");
 
         jLabel8.setText("—————————————————————————————————————————————————");
 

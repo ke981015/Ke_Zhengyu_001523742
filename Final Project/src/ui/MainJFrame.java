@@ -14,6 +14,7 @@ import Business.Role.AirQualityInspectorRole;
 import Business.Role.BuyerRole;
 import Business.Role.BuyerServiceRole;
 import Business.Role.InspectorRole;
+import Business.Role.ReceptionistRole;
 import Business.Role.SellerRole;
 import Business.Role.SellerServiceRole;
 import Business.Role.SystemAdminRole;
@@ -27,6 +28,7 @@ import ui.Buyer.BuyerRegisterJPanel;
 import ui.Buyer.BuyerHome;
 import ui.CustomerServiceRole.BuyerServiceWorkArea;
 import ui.CustomerServiceRole.SellerServiceWorkArea;
+import ui.ReceptionistRole.ReceptionistHome;
 import ui.Seller.SellerRegisterJPanel;
 import ui.Seller.SellerWorkAreaJPanel;
 import ui.Seller.SellerWorkAreaJPanel;
@@ -257,6 +259,10 @@ public class MainJFrame extends javax.swing.JFrame {
             }
             else if(userAccount.getRole() instanceof SellerServiceRole){
                 SellerServiceWorkArea home = new SellerServiceWorkArea(container, userAccount, inOrganization, inEnterprise, system);
+                Router.getInstance(null).go(home);
+            }
+            else if(userAccount.getRole() instanceof ReceptionistRole){
+                ReceptionistHome home = new ReceptionistHome(container, userAccount, inOrganization, inEnterprise, system);
                 Router.getInstance(null).go(home);
             }
             else{

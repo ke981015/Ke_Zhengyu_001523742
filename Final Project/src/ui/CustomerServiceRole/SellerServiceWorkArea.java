@@ -121,7 +121,7 @@ public class SellerServiceWorkArea extends javax.swing.JPanel {
 
         jLabel10.setFont(new java.awt.Font("Skia", 1, 24)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(99, 148, 249));
-        jLabel10.setText("Not answered question");
+        jLabel10.setText("Questions to be answered");
 
         jLabel8.setText("—————————————————————————————————————————————————");
 

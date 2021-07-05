@@ -5,7 +5,9 @@
  */
 package ui.Buyer;
 
+import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
+import Business.WorkQueue.AbstractQuestion;
 import Business.WorkQueue.WorkRequest;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -20,16 +22,16 @@ import ui.SystemAdminRole.SystemAdminWorkAreaJPanel;
 public class BookAppointmentJPanel extends javax.swing.JPanel {
     public JPanel container;
     public EcoSystem business;
-    WorkRequest car;
+    private AbstractQuestion course;
 
     /**
      * Creates new form BookAppointmentJPanel
      */
-    public BookAppointmentJPanel(JPanel userProcessContainer, EcoSystem business, WorkRequest car) {
+    public BookAppointmentJPanel(JPanel userProcessContainer, EcoSystem business, AbstractQuestion course) {
         initComponents();
         this.container = userProcessContainer;
         this.business = business;
-        this.car = car;
+        this.course = course;
     }
     
 
@@ -49,7 +51,6 @@ public class BookAppointmentJPanel extends javax.swing.JPanel {
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        backJButton3 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
 
         setLayout(null);
@@ -90,18 +91,6 @@ public class BookAppointmentJPanel extends javax.swing.JPanel {
         add(jButton1);
         jButton1.setBounds(450, 390, 83, 27);
 
-        backJButton3.setBackground(new java.awt.Color(255, 204, 204));
-        backJButton3.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        backJButton3.setForeground(new java.awt.Color(102, 153, 255));
-        backJButton3.setText("<< Back");
-        backJButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButton3ActionPerformed(evt);
-            }
-        });
-        add(backJButton3);
-        backJButton3.setBounds(30, 40, 83, 27);
-
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/3439d73c70642d1039f6fdc9345403a3.jpeg"))); // NOI18N
         jLabel4.setText("jLabel4");
         add(jLabel4);
@@ -109,21 +98,15 @@ public class BookAppointmentJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        car.setDate(jTextField1.getText());
-        car.setPhone(jTextField2.getText());
-        car.setName(jTextField3.getText());
+        course.setDate(jTextField1.getText());
+        course.setPhone(jTextField2.getText());
+        course.setName(jTextField3.getText());
+        DB4OUtil.getInstance().storeSystem(business);
         JOptionPane.showMessageDialog(this, "Saved.");
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void backJButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButton3ActionPerformed
-        container.remove(this);
-        CardLayout layout = (CardLayout) container.getLayout();
-        layout.previous(container);
-    }//GEN-LAST:event_backJButton3ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton3;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

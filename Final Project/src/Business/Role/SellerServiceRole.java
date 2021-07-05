@@ -11,7 +11,7 @@ import Business.Organization.SellerOrganization;
 import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
 import ui.Buyer.BuyerWorkArea;
-import ui.CustomerServiceRole.SellerServiceWorkAreaJPanel;
+import ui.CustomerServiceRole.SellerServiceWorkArea;
 
 /**
  *
@@ -21,7 +21,7 @@ public class SellerServiceRole extends Role {
 
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
-        return new SellerServiceWorkAreaJPanel(userProcessContainer, account, enterprise, business);
+        return new SellerServiceWorkArea(userProcessContainer, account, organization, enterprise, business);
     }
     
 }
