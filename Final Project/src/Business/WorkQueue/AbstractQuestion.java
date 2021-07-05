@@ -16,6 +16,7 @@ public abstract class AbstractQuestion {
     private String question;
     private UserAccount sender;
     private UserAccount solver;
+    private UserAccount publisher;
     private String answer;
     private String make;
     private String model;
@@ -369,5 +370,14 @@ public abstract class AbstractQuestion {
     public void setContact(String contact) {
         this.contact = contact;
     }
+
+    public UserAccount getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(UserAccount publisher) {
+        this.publisher = publisher;
+    }
+    
 
 }

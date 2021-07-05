@@ -409,7 +409,7 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
         car.setFrontPicture(path1);
         car.setBackPicture(path2);
         car.setDashBoardPicture(path3);
-        car.setSender(userAccount);
+        car.setPublisher(userAccount);
         system.getWorkQueue().getWorkRequestList().add(car);
         DB4OUtil.getInstance().storeSystem(system);
         JOptionPane.showMessageDialog(this, "Used car information saved.");
