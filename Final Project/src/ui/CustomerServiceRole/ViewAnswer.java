@@ -5,7 +5,6 @@
  */
 package ui.CustomerServiceRole;
 
-import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
 import Business.Router;
 import Business.WorkQueue.AbstractQuestion;
@@ -16,7 +15,7 @@ import javax.swing.JPanel;
  *
  * @author Administrator
  */
-public class Answer extends javax.swing.JPanel {
+public class ViewAnswer extends javax.swing.JPanel {
     public JPanel container;
     public EcoSystem business;
     //WorkRequest car;
@@ -25,12 +24,16 @@ public class Answer extends javax.swing.JPanel {
     /**
      * Creates new form Answer
      */
-    public Answer(JPanel userProcessContainer, EcoSystem business, /*WorkRequest car*/AbstractQuestion course) {
+    public ViewAnswer(JPanel userProcessContainer, EcoSystem business, /*WorkRequest car*/AbstractQuestion course) {
         initComponents();
         this.container = userProcessContainer;
         this.business = business;
         this.course = course;
         jTextArea2.setText(course.getQuestion());
+        if(course.getAnswer()!= null)
+            jTextArea3.setText(course.getAnswer());
+        else
+            jTextArea3.setText("Not answered yet");
         /*container.setPreferredSize(new Dimension(10, 600));
         jPanel1.setSize(1000, 300);
         jPanel2.setSize(1000, 300);*/
@@ -53,7 +56,6 @@ public class Answer extends javax.swing.JPanel {
         jTextArea3 = new javax.swing.JTextArea();
         jLabel8 = new javax.swing.JLabel();
         backJButton = new javax.swing.JButton();
-        requestTestJButton = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(1000, 305));
@@ -74,6 +76,7 @@ public class Answer extends javax.swing.JPanel {
         jLabel12.setForeground(new java.awt.Color(99, 148, 249));
         jLabel12.setText("Question");
 
+        jTextArea3.setEditable(false);
         jTextArea3.setColumns(20);
         jTextArea3.setRows(5);
         jScrollPane3.setViewportView(jTextArea3);
@@ -87,16 +90,6 @@ public class Answer extends javax.swing.JPanel {
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
-            }
-        });
-
-        requestTestJButton.setBackground(new java.awt.Color(255, 204, 204));
-        requestTestJButton.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        requestTestJButton.setForeground(new java.awt.Color(102, 153, 255));
-        requestTestJButton.setText("Reply");
-        requestTestJButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                requestTestJButtonActionPerformed(evt);
             }
         });
 
@@ -123,10 +116,6 @@ public class Answer extends javax.swing.JPanel {
                         .addGap(29, 29, 29)
                         .addComponent(backJButton)))
                 .addContainerGap(121, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(requestTestJButton)
-                .addGap(310, 310, 310))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -141,9 +130,7 @@ public class Answer extends javax.swing.JPanel {
                 .addComponent(jLabel11)
                 .addGap(55, 55, 55)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
-                .addComponent(requestTestJButton)
-                .addGap(6, 6, 6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(backJButton)
                 .addGap(63, 63, 63))
         );
@@ -152,14 +139,6 @@ public class Answer extends javax.swing.JPanel {
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
         Router.getInstance(null).back(0);
     }//GEN-LAST:event_backJButtonActionPerformed
-
-    private void requestTestJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_requestTestJButtonActionPerformed
-
-        String a = jTextArea3.getText();
-        course.setAnswer(a);
-        DB4OUtil.getInstance().storeSystem(business);
-
-    }//GEN-LAST:event_requestTestJButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -171,6 +150,5 @@ public class Answer extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea3;
-    private javax.swing.JButton requestTestJButton;
     // End of variables declaration//GEN-END:variables
 }

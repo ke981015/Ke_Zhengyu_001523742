@@ -12,8 +12,10 @@ import Business.Network.Network;
 import Business.Organization.Organization;
 import Business.Role.AirQualityInspectorRole;
 import Business.Role.BuyerRole;
+import Business.Role.BuyerServiceRole;
 import Business.Role.InspectorRole;
 import Business.Role.SellerRole;
+import Business.Role.SellerServiceRole;
 import Business.Role.SystemAdminRole;
 import Business.Role.UserAdminRole;
 import Business.Router;
@@ -23,6 +25,8 @@ import javax.swing.JOptionPane;
 import ui.AirQualityInspector.AirQualityInspectorHome;
 import ui.Buyer.BuyerRegisterJPanel;
 import ui.Buyer.BuyerHome;
+import ui.CustomerServiceRole.BuyerServiceWorkArea;
+import ui.CustomerServiceRole.SellerServiceWorkArea;
 import ui.Seller.SellerRegisterJPanel;
 import ui.Seller.SellerWorkAreaJPanel;
 import ui.Seller.SellerWorkAreaJPanel;
@@ -245,6 +249,14 @@ public class MainJFrame extends javax.swing.JFrame {
             }
             else if(userAccount.getRole() instanceof AirQualityInspectorRole){
                 AirQualityInspectorHome home = new AirQualityInspectorHome(container, userAccount, inOrganization, inEnterprise, system);
+                Router.getInstance(null).go(home);
+            }
+            else if(userAccount.getRole() instanceof BuyerServiceRole){
+                BuyerServiceWorkArea home = new BuyerServiceWorkArea(container, userAccount, inOrganization, inEnterprise, system);
+                Router.getInstance(null).go(home);
+            }
+            else if(userAccount.getRole() instanceof SellerServiceRole){
+                SellerServiceWorkArea home = new SellerServiceWorkArea(container, userAccount, inOrganization, inEnterprise, system);
                 Router.getInstance(null).go(home);
             }
             else{

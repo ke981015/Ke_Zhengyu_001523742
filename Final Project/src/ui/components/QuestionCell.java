@@ -20,6 +20,7 @@ import ui.AirQualityInspector.AirQualityInspectorHome;
 import ui.AirQualityInspector.AirQualityInspectorWorkArea;
 import ui.Buyer.BuyerWorkArea;
 import ui.CustomerServiceRole.Answer;
+import ui.CustomerServiceRole.ViewAnswer;
 import ui.Seller.SellerWorkAreaJPanel;
 import ui.VehicleConditionInspectorRole.InspectorWorkArea;
 
@@ -83,7 +84,7 @@ public class QuestionCell extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(442, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -116,17 +117,15 @@ public class QuestionCell extends javax.swing.JPanel {
     private void click(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_click
        //User user = Global.getInstance().getUser();
 
-        /*if(userAccount.getRole() instanceof BuyerRole){
-            Router.getInstance(null).go(new BuyerWorkArea(userProcessContainer,userAccount,organization,enterprise,business,course));
+        if(userAccount.getRole() instanceof BuyerRole){
+            Router.getInstance(null).go(new ViewAnswer(userProcessContainer,business,course));
         }
-        else if(userAccount.getRole() instanceof InspectorRole){
-            Router.getInstance(null).go(new InspectorWorkArea(userProcessContainer,business,course));
+        else if(userAccount.getRole() instanceof SellerRole){
+            Router.getInstance(null).go(new ViewAnswer(userProcessContainer,business,course));
         }
-        else if(userAccount.getRole() instanceof AirQualityInspectorRole){
-            Router.getInstance(null).go(new AirQualityInspectorWorkArea(userProcessContainer,business,course));
-        }*/
-
-        Router.getInstance(null).go(new Answer(userProcessContainer,business,course));
+        else{
+            Router.getInstance(null).go(new Answer(userProcessContainer,business,course));
+        }
         
     }//GEN-LAST:event_click
 

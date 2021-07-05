@@ -3,13 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ui.Buyer;
+package ui.Seller;
 
 import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
 import Business.Role.BuyerRole;
+import Business.Role.SellerRole;
 import Business.Router;
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.AbstractQuestion;
@@ -23,14 +24,14 @@ import ui.components.QuestionCell;
  *
  * @author Ke
  */
-public class BuyerQuestion extends javax.swing.JPanel {
+public class SellerQuestion extends javax.swing.JPanel {
     private JPanel userProcessContainer;
     private Organization organization;
     private Enterprise enterprise;
     private UserAccount userAccount;
     private EcoSystem business;
 
-    public BuyerQuestion(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
+    public SellerQuestion(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.organization = organization;
@@ -46,7 +47,7 @@ public class BuyerQuestion extends javax.swing.JPanel {
 
         for (AbstractQuestion request : business.getWorkQueue().getWorkRequestList()){
             if(request.getSender() != null){
-                if(request.getSender().getRole() instanceof BuyerRole){
+                if(request.getSender().getRole() instanceof SellerRole){
                     QuestionCell cell = new QuestionCell(userProcessContainer,userAccount,organization,enterprise,business,request);
                     contentPanel.add(cell);                
                 }

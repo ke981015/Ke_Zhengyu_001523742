@@ -221,8 +221,8 @@ public class SellerWorkAreaJPanel extends javax.swing.JPanel {
         /*CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         userProcessContainer.add("QuestionJPanel", new SellerQuestionJPanel(userProcessContainer, userAccount, enterprise, system));
         layout.next(userProcessContainer);*/
-        SellerQuestionJPanel questionJPanel = new SellerQuestionJPanel(userProcessContainer, userAccount, enterprise, system);
-        Router.getInstance(null).go(questionJPanel);
+        SellerQuestion question = new SellerQuestion(userProcessContainer, userAccount, organization, enterprise, system);
+        Router.getInstance(null).go(question);
     }//GEN-LAST:event_jButton2ActionPerformed
 
 

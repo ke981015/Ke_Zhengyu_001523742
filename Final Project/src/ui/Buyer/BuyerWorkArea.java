@@ -26,7 +26,6 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
-import ui.CustomerServiceRole.BuyerQuestionJPanel;
 import ui.WarranterRole.WarranterWorkAreaJPanel;
 
 /**
