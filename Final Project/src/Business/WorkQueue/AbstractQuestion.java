@@ -13,7 +13,10 @@ import java.util.Date;
  */
 public abstract class AbstractQuestion {
 
+    private boolean done;
     private String question;
+    private String dealdate;
+    private String dealprice;
     private UserAccount sender;
     private UserAccount solver;
     private UserAccount publisher;
@@ -377,6 +380,30 @@ public abstract class AbstractQuestion {
 
     public void setPublisher(UserAccount publisher) {
         this.publisher = publisher;
+    }
+
+    public String getDealdate() {
+        return dealdate;
+    }
+
+    public void setDealdate(String dealdate) {
+        this.dealdate = dealdate;
+    }
+
+    public String getDealprice() {
+        return dealprice;
+    }
+
+    public void setDealprice(String dealprice) {
+        this.dealprice = dealprice;
+    }
+
+    public boolean isDone() {
+        return done;
+    }
+
+    public void setDone(boolean done) {
+        this.done = done;
     }
     
 

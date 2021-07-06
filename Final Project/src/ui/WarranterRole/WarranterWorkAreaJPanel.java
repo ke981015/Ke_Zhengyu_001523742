@@ -79,7 +79,7 @@ public class WarranterWorkAreaJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        File file = new File("src\\resource\\after-sale warranty.docx");
+        File file = new File("src\\resource\\Home Sales Contract.pdf");
         try {
             java.awt.Desktop.getDesktop().open(file);
         } catch (IOException ex) {

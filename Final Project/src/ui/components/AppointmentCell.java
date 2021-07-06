@@ -19,6 +19,7 @@ import javax.swing.JPanel;
 import ui.AirQualityInspector.AirQualityInspectorHome;
 import ui.AirQualityInspector.AirQualityInspectorWorkArea;
 import ui.Buyer.BuyerWorkArea;
+import ui.ReceptionistRole.ReceptionistWorkArea;
 import ui.Seller.SellerWorkAreaJPanel;
 import ui.VehicleConditionInspectorRole.InspectorWorkArea;
 
@@ -144,17 +145,8 @@ public class AppointmentCell extends javax.swing.JPanel {
 
     private void click(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_click
        //User user = Global.getInstance().getUser();
-
-        if(userAccount.getRole() instanceof BuyerRole){
-            Router.getInstance(null).go(new BuyerWorkArea(userProcessContainer,userAccount,organization,enterprise,business,course));
-        }
-        else if(userAccount.getRole() instanceof InspectorRole){
-            Router.getInstance(null).go(new InspectorWorkArea(userProcessContainer,business,course));
-        }
-        else if(userAccount.getRole() instanceof AirQualityInspectorRole){
-            Router.getInstance(null).go(new AirQualityInspectorWorkArea(userProcessContainer,business,course));
-        }
-        
+        Router.getInstance(null).go(new ReceptionistWorkArea(userProcessContainer,userAccount,organization,enterprise,business,course));
+  
     }//GEN-LAST:event_click
 
 

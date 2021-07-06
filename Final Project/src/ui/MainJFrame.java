@@ -7,9 +7,9 @@ package ui;
 import Business.EcoSystem;
 import Business.DB4OUtil.DB4OUtil;
 import Business.Enterprise.Enterprise;
-import Business.Global;
 import Business.Network.Network;
 import Business.Organization.Organization;
+import Business.Role.AccounterRole;
 import Business.Role.AirQualityInspectorRole;
 import Business.Role.BuyerRole;
 import Business.Role.BuyerServiceRole;
@@ -23,6 +23,7 @@ import Business.Router;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
+import ui.Accounter.AccounterHome;
 import ui.AirQualityInspector.AirQualityInspectorHome;
 import ui.Buyer.BuyerRegisterJPanel;
 import ui.Buyer.BuyerHome;
@@ -30,7 +31,6 @@ import ui.CustomerServiceRole.BuyerServiceWorkArea;
 import ui.CustomerServiceRole.SellerServiceWorkArea;
 import ui.ReceptionistRole.ReceptionistHome;
 import ui.Seller.SellerRegisterJPanel;
-import ui.Seller.SellerWorkAreaJPanel;
 import ui.Seller.SellerWorkAreaJPanel;
 import ui.SystemAdminRole.SystemAdminWorkAreaJPanel;
 import ui.UserAdminRole.UserAdminWorkAreaJPanel;
@@ -161,9 +161,9 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Skia", 1, 48)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(99, 148, 249));
-        jLabel4.setText("Renting System");
+        jLabel4.setText("Second-hand house sale System");
         jPanel2.add(jLabel4);
-        jLabel4.setBounds(190, 220, 720, 120);
+        jLabel4.setBounds(20, 220, 760, 120);
 
         jLabel6.setText("@ Zhengyu Ke");
         jPanel2.add(jLabel6);
@@ -263,6 +263,10 @@ public class MainJFrame extends javax.swing.JFrame {
             }
             else if(userAccount.getRole() instanceof ReceptionistRole){
                 ReceptionistHome home = new ReceptionistHome(container, userAccount, inOrganization, inEnterprise, system);
+                Router.getInstance(null).go(home);
+            }
+            else if(userAccount.getRole() instanceof AccounterRole){
+                AccounterHome home = new AccounterHome(container, userAccount, inOrganization, inEnterprise, system);
                 Router.getInstance(null).go(home);
             }
             else{
