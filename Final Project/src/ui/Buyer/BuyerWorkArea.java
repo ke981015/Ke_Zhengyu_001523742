@@ -240,6 +240,8 @@ public class BuyerWorkArea extends javax.swing.JPanel {
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         userProcessContainer.add("QuestionJPanel", new ViewVehicleInfoJPanel(userProcessContainer,business,car));
         layout.next(userProcessContainer);*/
+        ViewListingInfo report = new ViewListingInfo(userProcessContainer,business,userAccount,course);
+        jSplitPane1.setRightComponent(report);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed

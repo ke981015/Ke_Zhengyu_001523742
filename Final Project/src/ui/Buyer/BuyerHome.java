@@ -78,7 +78,9 @@ public class BuyerHome extends javax.swing.JPanel {
         line = new javax.swing.JSeparator();
 
         setBackground(new java.awt.Color(255, 255, 255));
-        setMinimumSize(new java.awt.Dimension(1024, 768));
+        setMaximumSize(new java.awt.Dimension(1500, 1000));
+        setMinimumSize(new java.awt.Dimension(1500, 1000));
+        setPreferredSize(new java.awt.Dimension(1500, 1000));
 
         contentPanel.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -86,7 +88,7 @@ public class BuyerHome extends javax.swing.JPanel {
         contentPanel.setLayout(contentPanelLayout);
         contentPanelLayout.setHorizontalGroup(
             contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 834, Short.MAX_VALUE)
+            .addGap(0, 1191, Short.MAX_VALUE)
         );
         contentPanelLayout.setVerticalGroup(
             contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -184,7 +186,7 @@ public class BuyerHome extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(line, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(scrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 2010, Short.MAX_VALUE)
+                .addComponent(scrollPanel)
                 .addContainerGap(29, Short.MAX_VALUE))
             .addComponent(sidePanel, javax.swing.GroupLayout.DEFAULT_SIZE, 2133, Short.MAX_VALUE)
         );

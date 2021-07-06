@@ -5,7 +5,9 @@
 package Business.WorkQueue;
 
 import Business.UserAccount.UserAccount;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  *
@@ -13,6 +15,7 @@ import java.util.Date;
  */
 public abstract class AbstractQuestion {
 
+    String[] path = new String[10];
     private boolean done;
     private String question;
     private String dealdate;
@@ -405,6 +408,15 @@ public abstract class AbstractQuestion {
     public void setDone(boolean done) {
         this.done = done;
     }
+
+    public String[] getPath() {
+        return path;
+    }
+
+    public void setPath(String[] path) {
+        this.path = path;
+    }
+
     
 
 }

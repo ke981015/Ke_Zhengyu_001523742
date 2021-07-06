@@ -212,6 +212,7 @@ public class SellerWorkAreaJPanel extends javax.swing.JPanel {
         /*userProcessContainer.add("vehicleInfoJPanel",vehicleInfoJPanel);
         CardLayout layout=(CardLayout)userProcessContainer.getLayout();
         layout.next(userProcessContainer);*/
+        
         Router.getInstance(null).go(listingInfoJPanel);
     }//GEN-LAST:event_jButton1ActionPerformed
 

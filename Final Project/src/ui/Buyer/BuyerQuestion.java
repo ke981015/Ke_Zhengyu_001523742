@@ -184,6 +184,8 @@ public class BuyerQuestion extends javax.swing.JPanel {
 
         userAccount.getWorkQueue().getWorkRequestList().add(question);
         business.getWorkQueue().getWorkRequestList().add(question);
+        QuestionCell cell = new QuestionCell(userProcessContainer,userAccount,organization,enterprise,business,question);
+        contentPanel.add(cell);  
         DB4OUtil.getInstance().storeSystem(business);
         updateUI();
         //enterprise.getWorkQueue().getWorkRequestList().add(question);

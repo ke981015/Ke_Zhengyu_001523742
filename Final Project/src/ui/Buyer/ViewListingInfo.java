@@ -3,12 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ui.Seller;
+package ui.Buyer;
 
+import ui.Seller.*;
 import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
 import Business.Router;
 import Business.UserAccount.UserAccount;
+import Business.WorkQueue.AbstractQuestion;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import java.awt.GridLayout;
@@ -31,7 +33,7 @@ import ui.components.PictureCell;
  *
  * @author Ke
  */
-public class ListingInfoJPanel extends javax.swing.JPanel {
+public class ViewListingInfo extends javax.swing.JPanel {
 
     /**
      * Creates new form FileJPanel
@@ -39,18 +41,44 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
     public JPanel container;
     public EcoSystem system;
     private UserAccount userAccount;
-    //List<String> path = new ArrayList<>();
+    AbstractQuestion course;
     String[] path = new String[10];
     int i = 0;
     String path1 ="";
     String path2 ="";
     String path3 ="";
     
-    public ListingInfoJPanel(JPanel userProcessContainer, EcoSystem system, UserAccount userAccount) {
+    public ViewListingInfo(JPanel userProcessContainer, EcoSystem system, UserAccount userAccount, AbstractQuestion course) {
         initComponents();
         this.container = userProcessContainer;
         this.system = system;
         this.userAccount = userAccount;
+        this.course = course;
+        path = course.getPath();
+        View();
+    }
+    
+    public void View(){
+        txtMake.setText(course.getMake());       
+        txtModel.setText(course.getModel());
+        txtYear.setText(course.getYear());
+        txtCategory.setText(course.getCategory());
+        txtState.setText(course.getState());
+        txtCity.setText(course.getCity());
+        txtVin.setText(course.getVin());
+        txtMileage.setText(course.getMileage());
+        txtHorsepower.setText(course.getHorsepower());
+        contentPanel.setLayout(new GridLayout(0,2));
+        for(int i = 0; i<10 ;i++){
+            PictureCell cell = new PictureCell(container,userAccount,system, path[i]);
+            contentPanel.add(cell);
+        }
+        /*ImageIcon icon = new ImageIcon(car.getFrontPicture());
+        img.setIcon(icon);  
+        ImageIcon icon1 = new ImageIcon(car.getBackPicture());
+        img1.setIcon(icon1); 
+        ImageIcon icon2 = new ImageIcon(car.getDashBoardPicture());
+        img2.setIcon(icon2); */
     }
     
 
@@ -83,8 +111,6 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
         txtMileage = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         txtHorsepower = new javax.swing.JTextField();
-        btnSave = new javax.swing.JButton();
-        btnDashBoard = new javax.swing.JButton();
         jLabel22 = new javax.swing.JLabel();
         txtMake1 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -161,23 +187,6 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
 
         txtHorsepower.setBackground(new java.awt.Color(255, 204, 204));
 
-        btnSave.setText("Save");
-        btnSave.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSaveActionPerformed(evt);
-            }
-        });
-
-        btnDashBoard.setBackground(new java.awt.Color(255, 204, 204));
-        btnDashBoard.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        btnDashBoard.setForeground(new java.awt.Color(102, 153, 255));
-        btnDashBoard.setText("Upload dash board view");
-        btnDashBoard.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDashBoardActionPerformed(evt);
-            }
-        });
-
         jLabel22.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(102, 153, 255));
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -204,10 +213,6 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnDashBoard)
-                .addGap(393, 393, 393))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -259,10 +264,7 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
                             .addComponent(jLabel10)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(28, 28, 28)
-                                .addComponent(jLabel8))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(358, 358, 358)
-                        .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jLabel8)))))
                 .addContainerGap(184, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -272,9 +274,7 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
                 .addComponent(jLabel10)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnDashBoard)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -328,75 +328,12 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
                                 .addGap(20, 20, 20)
                                 .addComponent(txtHorsepower, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(btnSave)
-                .addGap(726, 726, 726))
+                .addGap(771, 771, 771))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
-
-        WorkRequest car = new WorkRequest();
-        car.setMake(txtMake.getText());
-        car.setModel(txtModel.getText());
-        car.setYear(txtYear.getText());
-        car.setCategory(txtCategory.getText());
-        car.setState(txtState.getText());
-        car.setCity(txtCity.getText());
-        car.setVin(txtVin.getText());
-        car.setMileage(txtMileage.getText());
-        car.setHorsepower(txtHorsepower.getText());
-        /*car.setInColor(txtInterColor.getText());
-        car.setFuelType(txtFuelType.getText());
-        car.setTransmission(txtTransmission.getText());
-        car.setMpgCity(txtMpgCity.getText());
-        car.setMpgHwy(txtMpgHwy.getText());
-        car.setDrivetrain(txtDrivetrain.getText());
-        car.setContact(jTextField1.getText());*/
-        /*car.setFrontPicture(path1);
-        car.setBackPicture(path2);
-        car.setDashBoardPicture(path3);*/
-        car.setPath(path);
-        car.setPublisher(userAccount);
-        system.getWorkQueue().getWorkRequestList().add(car);
-        DB4OUtil.getInstance().storeSystem(system);
-        JOptionPane.showMessageDialog(this, "Used car information saved.");
-
-    }//GEN-LAST:event_btnSaveActionPerformed
-
-    private void btnDashBoardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDashBoardActionPerformed
-        // TODO add your handling code here:
-        JFileChooser chooser = new JFileChooser();
-        FileNameExtensionFilter filter = new FileNameExtensionFilter("please choose a pic","img","png");
-        chooser.setFileFilter(filter);
-        chooser.setCurrentDirectory(new File("."));
-        int result = chooser.showOpenDialog(null);
-        //File file=chooser.getSelectedFile();
-        if(result==JFileChooser.APPROVE_OPTION){
-            String name = chooser.getSelectedFile().getPath();
-            if(name==""||name==null){
-                return;
-            }
-            //ImageIcon icon = new ImageIcon(name);
-            //Image image = icon.getImage();
-            //Image newImage = image.getScaledInstance(img2.getWidth(), img2.getHeight(), Image.SCALE_DEFAULT);
-            //System.out.println(img2.getWidth()+""+img2.getHeight());
-            //icon.setImage(newImage);
-            //img2.setIcon(icon);
-            contentPanel.setLayout(new GridLayout(0,2));
-            PictureCell cell = new PictureCell(container,userAccount,system,name);
-            contentPanel.add(cell);
-            updateUI();
-            //path.set(i, name);
-            path[i] = name;
-            i++;
-        }
-    }//GEN-LAST:event_btnDashBoardActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnDashBoard;
-    private javax.swing.JButton btnSave;
     private javax.swing.JPanel contentPanel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

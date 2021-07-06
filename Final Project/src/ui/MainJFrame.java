@@ -31,6 +31,7 @@ import ui.CustomerServiceRole.BuyerServiceWorkArea;
 import ui.CustomerServiceRole.SellerServiceWorkArea;
 import ui.ReceptionistRole.ReceptionistHome;
 import ui.Seller.SellerRegisterJPanel;
+import ui.Seller.SellerWorkArea;
 import ui.Seller.SellerWorkAreaJPanel;
 import ui.SystemAdminRole.SystemAdminWorkAreaJPanel;
 import ui.UserAdminRole.UserAdminWorkAreaJPanel;
@@ -52,7 +53,8 @@ public class MainJFrame extends javax.swing.JFrame {
     public MainJFrame() {
         initComponents();
         system = dB4OUtil.retrieveSystem();
-        this.setSize(1024, 768);
+        //this.setSize(1024, 768);
+        this.setSize(1200, 850);
         Router.getInstance(this);
     }
 
@@ -150,7 +152,7 @@ public class MainJFrame extends javax.swing.JFrame {
         btnSellerRegister.setBounds(20, 490, 103, 38);
 
         jPanel1.add(LoginJPanel);
-        LoginJPanel.setBounds(0, 0, 200, 770);
+        LoginJPanel.setBounds(0, 0, 200, 890);
 
         jSplitPane1.setLeftComponent(jPanel1);
 
@@ -163,11 +165,11 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(99, 148, 249));
         jLabel4.setText("Second-hand house sale System");
         jPanel2.add(jLabel4);
-        jLabel4.setBounds(20, 220, 760, 120);
+        jLabel4.setBounds(140, 260, 760, 120);
 
         jLabel6.setText("@ Zhengyu Ke");
         jPanel2.add(jLabel6);
-        jLabel6.setBounds(590, 400, 100, 18);
+        jLabel6.setBounds(780, 460, 100, 18);
 
         container.add(jPanel2, "card2");
 
@@ -242,7 +244,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 Router.getInstance(null).go(home);
             }
             else if(userAccount.getRole() instanceof SellerRole){
-                SellerWorkAreaJPanel home = new SellerWorkAreaJPanel(container, userAccount, inOrganization, inEnterprise, system);
+                SellerWorkArea home = new SellerWorkArea(container, userAccount, inOrganization, inEnterprise, system);
                 Router.getInstance(null).go(home);
             }
             else if(userAccount.getRole() instanceof InspectorRole){
