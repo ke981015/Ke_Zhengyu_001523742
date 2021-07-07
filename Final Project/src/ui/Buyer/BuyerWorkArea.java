@@ -156,27 +156,25 @@ public class BuyerWorkArea extends javax.swing.JPanel {
             SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSeparator1)
             .addGroup(SideBarLayout.createSequentialGroup()
-                .addComponent(jButton5)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(SideBarLayout.createSequentialGroup()
                 .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(SideBarLayout.createSequentialGroup()
-                        .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton2)
-                            .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(SideBarLayout.createSequentialGroup()
-                                    .addGap(25, 25, 25)
-                                    .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(SideBarLayout.createSequentialGroup()
-                                    .addGap(30, 30, 30)
-                                    .addComponent(backButton))
-                                .addGroup(SideBarLayout.createSequentialGroup()
-                                    .addGap(33, 33, 33)
-                                    .addComponent(jButton6))))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jButton2)
+                        .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(SideBarLayout.createSequentialGroup()
+                                .addGap(25, 25, 25)
+                                .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(SideBarLayout.createSequentialGroup()
+                                .addGap(30, 30, 30)
+                                .addComponent(backButton))
+                            .addGroup(SideBarLayout.createSequentialGroup()
+                                .addGap(33, 33, 33)
+                                .addComponent(jButton6))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SideBarLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton3)))
+                        .addComponent(jButton3))
+                    .addGroup(SideBarLayout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         SideBarLayout.setVerticalGroup(
@@ -192,9 +190,9 @@ public class BuyerWorkArea extends javax.swing.JPanel {
                 .addComponent(jButton2)
                 .addGap(35, 35, 35)
                 .addComponent(jButton3)
-                .addGap(49, 49, 49)
+                .addGap(40, 40, 40)
                 .addComponent(jButton5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 217, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 326, Short.MAX_VALUE)
                 .addComponent(backButton)
                 .addGap(47, 47, 47))
         );
@@ -206,7 +204,7 @@ public class BuyerWorkArea extends javax.swing.JPanel {
         jSplitPane1.setRightComponent(jPanel2);
 
         add(jSplitPane1);
-        jSplitPane1.setBounds(0, 0, 1150, 720);
+        jSplitPane1.setBounds(0, 0, 1250, 820);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

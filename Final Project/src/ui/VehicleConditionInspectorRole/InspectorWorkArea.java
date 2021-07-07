@@ -130,14 +130,19 @@ public class InspectorWorkArea extends javax.swing.JPanel {
             }
         });
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Tag"));
 
+        jCheckBox1.setBackground(new java.awt.Color(255, 255, 255));
         jCheckBox1.setText("Free property fee");
 
+        jCheckBox2.setBackground(new java.awt.Color(255, 255, 255));
         jCheckBox2.setText("Independent balcony");
 
+        jCheckBox3.setBackground(new java.awt.Color(255, 255, 255));
         jCheckBox3.setText("Close to the subway");
 
+        jCheckBox4.setBackground(new java.awt.Color(255, 255, 255));
         jCheckBox4.setText("High greening rate");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -167,18 +172,25 @@ public class InspectorWorkArea extends javax.swing.JPanel {
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Bedroom facilities"));
 
+        jCheckBox5.setBackground(new java.awt.Color(255, 255, 255));
         jCheckBox5.setText("air conditioning");
 
+        jCheckBox6.setBackground(new java.awt.Color(255, 255, 255));
         jCheckBox6.setText("wardrobe");
 
+        jCheckBox7.setBackground(new java.awt.Color(255, 255, 255));
         jCheckBox7.setText("bed");
 
+        jCheckBox8.setBackground(new java.awt.Color(255, 255, 255));
         jCheckBox8.setText("mattress");
 
+        jCheckBox9.setBackground(new java.awt.Color(255, 255, 255));
         jCheckBox9.setText("table");
 
+        jCheckBox10.setBackground(new java.awt.Color(255, 255, 255));
         jCheckBox10.setText("chair");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -221,16 +233,22 @@ public class InspectorWorkArea extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Kitchen facilities"));
 
+        jCheckBox11.setBackground(new java.awt.Color(255, 255, 255));
         jCheckBox11.setText("Microwave oven");
 
+        jCheckBox12.setBackground(new java.awt.Color(255, 255, 255));
         jCheckBox12.setText("Gas stoves");
 
+        jCheckBox13.setBackground(new java.awt.Color(255, 255, 255));
         jCheckBox13.setText("Range hood");
 
+        jCheckBox14.setBackground(new java.awt.Color(255, 255, 255));
         jCheckBox14.setText("refrigerator");
 
+        jCheckBox15.setBackground(new java.awt.Color(255, 255, 255));
         jCheckBox15.setText("Water heater");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -270,10 +288,13 @@ public class InspectorWorkArea extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Toilet facilities"));
 
+        jCheckBox16.setBackground(new java.awt.Color(255, 255, 255));
         jCheckBox16.setText("washing machine");
 
+        jCheckBox17.setBackground(new java.awt.Color(255, 255, 255));
         jCheckBox17.setText("Water heater");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -297,22 +318,31 @@ public class InspectorWorkArea extends javax.swing.JPanel {
                 .addGap(21, 21, 21))
         );
 
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Living room facilities"));
 
+        jCheckBox18.setBackground(java.awt.Color.white);
         jCheckBox18.setText("router");
 
+        jCheckBox19.setBackground(java.awt.Color.white);
         jCheckBox19.setText("TV");
 
+        jCheckBox20.setBackground(java.awt.Color.white);
         jCheckBox20.setText("coffee table");
 
+        jCheckBox21.setBackground(java.awt.Color.white);
         jCheckBox21.setText("sofa");
 
+        jCheckBox22.setBackground(java.awt.Color.white);
         jCheckBox22.setText("Shoebox");
 
+        jCheckBox23.setBackground(new java.awt.Color(255, 255, 255));
         jCheckBox23.setText("chair");
 
+        jCheckBox24.setBackground(new java.awt.Color(255, 255, 255));
         jCheckBox24.setText("table");
 
+        jCheckBox25.setBackground(new java.awt.Color(255, 255, 255));
         jCheckBox25.setText("air conditioning");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
