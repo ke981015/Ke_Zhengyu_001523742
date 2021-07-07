@@ -17,6 +17,31 @@ public abstract class AbstractQuestion {
 
     String[] path = new String[10];
     private boolean done;
+    private String tag1;
+    private String tag2;
+    private String tag3;
+    private String tag4;
+    private String livingroom1;
+    private String livingroom2;
+    private String livingroom3;
+    private String livingroom4;
+    private String livingroom5;
+    private String livingroom6;
+    private String livingroom7;
+    private String livingroom8;
+    private String bedroom1;
+    private String bedroom2;
+    private String bedroom3;
+    private String bedroom4;
+    private String bedroom5;
+    private String bedroom6;
+    private String toilet1;
+    private String toilet2;
+    private String kitchen1;
+    private String kitchen2;
+    private String kitchen3;
+    private String kitchen4;
+    private String kitchen5;
     private String question;
     private String dealdate;
     private String dealprice;
@@ -43,18 +68,6 @@ public abstract class AbstractQuestion {
     private String backPicture;
     private String dashBoardPicture;
     private String valuation;
-    private String q1;
-    private String q2;
-    private String q3;
-    private String q4;
-    private String q5;
-    private String q6;
-    private String q7;
-    private String q8;
-    private String q9;
-    private String q10;
-    private String q11;
-    private String q12;
     private String date;
     private String phone;
     private String name;
@@ -249,102 +262,6 @@ public abstract class AbstractQuestion {
         this.valuation = valuation;
     }
 
-    public String getQ1() {
-        return q1;
-    }
-
-    public void setQ1(String q1) {
-        this.q1 = q1;
-    }
-
-    public String getQ2() {
-        return q2;
-    }
-
-    public void setQ2(String q2) {
-        this.q2 = q2;
-    }
-
-    public String getQ3() {
-        return q3;
-    }
-
-    public void setQ3(String q3) {
-        this.q3 = q3;
-    }
-
-    public String getQ4() {
-        return q4;
-    }
-
-    public void setQ4(String q4) {
-        this.q4 = q4;
-    }
-
-    public String getQ5() {
-        return q5;
-    }
-
-    public void setQ5(String q5) {
-        this.q5 = q5;
-    }
-
-    public String getQ6() {
-        return q6;
-    }
-
-    public void setQ6(String q6) {
-        this.q6 = q6;
-    }
-
-    public String getQ7() {
-        return q7;
-    }
-
-    public void setQ7(String q7) {
-        this.q7 = q7;
-    }
-
-    public String getQ8() {
-        return q8;
-    }
-
-    public void setQ8(String q8) {
-        this.q8 = q8;
-    }
-
-    public String getQ9() {
-        return q9;
-    }
-
-    public void setQ9(String q9) {
-        this.q9 = q9;
-    }
-
-    public String getQ10() {
-        return q10;
-    }
-
-    public void setQ10(String q10) {
-        this.q10 = q10;
-    }
-
-    public String getQ11() {
-        return q11;
-    }
-
-    public void setQ11(String q11) {
-        this.q11 = q11;
-    }
-
-    public String getQ12() {
-        return q12;
-    }
-
-    public void setQ12(String q12) {
-        this.q12 = q12;
-    }
-
     public String getDate() {
         return date;
     }
@@ -415,6 +332,206 @@ public abstract class AbstractQuestion {
 
     public void setPath(String[] path) {
         this.path = path;
+    }
+
+    public String getTag1() {
+        return tag1;
+    }
+
+    public void setTag1(String tag1) {
+        this.tag1 = tag1;
+    }
+
+    public String getTag2() {
+        return tag2;
+    }
+
+    public void setTag2(String tag2) {
+        this.tag2 = tag2;
+    }
+
+    public String getTag3() {
+        return tag3;
+    }
+
+    public void setTag3(String tag3) {
+        this.tag3 = tag3;
+    }
+
+    public String getTag4() {
+        return tag4;
+    }
+
+    public void setTag4(String tag4) {
+        this.tag4 = tag4;
+    }
+
+    public String getLivingroom1() {
+        return livingroom1;
+    }
+
+    public void setLivingroom1(String livingroom1) {
+        this.livingroom1 = livingroom1;
+    }
+
+    public String getLivingroom2() {
+        return livingroom2;
+    }
+
+    public void setLivingroom2(String livingroom2) {
+        this.livingroom2 = livingroom2;
+    }
+
+    public String getLivingroom3() {
+        return livingroom3;
+    }
+
+    public void setLivingroom3(String livingroom3) {
+        this.livingroom3 = livingroom3;
+    }
+
+    public String getLivingroom4() {
+        return livingroom4;
+    }
+
+    public void setLivingroom4(String livingroom4) {
+        this.livingroom4 = livingroom4;
+    }
+
+    public String getLivingroom5() {
+        return livingroom5;
+    }
+
+    public void setLivingroom5(String livingroom5) {
+        this.livingroom5 = livingroom5;
+    }
+
+    public String getLivingroom6() {
+        return livingroom6;
+    }
+
+    public void setLivingroom6(String livingroom6) {
+        this.livingroom6 = livingroom6;
+    }
+
+    public String getLivingroom7() {
+        return livingroom7;
+    }
+
+    public void setLivingroom7(String livingroom7) {
+        this.livingroom7 = livingroom7;
+    }
+
+    public String getLivingroom8() {
+        return livingroom8;
+    }
+
+    public void setLivingroom8(String livingroom8) {
+        this.livingroom8 = livingroom8;
+    }
+
+    public String getBedroom1() {
+        return bedroom1;
+    }
+
+    public void setBedroom1(String bedroom1) {
+        this.bedroom1 = bedroom1;
+    }
+
+    public String getBedroom2() {
+        return bedroom2;
+    }
+
+    public void setBedroom2(String bedroom2) {
+        this.bedroom2 = bedroom2;
+    }
+
+    public String getBedroom3() {
+        return bedroom3;
+    }
+
+    public void setBedroom3(String bedroom3) {
+        this.bedroom3 = bedroom3;
+    }
+
+    public String getBedroom4() {
+        return bedroom4;
+    }
+
+    public void setBedroom4(String bedroom4) {
+        this.bedroom4 = bedroom4;
+    }
+
+    public String getBedroom5() {
+        return bedroom5;
+    }
+
+    public void setBedroom5(String bedroom5) {
+        this.bedroom5 = bedroom5;
+    }
+
+    public String getBedroom6() {
+        return bedroom6;
+    }
+
+    public void setBedroom6(String bedroom6) {
+        this.bedroom6 = bedroom6;
+    }
+
+    public String getToilet1() {
+        return toilet1;
+    }
+
+    public void setToilet1(String toilet1) {
+        this.toilet1 = toilet1;
+    }
+
+    public String getToilet2() {
+        return toilet2;
+    }
+
+    public void setToilet2(String toilet2) {
+        this.toilet2 = toilet2;
+    }
+
+    public String getKitchen1() {
+        return kitchen1;
+    }
+
+    public void setKitchen1(String kitchen1) {
+        this.kitchen1 = kitchen1;
+    }
+
+    public String getKitchen2() {
+        return kitchen2;
+    }
+
+    public void setKitchen2(String kitchen2) {
+        this.kitchen2 = kitchen2;
+    }
+
+    public String getKitchen3() {
+        return kitchen3;
+    }
+
+    public void setKitchen3(String kitchen3) {
+        this.kitchen3 = kitchen3;
+    }
+
+    public String getKitchen4() {
+        return kitchen4;
+    }
+
+    public void setKitchen4(String kitchen4) {
+        this.kitchen4 = kitchen4;
+    }
+
+    public String getKitchen5() {
+        return kitchen5;
+    }
+
+    public void setKitchen5(String kitchen5) {
+        this.kitchen5 = kitchen5;
     }
 
     

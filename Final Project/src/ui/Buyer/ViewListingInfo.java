@@ -70,8 +70,10 @@ public class ViewListingInfo extends javax.swing.JPanel {
         txtHorsepower.setText(course.getHorsepower());
         contentPanel.setLayout(new GridLayout(0,2));
         for(int i = 0; i<10 ;i++){
-            PictureCell cell = new PictureCell(container,userAccount,system, path[i]);
-            contentPanel.add(cell);
+            if(path[i] != null){
+                PictureCell cell = new PictureCell(container,userAccount,system, path[i]);
+                contentPanel.add(cell);
+            }
         }
         /*ImageIcon icon = new ImageIcon(car.getFrontPicture());
         img.setIcon(icon);  
@@ -120,7 +122,7 @@ public class ViewListingInfo extends javax.swing.JPanel {
 
         jLabel10.setFont(new java.awt.Font("Skia", 1, 24)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(99, 148, 249));
-        jLabel10.setText("Create a new listing");
+        jLabel10.setText("Listing Info");
 
         jLabel8.setText("—————————————————————————————————————————————————");
 

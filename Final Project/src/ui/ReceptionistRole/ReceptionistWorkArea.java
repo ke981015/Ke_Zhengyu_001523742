@@ -260,7 +260,7 @@ public class ReceptionistWorkArea extends javax.swing.JPanel {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
 
-        ViewVehicleConditionReportJPanel report = new ViewVehicleConditionReportJPanel(userProcessContainer,business,course);
+        ViewReport report = new ViewReport(userProcessContainer,business,userAccount,course);
         jSplitPane1.setRightComponent(report);
     }//GEN-LAST:event_jButton5ActionPerformed
 

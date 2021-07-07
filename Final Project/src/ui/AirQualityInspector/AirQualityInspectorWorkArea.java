@@ -237,7 +237,7 @@ public class AirQualityInspectorWorkArea extends javax.swing.JPanel {
     }//GEN-LAST:event_backJButtonActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        course.setQ1(jTextField1.getText());
+        /*course.setQ1(jTextField1.getText());
         course.setQ2(jTextField2.getText());
         course.setQ3(jTextField3.getText());
         course.setQ4(jTextField4.getText());
@@ -248,7 +248,7 @@ public class AirQualityInspectorWorkArea extends javax.swing.JPanel {
         course.setQ9(jTextField9.getText());
         course.setQ10(jTextField10.getText());
         course.setQ11(jTextField11.getText());
-        course.setQ12(jTextField12.getText());
+        course.setQ12(jTextField12.getText());*/
         DB4OUtil.getInstance().storeSystem(business);
         JOptionPane.showMessageDialog(this, "Saved.");
     }//GEN-LAST:event_jButton1ActionPerformed

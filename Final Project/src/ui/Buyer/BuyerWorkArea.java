@@ -88,7 +88,6 @@ public class BuyerWorkArea extends javax.swing.JPanel {
         nameLabel = new javax.swing.JLabel();
         backButton = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
-        jButton4 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -108,16 +107,6 @@ public class BuyerWorkArea extends javax.swing.JPanel {
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backButtonActionPerformed(evt);
-            }
-        });
-
-        jButton4.setBackground(new java.awt.Color(255, 204, 204));
-        jButton4.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(102, 153, 255));
-        jButton4.setText("View the vehicle valuation");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
             }
         });
 
@@ -167,25 +156,28 @@ public class BuyerWorkArea extends javax.swing.JPanel {
             SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSeparator1)
             .addGroup(SideBarLayout.createSequentialGroup()
-                .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jButton5)
-                        .addComponent(jButton4))
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                .addComponent(jButton5)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(SideBarLayout.createSequentialGroup()
                 .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(SideBarLayout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(SideBarLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton6))
-                    .addGroup(SideBarLayout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(backButton)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton2)
+                            .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(SideBarLayout.createSequentialGroup()
+                                    .addGap(25, 25, 25)
+                                    .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(SideBarLayout.createSequentialGroup()
+                                    .addGap(30, 30, 30)
+                                    .addComponent(backButton))
+                                .addGroup(SideBarLayout.createSequentialGroup()
+                                    .addGap(33, 33, 33)
+                                    .addComponent(jButton6))))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SideBarLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton3)))
+                .addContainerGap())
         );
         SideBarLayout.setVerticalGroup(
             SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -194,17 +186,15 @@ public class BuyerWorkArea extends javax.swing.JPanel {
                 .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(97, 97, 97)
-                .addComponent(jButton4)
-                .addGap(36, 36, 36)
+                .addGap(82, 82, 82)
                 .addComponent(jButton6)
-                .addGap(45, 45, 45)
-                .addComponent(jButton5)
-                .addGap(18, 18, 18)
+                .addGap(32, 32, 32)
                 .addComponent(jButton2)
                 .addGap(35, 35, 35)
                 .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 157, Short.MAX_VALUE)
+                .addGap(49, 49, 49)
+                .addComponent(jButton5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 217, Short.MAX_VALUE)
                 .addComponent(backButton)
                 .addGap(47, 47, 47))
         );
@@ -244,23 +234,9 @@ public class BuyerWorkArea extends javax.swing.JPanel {
         jSplitPane1.setRightComponent(report);
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        /*int selectedRow = workRequestJTable.getSelectedRow();
-        
-        if (selectedRow < 0){
-            JOptionPane.showMessageDialog(this,"Please choose a car!");
-            return;
-        }
-        
-        WorkRequest car =  (WorkRequest)workRequestJTable.getValueAt(selectedRow, 3);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        userProcessContainer.add("QuestionJPanel", new ViewVehicleValuationJPanel(userProcessContainer,business,car));
-        layout.next(userProcessContainer);*/
-    }//GEN-LAST:event_jButton4ActionPerformed
-
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
 
-        ViewVehicleConditionReportJPanel report = new ViewVehicleConditionReportJPanel(userProcessContainer,business,course);
+        ViewReport report = new ViewReport(userProcessContainer,business,userAccount,course);
         jSplitPane1.setRightComponent(report);
     }//GEN-LAST:event_jButton5ActionPerformed
 
@@ -289,7 +265,6 @@ public class BuyerWorkArea extends javax.swing.JPanel {
     private javax.swing.JButton backButton;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JPanel jPanel2;
