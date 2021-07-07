@@ -23,7 +23,7 @@ import ui.AirQualityInspector.AirQualityInspectorWorkArea;
 import ui.Buyer.BuyerWorkArea;
 import ui.ReceptionistRole.ReceptionistWorkArea;
 import ui.Seller.SellerWorkAreaJPanel;
-import ui.VehicleConditionInspectorRole.InspectorWorkArea;
+import ui.InspectorRole.InspectorWorkArea;
 
 /**
  *

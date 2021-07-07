@@ -45,6 +45,10 @@ public abstract class AbstractQuestion {
     private String question;
     private String dealdate;
     private String dealprice;
+    private String temperature;
+    private String humidity;
+    private String Formaldehyde;
+    
     private UserAccount sender;
     private UserAccount solver;
     private UserAccount publisher;
@@ -532,6 +536,30 @@ public abstract class AbstractQuestion {
 
     public void setKitchen5(String kitchen5) {
         this.kitchen5 = kitchen5;
+    }
+
+    public String getTemperature() {
+        return temperature;
+    }
+
+    public void setTemperature(String temperature) {
+        this.temperature = temperature;
+    }
+
+    public String getHumidity() {
+        return humidity;
+    }
+
+    public void setHumidity(String humidity) {
+        this.humidity = humidity;
+    }
+
+    public String getFormaldehyde() {
+        return Formaldehyde;
+    }
+
+    public void setFormaldehyde(String Formaldehyde) {
+        this.Formaldehyde = Formaldehyde;
     }
 
     

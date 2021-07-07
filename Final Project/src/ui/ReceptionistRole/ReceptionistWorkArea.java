@@ -27,7 +27,6 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
-import ui.WarranterRole.WarranterWorkAreaJPanel;
 
 /**
  *
@@ -273,7 +272,7 @@ public class ReceptionistWorkArea extends javax.swing.JPanel {
         try {
             java.awt.Desktop.getDesktop().open(file);
         } catch (IOException ex) {
-            Logger.getLogger(WarranterWorkAreaJPanel.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ReceptionistWorkArea.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 

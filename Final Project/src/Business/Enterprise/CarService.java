@@ -9,7 +9,6 @@ import Business.Organization.AppraiserOrganization;
 import Business.Organization.BuyerOrganization;
 import Business.Organization.Organization;
 import Business.Organization.VehicleConditionInspectorOrganization;
-import Business.Organization.WarranterOrganization;
 import Business.Role.Role;
 import java.util.ArrayList;
 
@@ -32,7 +31,7 @@ public class CarService extends Enterprise {
         ArrayList<Organization> organizations = new ArrayList();
         organizations.add(new VehicleConditionInspectorOrganization());
         organizations.add(new AppraiserOrganization());
-        organizations.add(new WarranterOrganization());
+        //organizations.add(new WarranterOrganization());
         return organizations;
     }
     

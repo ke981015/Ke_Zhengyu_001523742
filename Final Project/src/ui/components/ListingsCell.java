@@ -20,7 +20,7 @@ import ui.AirQualityInspector.AirQualityInspectorHome;
 import ui.AirQualityInspector.AirQualityInspectorWorkArea;
 import ui.Buyer.BuyerWorkArea;
 import ui.Seller.SellerWorkAreaJPanel;
-import ui.VehicleConditionInspectorRole.InspectorWorkArea;
+import ui.InspectorRole.InspectorWorkArea;
 
 /**
  *
@@ -139,7 +139,7 @@ public class ListingsCell extends javax.swing.JPanel {
             Router.getInstance(null).go(new InspectorWorkArea(userProcessContainer,business,userAccount,course));
         }
         else if(userAccount.getRole() instanceof AirQualityInspectorRole){
-            Router.getInstance(null).go(new AirQualityInspectorWorkArea(userProcessContainer,business,course));
+            Router.getInstance(null).go(new AirQualityInspectorWorkArea(userProcessContainer,business,userAccount,course));
         }
         
     }//GEN-LAST:event_click

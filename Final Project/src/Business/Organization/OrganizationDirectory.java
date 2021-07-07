@@ -49,10 +49,10 @@ public class OrganizationDirectory {
             organization = new CustomerServiceOrganization();
             organizationList.add(organization);
         }
-        if (type.getValue().equals(Type.Warranter.getValue())){
+        /*if (type.getValue().equals(Type.Warranter.getValue())){
             organization = new WarranterOrganization();
             organizationList.add(organization);
-        }
+        }*/
         return organization;
     }
 }

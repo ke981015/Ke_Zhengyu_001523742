@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ui.VehicleConditionInspectorRole;
+package ui.InspectorRole;
 
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;

@@ -35,7 +35,7 @@ import ui.Seller.SellerWorkArea;
 import ui.Seller.SellerWorkAreaJPanel;
 import ui.SystemAdminRole.SystemAdminWorkAreaJPanel;
 import ui.UserAdminRole.UserAdminWorkAreaJPanel;
-import ui.VehicleConditionInspectorRole.InspectorHome;
+import ui.InspectorRole.InspectorHome;
 
 
 /**

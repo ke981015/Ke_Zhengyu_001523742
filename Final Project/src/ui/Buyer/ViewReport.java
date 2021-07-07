@@ -5,7 +5,6 @@
  */
 package ui.Buyer;
 
-import ui.VehicleConditionInspectorRole.*;
 import ui.Seller.*;
 import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;

@@ -26,8 +26,6 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
-import ui.WarranterRole.WarranterWorkAreaJPanel;
-
 /**
  *
  * @author Ke
@@ -53,27 +51,8 @@ public class BuyerWorkArea extends javax.swing.JPanel {
         this.userAccount = account;
         this.business = business;
         this.course = course;
-        initCourses(/*business.getListingsDirectory()*/);
     }
-    
-    private void initCourses(/*ListingsDirectory courseDir*/){
 
-        /*for (Listings course : courseDir){
-            ListingsCell cell = new ListingsCell(course);
-            jPanel1.add(cell);
-            cell.setPreferredSize(new Dimension(jPanel1.getWidth(), cell_H));
-        }*/
-
-        //scrollPanel.setSize(contentPanel.getWidth(), cell_H * courseDir.getList().size() / 2 + 1);
-
-        /*jPanel1.setSize(jPanel1.getWidth(), cell_H * courseDir.getList().size() / 2 + 1);
-
-        jPanel1.setPreferredSize(new Dimension(jPanel1.getWidth(), cell_H * courseDir.getList().size() / 2 + 1));
-        updateUI();*/
-    }
-    
-
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -90,8 +69,8 @@ public class BuyerWorkArea extends javax.swing.JPanel {
         jSeparator1 = new javax.swing.JSeparator();
         jButton6 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
 
         setLayout(null);
@@ -130,16 +109,6 @@ public class BuyerWorkArea extends javax.swing.JPanel {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(255, 204, 204));
-        jButton2.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(102, 153, 255));
-        jButton2.setText("after-sale warranty");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
         jButton3.setBackground(new java.awt.Color(255, 204, 204));
         jButton3.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jButton3.setForeground(new java.awt.Color(102, 153, 255));
@@ -150,6 +119,16 @@ public class BuyerWorkArea extends javax.swing.JPanel {
             }
         });
 
+        jButton7.setBackground(new java.awt.Color(255, 204, 204));
+        jButton7.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jButton7.setForeground(new java.awt.Color(102, 153, 255));
+        jButton7.setText("View air quality report");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout SideBarLayout = new javax.swing.GroupLayout(SideBar);
         SideBar.setLayout(SideBarLayout);
         SideBarLayout.setHorizontalGroup(
@@ -157,8 +136,7 @@ public class BuyerWorkArea extends javax.swing.JPanel {
             .addComponent(jSeparator1)
             .addGroup(SideBarLayout.createSequentialGroup()
                 .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jButton2)
+                    .addGroup(SideBarLayout.createSequentialGroup()
                         .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(SideBarLayout.createSequentialGroup()
                                 .addGap(25, 25, 25)
@@ -168,13 +146,16 @@ public class BuyerWorkArea extends javax.swing.JPanel {
                                 .addComponent(backButton))
                             .addGroup(SideBarLayout.createSequentialGroup()
                                 .addGap(33, 33, 33)
-                                .addComponent(jButton6))))
+                                .addComponent(jButton6)))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SideBarLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButton3))
                     .addGroup(SideBarLayout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap()
+                        .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         SideBarLayout.setVerticalGroup(
@@ -186,13 +167,13 @@ public class BuyerWorkArea extends javax.swing.JPanel {
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(82, 82, 82)
                 .addComponent(jButton6)
-                .addGap(32, 32, 32)
-                .addComponent(jButton2)
-                .addGap(35, 35, 35)
+                .addGap(94, 94, 94)
                 .addComponent(jButton3)
                 .addGap(40, 40, 40)
                 .addComponent(jButton5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 326, Short.MAX_VALUE)
+                .addGap(34, 34, 34)
+                .addComponent(jButton7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 265, Short.MAX_VALUE)
                 .addComponent(backButton)
                 .addGap(47, 47, 47))
         );
@@ -207,27 +188,8 @@ public class BuyerWorkArea extends javax.swing.JPanel {
         jSplitPane1.setBounds(0, 0, 1250, 820);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        File file = new File("src\\resource\\after-sale warranty.docx");
-        try {
-            java.awt.Desktop.getDesktop().open(file);
-        } catch (IOException ex) {
-            Logger.getLogger(WarranterWorkAreaJPanel.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        /*int selectedRow = workRequestJTable.getSelectedRow();
-        
-        if (selectedRow < 0){
-            JOptionPane.showMessageDialog(this,"Please choose a car!");
-            return;
-        }
-        
-        WorkRequest car =  (WorkRequest)workRequestJTable.getValueAt(selectedRow, 3);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        userProcessContainer.add("QuestionJPanel", new ViewVehicleInfoJPanel(userProcessContainer,business,car));
-        layout.next(userProcessContainer);*/
+
         ViewListingInfo report = new ViewListingInfo(userProcessContainer,business,userAccount,course);
         jSplitPane1.setRightComponent(report);
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -239,17 +201,7 @@ public class BuyerWorkArea extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        /*int selectedRow = workRequestJTable.getSelectedRow();
-        
-        if (selectedRow < 0){
-            JOptionPane.showMessageDialog(this,"Please choose a car!");
-            return;
-        }
-        
-        WorkRequest car =  (WorkRequest)workRequestJTable.getValueAt(selectedRow, 3);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        userProcessContainer.add("QuestionJPanel", new BookAppointmentJPanel(userProcessContainer,business,car));
-        layout.next(userProcessContainer);*/
+
         BookAppointmentJPanel report = new BookAppointmentJPanel(userProcessContainer,business,course);
         jSplitPane1.setRightComponent(report);
     }//GEN-LAST:event_jButton6ActionPerformed
@@ -258,13 +210,19 @@ public class BuyerWorkArea extends javax.swing.JPanel {
         Router.getInstance(null).back(0);
     }//GEN-LAST:event_backButtonActionPerformed
 
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        ViewAirQualityReport report = new ViewAirQualityReport(userProcessContainer,business,userAccount,course);
+        jSplitPane1.setRightComponent(report);
+    }//GEN-LAST:event_jButton7ActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel SideBar;
     private javax.swing.JButton backButton;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSplitPane jSplitPane1;

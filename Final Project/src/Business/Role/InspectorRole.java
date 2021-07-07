@@ -11,7 +11,7 @@ import Business.Organization.SellerOrganization;
 import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
 import ui.Buyer.BuyerWorkArea;
-import ui.VehicleConditionInspectorRole.InspectorHome;
+import ui.InspectorRole.InspectorHome;
 
 /**
  *

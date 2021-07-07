@@ -7,7 +7,6 @@ package Business.Enterprise;
 
 import Business.Organization.Organization;
 import Business.Organization.VehicleConditionInspectorOrganization;
-import Business.Organization.WarranterOrganization;
 import Business.Role.Role;
 import java.util.ArrayList;
 
@@ -28,7 +27,7 @@ public class CustomerService extends Enterprise {
     @Override
     public ArrayList<Organization> getSupportedOrganization() {
         ArrayList<Organization> organizations = new ArrayList();
-        organizations.add(new WarranterOrganization());
+        //organizations.add(new WarranterOrganization());
         return organizations;
     }
     

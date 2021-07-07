@@ -69,12 +69,15 @@ public class ViewListingInfo extends javax.swing.JPanel {
         txtMileage.setText(course.getMileage());
         txtHorsepower.setText(course.getHorsepower());
         contentPanel.setLayout(new GridLayout(0,2));
+        if(path == null)
+            return;
         for(int i = 0; i<10 ;i++){
             if(path[i] != null){
                 PictureCell cell = new PictureCell(container,userAccount,system, path[i]);
                 contentPanel.add(cell);
             }
         }
+        
         /*ImageIcon icon = new ImageIcon(car.getFrontPicture());
         img.setIcon(icon);  
         ImageIcon icon1 = new ImageIcon(car.getBackPicture());
