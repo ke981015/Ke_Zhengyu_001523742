@@ -7,24 +7,14 @@ package ui.Seller;
 
 import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
-import Business.Router;
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.WorkRequest;
-import java.awt.CardLayout;
 import java.awt.GridLayout;
-import java.awt.Image;
-import java.io.IOException;
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import ui.components.ListingsCell;
 import ui.components.PictureCell;
 
 /**
@@ -42,9 +32,6 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
     //List<String> path = new ArrayList<>();
     String[] path = new String[10];
     int i = 0;
-    String path1 ="";
-    String path2 ="";
-    String path3 ="";
     
     public ListingInfoJPanel(JPanel userProcessContainer, EcoSystem system, UserAccount userAccount) {
         initComponents();
@@ -66,90 +53,108 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
         jLabel10 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        txtMake = new javax.swing.JTextField();
-        jLabel17 = new javax.swing.JLabel();
-        txtModel = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
-        txtYear = new javax.swing.JTextField();
+        txtAd1 = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
-        txtCategory = new javax.swing.JTextField();
+        txtAd2 = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
-        txtState = new javax.swing.JTextField();
+        txtRent = new javax.swing.JTextField();
+        jRadioButton1 = new javax.swing.JRadioButton();
         jLabel21 = new javax.swing.JLabel();
-        txtCity = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         txtVin = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        txtMileage = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         txtHorsepower = new javax.swing.JTextField();
         btnSave = new javax.swing.JButton();
         btnDashBoard = new javax.swing.JButton();
         jLabel22 = new javax.swing.JLabel();
-        txtMake1 = new javax.swing.JTextField();
+        txtArea = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         contentPanel = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        ComboState = new javax.swing.JComboBox<>();
+        ComboCity = new javax.swing.JComboBox<>();
+        jLabel23 = new javax.swing.JLabel();
+        ComboOri = new javax.swing.JComboBox<>();
+        txtBath = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        txtBed = new javax.swing.JTextField();
+        txtLiving = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        txtFl = new javax.swing.JTextField();
+        jLabel24 = new javax.swing.JLabel();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jLabel25 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel10.setFont(new java.awt.Font("Skia", 1, 24)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(99, 148, 249));
         jLabel10.setText("Create a new listing");
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 45, -1, -1));
 
         jLabel8.setText("—————————————————————————————————————————————————");
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(87, 86, -1, -1));
 
         jLabel16.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(102, 153, 255));
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel16.setText("State:");
-
-        jLabel17.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(102, 153, 255));
-        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel17.setText("Community:");
+        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(86, 160, 49, -1));
 
         jLabel18.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(102, 153, 255));
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel18.setText("Address line1:");
+        add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(422, 157, -1, -1));
+        add(txtAd1, new org.netbeans.lib.awtextra.AbsoluteConstraints(549, 157, 390, -1));
 
         jLabel19.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(102, 153, 255));
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel19.setText("Address line2:");
+        add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(422, 212, -1, -1));
+        add(txtAd2, new org.netbeans.lib.awtextra.AbsoluteConstraints(549, 209, 390, -1));
 
         jLabel20.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(102, 153, 255));
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel20.setText("Expected rent:");
+        add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 390, 121, -1));
+        add(txtRent, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 390, 130, -1));
+
+        jRadioButton1.setText("YES");
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
+        add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 330, -1, -1));
 
         jLabel21.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(102, 153, 255));
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel21.setText("Area:");
+        add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 89, -1));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(102, 153, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel1.setText("Name:");
-
-        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(102, 153, 255));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel2.setText("Time:");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 89, -1));
+        add(txtVin, new org.netbeans.lib.awtextra.AbsoluteConstraints(173, 450, 100, -1));
 
         jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(102, 153, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Phone:");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 450, 89, -1));
+        add(txtHorsepower, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 450, 160, -1));
 
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
@@ -157,6 +162,7 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
                 btnSaveActionPerformed(evt);
             }
         });
+        add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 760, 330, -1));
 
         btnDashBoard.setBackground(new java.awt.Color(255, 204, 204));
         btnDashBoard.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
@@ -167,11 +173,14 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
                 btnDashBoardActionPerformed(evt);
             }
         });
+        add(btnDashBoard, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 760, -1, -1));
 
         jLabel22.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(102, 153, 255));
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel22.setText("City:");
+        add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(86, 212, 49, -1));
+        add(txtArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(173, 270, 100, -1));
 
         contentPanel.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -179,7 +188,7 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
         contentPanel.setLayout(contentPanelLayout);
         contentPanelLayout.setHorizontalGroup(
             contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 760, Short.MAX_VALUE)
+            .addGap(0, 917, Short.MAX_VALUE)
         );
         contentPanelLayout.setVerticalGroup(
             contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -188,214 +197,139 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
 
         jScrollPane1.setViewportView(contentPanel);
 
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 510, 870, 230));
+
         jLabel5.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(102, 153, 255));
         jLabel5.setText("Elevator:");
-
-        jTextField2.setBackground(new java.awt.Color(0, 0, 255));
-
-        jTextField3.setBackground(new java.awt.Color(0, 0, 255));
-
-        jTextField5.setBackground(new java.awt.Color(51, 102, 255));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 330, 60, -1));
 
         jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(102, 153, 255));
         jLabel4.setText("Orientation:");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 330, 90, -1));
 
         jLabel6.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(102, 153, 255));
         jLabel6.setText("Unit type:");
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 270, 74, -1));
 
         jLabel7.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(102, 153, 255));
         jLabel7.setText("Floor:");
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 390, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnDashBoard)
-                .addGap(393, 393, 393))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(72, 72, 72)
-                                .addComponent(txtState, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(32, 32, 32)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(40, 40, 40)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(72, 72, 72)
-                                                .addComponent(txtMake, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(72, 72, 72)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txtMake1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtVin, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtMileage, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtHorsepower, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(72, 72, 72)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txtModel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtYear, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtCategory, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                        .addGap(60, 60, 60)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 577, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(59, 59, 59)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel10)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(28, 28, 28)
-                                .addComponent(jLabel8))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(84, 84, 84)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(26, 26, 26)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(83, 83, 83)
-                        .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(184, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addComponent(jLabel10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnDashBoard)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel16)
-                                    .addComponent(txtMake, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(28, 28, 28)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel22)
-                                    .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(29, 29, 29)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(5, 5, 5)
-                                        .addComponent(jLabel17)
-                                        .addGap(25, 25, 25)
-                                        .addComponent(jLabel18)
-                                        .addGap(25, 25, 25)
-                                        .addComponent(jLabel19))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(txtModel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(20, 20, 20)
-                                        .addComponent(txtYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(19, 19, 19)
-                                        .addComponent(txtCategory, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(40, 40, 40)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtState, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(5, 5, 5)
-                                        .addComponent(jLabel20)))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(26, 26, 26)
-                                        .addComponent(jLabel21)
-                                        .addGap(25, 25, 25)
-                                        .addComponent(jLabel1)
-                                        .addGap(25, 25, 25)
-                                        .addComponent(jLabel2)
-                                        .addGap(25, 25, 25)
-                                        .addComponent(jLabel3))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(23, 23, 23)
-                                        .addComponent(txtMake1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(txtVin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(20, 20, 20)
-                                        .addComponent(txtMileage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(20, 20, 20)
-                                        .addComponent(txtHorsepower, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(btnSave))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(516, 516, 516)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4))
-                        .addGap(25, 25, 25)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(26, 26, 26)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel7)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(24, 24, 24)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(566, 566, 566))
-        );
+        ComboState.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "California", "Massachusetts", "New Jersey", "New York" }));
+        ComboState.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComboStateActionPerformed(evt);
+            }
+        });
+        add(ComboState, new org.netbeans.lib.awtextra.AbsoluteConstraints(173, 157, -1, -1));
+
+        ComboCity.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Los Angeles", "Hollywood", "Compton", "San Francisco" }));
+        add(ComboCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(173, 209, -1, -1));
+
+        jLabel23.setForeground(new java.awt.Color(102, 153, 255));
+        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel23.setText("㎡");
+        add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 270, 20, -1));
+
+        ComboOri.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "East", "South", "West", "North" }));
+        add(ComboOri, new org.netbeans.lib.awtextra.AbsoluteConstraints(173, 330, 134, -1));
+        add(txtBath, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 270, 30, -1));
+
+        jLabel9.setText("bathroom");
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 270, -1, -1));
+        add(txtBed, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 270, 30, -1));
+        add(txtLiving, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 270, 30, -1));
+
+        jLabel11.setText("bedroom");
+        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 270, -1, -1));
+
+        jLabel12.setText("living room");
+        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 270, -1, -1));
+        add(txtFl, new org.netbeans.lib.awtextra.AbsoluteConstraints(173, 390, 100, -1));
+
+        jLabel24.setForeground(new java.awt.Color(102, 153, 255));
+        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel24.setText("$ (every year)");
+        add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 390, 120, -1));
+
+        jRadioButton2.setText("NO");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
+        add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 330, -1, -1));
+
+        jLabel25.setForeground(new java.awt.Color(102, 153, 255));
+        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel25.setText("F");
+        add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 390, 20, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
 
         WorkRequest car = new WorkRequest();
-        car.setMake(txtMake.getText());
-        car.setModel(txtModel.getText());
-        car.setYear(txtYear.getText());
-        car.setCategory(txtCategory.getText());
-        car.setState(txtState.getText());
-        car.setCity(txtCity.getText());
-        car.setVin(txtVin.getText());
-        car.setMileage(txtMileage.getText());
-        car.setHorsepower(txtHorsepower.getText());
-        /*car.setInColor(txtInterColor.getText());
-        car.setFuelType(txtFuelType.getText());
-        car.setTransmission(txtTransmission.getText());
-        car.setMpgCity(txtMpgCity.getText());
-        car.setMpgHwy(txtMpgHwy.getText());
-        car.setDrivetrain(txtDrivetrain.getText());
-        car.setContact(jTextField1.getText());*/
-        /*car.setFrontPicture(path1);
-        car.setBackPicture(path2);
-        car.setDashBoardPicture(path3);*/
-        car.setPath(path);
-        car.setPublisher(userAccount);
+        car.setState(ComboState.getSelectedItem().toString());
+        car.setCity(ComboCity.getSelectedItem().toString());
+        
+        if(txtAd1.getText()==null||txtAd2.getText()==null){
+            JOptionPane.showMessageDialog(this, "Please enter the address.");
+            return;
+        }
+        car.setAddress1(txtAd1.getText());
+        car.setAddress2(txtAd2.getText());
+        
+        try{
+            car.setArea(Double.parseDouble(txtArea.getText()));
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(this, "Please enter the correct type in Area.");
+            return;
+        }
+        
+        car.setOrientation(ComboOri.getSelectedItem().toString());
+        
+        try{
+            car.setBedroom(Integer.parseInt(txtBed.getText()));
+            car.setLivingroom(Integer.parseInt(txtLiving.getText()));
+            car.setBathroom(Integer.parseInt(txtBath.getText()));
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(this, "Please enter the correct type in Unit type.");
+            return;
+        }
+        
+        try{
+            car.setFloor(Integer.parseInt(txtFl.getText()));
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(this, "Please enter the correct type in Floor.");
+            return;
+        }
+        
+        if(jRadioButton1.isSelected()==false && jRadioButton2.isSelected()==false){
+            JOptionPane.showMessageDialog(this, "Please choose whether there is an elevator.");
+        }
+        else{
+            if(jRadioButton1.isSelected())
+                car.setElevator(true);
+            else if(jRadioButton2.isSelected())
+                car.setElevator(false);
+        }
+        
+        try{
+            car.setRent(Double.parseDouble(txtRent.getText()));
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(this, "Please enter the correct type in Expected rent.");
+            return;
+        }
+        
+
         system.getWorkQueue().getWorkRequestList().add(car);
         DB4OUtil.getInstance().storeSystem(system);
         JOptionPane.showMessageDialog(this, "Used car information saved.");
@@ -431,45 +365,95 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnDashBoardActionPerformed
 
+    private void ComboStateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboStateActionPerformed
+        // TODO add your handling code here:
+        if(ComboState.getSelectedItem().equals("California")){
+            ComboCity.removeAllItems();
+            ComboCity.addItem("Los Angeles");
+            ComboCity.addItem("Hollywood");
+            ComboCity.addItem("Compton");
+            ComboCity.addItem("San Francisco");
+        }
+        if(ComboState.getSelectedItem().equals("Massachusetts")){
+            ComboCity.removeAllItems();
+            ComboCity.addItem("Boston");
+            ComboCity.addItem("Lowell");
+            ComboCity.addItem("Quincy");
+            ComboCity.addItem("Lynn");
+        }
+        if(ComboState.getSelectedItem().equals("New Jersey")){
+            ComboCity.removeAllItems();
+            ComboCity.addItem("Newark");
+            ComboCity.addItem("Jersey City");
+            ComboCity.addItem("Paterson");
+            ComboCity.addItem("Elizabeth");
+        }
+        if(ComboState.getSelectedItem().equals("New York")){
+            ComboCity.removeAllItems();
+            ComboCity.addItem("New York City");
+            ComboCity.addItem("Buffalo");
+            ComboCity.addItem("Rochester");
+            ComboCity.addItem("Albany");
+        }
+
+            
+    }//GEN-LAST:event_ComboStateActionPerformed
+
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        // TODO add your handling code here:
+        if(jRadioButton1.isSelected()){
+            jRadioButton2.setSelected(false);
+        }
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
+
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        // TODO add your handling code here:
+        if(jRadioButton2.isSelected()){
+            jRadioButton1.setSelected(false);
+        }
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> ComboCity;
+    private javax.swing.JComboBox<String> ComboOri;
+    private javax.swing.JComboBox<String> ComboState;
     private javax.swing.JButton btnDashBoard;
     private javax.swing.JButton btnSave;
     private javax.swing.JPanel contentPanel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField txtCategory;
-    private javax.swing.JTextField txtCity;
+    private javax.swing.JTextField txtAd1;
+    private javax.swing.JTextField txtAd2;
+    private javax.swing.JTextField txtArea;
+    private javax.swing.JTextField txtBath;
+    private javax.swing.JTextField txtBed;
+    private javax.swing.JTextField txtFl;
     private javax.swing.JTextField txtHorsepower;
-    private javax.swing.JTextField txtMake;
-    private javax.swing.JTextField txtMake1;
-    private javax.swing.JTextField txtMileage;
-    private javax.swing.JTextField txtModel;
-    private javax.swing.JTextField txtState;
+    private javax.swing.JTextField txtLiving;
+    private javax.swing.JTextField txtRent;
     private javax.swing.JTextField txtVin;
-    private javax.swing.JTextField txtYear;
     // End of variables declaration//GEN-END:variables
 
-    private void copyFile(File f1, File f2) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

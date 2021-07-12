@@ -87,13 +87,12 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         userJTable = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         passwordJTextField = new javax.swing.JTextField();
-        backjButton1 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         organizationJComboBox = new javax.swing.JComboBox();
         jLabel4 = new javax.swing.JLabel();
         roleJComboBox = new javax.swing.JComboBox();
-        jLabel3 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
         createUserJButton.setBackground(new java.awt.Color(255, 204, 204));
@@ -159,18 +158,6 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         add(passwordJTextField);
         passwordJTextField.setBounds(590, 450, 146, 24);
 
-        backjButton1.setBackground(new java.awt.Color(255, 204, 204));
-        backjButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        backjButton1.setForeground(new java.awt.Color(102, 153, 255));
-        backjButton1.setText("<< Back");
-        backjButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backjButton1ActionPerformed(evt);
-            }
-        });
-        add(backjButton1);
-        backjButton1.setBounds(20, 40, 112, 31);
-
         jLabel5.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 204, 204));
         jLabel5.setText("Organization");
@@ -195,11 +182,6 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         roleJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         add(roleJComboBox);
         roleJComboBox.setBounds(580, 370, 146, 24);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/6905b594d7eab2eafa12cd1d1022f3cd.jpeg"))); // NOI18N
-        jLabel3.setText("jLabel3");
-        add(jLabel3);
-        jLabel3.setBounds(0, 0, 1430, 910);
     }// </editor-fold>//GEN-END:initComponents
 
     private void createUserJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createUserJButtonActionPerformed
@@ -214,14 +196,6 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         popData();
     }//GEN-LAST:event_createUserJButtonActionPerformed
 
-    private void backjButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backjButton1ActionPerformed
-        // TODO add your handling code here:
-        /*container.remove(this);
-        CardLayout layout = (CardLayout) container.getLayout();
-        layout.previous(container);*/
-        Router.getInstance(null).back(0);
-    }//GEN-LAST:event_backjButton1ActionPerformed
-
     private void organizationJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_organizationJComboBoxActionPerformed
         Organization organization = (Organization) organizationJComboBox.getSelectedItem();
         if (organization != null){
@@ -230,11 +204,9 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_organizationJComboBoxActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backjButton1;
     private javax.swing.JButton createUserJButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;

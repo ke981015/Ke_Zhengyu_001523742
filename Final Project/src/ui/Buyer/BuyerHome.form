@@ -53,9 +53,9 @@
               <Component id="line" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="scrollPanel" max="32767" attributes="0"/>
-              <EmptySpace pref="29" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
-          <Component id="sidePanel" alignment="0" pref="2133" max="32767" attributes="0"/>
+          <Component id="sidePanel" alignment="0" pref="1000" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>

@@ -95,9 +95,8 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         addJButton = new javax.swing.JButton();
         organizationJComboBox = new javax.swing.JComboBox();
         jLabel1 = new javax.swing.JLabel();
-        backJButton = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
         addJButton.setBackground(new java.awt.Color(255, 204, 204));
@@ -125,23 +124,6 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         jLabel1.setText("Organization Type ");
         add(jLabel1);
         jLabel1.setBounds(330, 230, 144, 18);
-
-        backJButton.setBackground(new java.awt.Color(255, 204, 204));
-        backJButton.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        backJButton.setForeground(new java.awt.Color(102, 153, 255));
-        backJButton.setText("<< Back");
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
-            }
-        });
-        add(backJButton);
-        backJButton.setBounds(30, 30, 83, 27);
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/6905b594d7eab2eafa12cd1d1022f3cd.jpeg"))); // NOI18N
-        jLabel2.setText("jLabel2");
-        add(jLabel2);
-        jLabel2.setBounds(-5, -4, 1330, 770);
     }// </editor-fold>//GEN-END:initComponents
 
     private void addJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJButtonActionPerformed
@@ -152,20 +134,13 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         JOptionPane.showMessageDialog(this,"Organization Created");
     }//GEN-LAST:event_addJButtonActionPerformed
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
-        //SystemAdminWorkAreaJPanel home = new SystemAdminWorkAreaJPanel(userProcessContainer, system);
-        Router.getInstance(null).back(0);
-    }//GEN-LAST:event_backJButtonActionPerformed
-
     private void organizationJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_organizationJComboBoxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_organizationJComboBoxActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addJButton;
-    private javax.swing.JButton backJButton;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JComboBox organizationJComboBox;
     // End of variables declaration//GEN-END:variables
 }

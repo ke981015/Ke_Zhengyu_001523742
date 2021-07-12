@@ -32,9 +32,9 @@ import ui.CustomerServiceRole.SellerServiceWorkArea;
 import ui.ReceptionistRole.ReceptionistHome;
 import ui.Seller.SellerWorkArea;
 import ui.SystemAdminRole.SystemAdminWorkAreaJPanel;
-import ui.UserAdminRole.UserAdminWorkAreaJPanel;
 import ui.InspectorRole.InspectorHome;
 import ui.Seller.SellerRegister;
+import ui.UserAdminRole.UserAdminWorkArea;
 
 
 /**
@@ -239,7 +239,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 Router.getInstance(null).go(home);
             }
             else if(userAccount.getRole() instanceof UserAdminRole){
-                UserAdminWorkAreaJPanel home = new UserAdminWorkAreaJPanel(container, system, inEnterprise);
+                UserAdminWorkArea home = new UserAdminWorkArea(container, system, inEnterprise);
                 Router.getInstance(null).go(home);
             }
             else if(userAccount.getRole() instanceof SellerRole){

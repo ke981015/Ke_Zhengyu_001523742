@@ -5,9 +5,6 @@
 package Business.WorkQueue;
 
 import Business.UserAccount.UserAccount;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 /**
  *
@@ -48,6 +45,15 @@ public abstract class AbstractQuestion {
     private String temperature;
     private String humidity;
     private String Formaldehyde;
+    private Double area;
+    private String address1;
+    private String address2;
+    private String Orientation;
+    private int bedroom;
+    private int bathroom;
+    private int livingroom;
+    private int floor;
+    private double rent;
     
     private UserAccount sender;
     private UserAccount solver;
@@ -76,6 +82,7 @@ public abstract class AbstractQuestion {
     private String phone;
     private String name;
     private String contact;
+    private boolean elevator;
     
     
     public AbstractQuestion(){
@@ -562,6 +569,85 @@ public abstract class AbstractQuestion {
         this.Formaldehyde = Formaldehyde;
     }
 
-    
+    public Double getArea() {
+        return area;
+    }
+
+    public void setArea(Double area) {
+        this.area = area;
+    }
+
+    public String getAddress1() {
+        return address1;
+    }
+
+    public void setAddress1(String address1) {
+        this.address1 = address1;
+    }
+
+    public String getAddress2() {
+        return address2;
+    }
+
+    public void setAddress2(String address2) {
+        this.address2 = address2;
+    }
+
+    public String getOrientation() {
+        return Orientation;
+    }
+
+    public void setOrientation(String Orientation) {
+        this.Orientation = Orientation;
+    }
+
+    public int getBedroom() {
+        return bedroom;
+    }
+
+    public void setBedroom(int bedroom) {
+        this.bedroom = bedroom;
+    }
+
+    public int getBathroom() {
+        return bathroom;
+    }
+
+    public void setBathroom(int bathroom) {
+        this.bathroom = bathroom;
+    }
+
+    public int getLivingroom() {
+        return livingroom;
+    }
+
+    public void setLivingroom(int livingroom) {
+        this.livingroom = livingroom;
+    }
+
+    public int getFloor() {
+        return floor;
+    }
+
+    public void setFloor(int floor) {
+        this.floor = floor;
+    }
+
+    public boolean isElevator() {
+        return elevator;
+    }
+
+    public void setElevator(boolean elevator) {
+        this.elevator = elevator;
+    }
+
+    public double getRent() {
+        return rent;
+    }
+
+    public void setRent(double rent) {
+        this.rent = rent;
+    }
+ 
 
 }
