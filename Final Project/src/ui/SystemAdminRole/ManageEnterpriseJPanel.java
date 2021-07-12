@@ -85,8 +85,8 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         enterpriseTypeJComboBox = new javax.swing.JComboBox();
         submitJButton = new javax.swing.JButton();
         backJButton = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
         enterpriseJTable.setBackground(new java.awt.Color(204, 255, 204));
@@ -116,29 +116,23 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         add(jScrollPane1);
         jScrollPane1.setBounds(310, 150, 523, 95);
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 204, 204));
         jLabel1.setText("Network");
         add(jLabel1);
-        jLabel1.setBounds(370, 340, 70, 19);
+        jLabel1.setBounds(370, 340, 70, 18);
 
         networkJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         add(networkJComboBox);
         networkJComboBox.setBounds(520, 330, 136, 24);
 
-        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 204, 204));
         jLabel2.setText("Name");
         add(jLabel2);
-        jLabel2.setBounds(370, 440, 50, 19);
+        jLabel2.setBounds(370, 440, 50, 18);
         add(nameJTextField);
         nameJTextField.setBounds(520, 440, 136, 24);
 
-        jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 204, 204));
         jLabel3.setText("Enterprise Type");
         add(jLabel3);
-        jLabel3.setBounds(370, 400, 120, 19);
+        jLabel3.setBounds(370, 400, 120, 18);
 
         enterpriseTypeJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         enterpriseTypeJComboBox.addActionListener(new java.awt.event.ActionListener() {
@@ -172,10 +166,6 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         });
         add(backJButton);
         backJButton.setBounds(20, 40, 83, 27);
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/ae67090fd1792e2b791933fe901b6025.jpeg"))); // NOI18N
-        add(jLabel4);
-        jLabel4.setBounds(0, 0, 1220, 860);
     }// </editor-fold>//GEN-END:initComponents
 
     private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
@@ -213,7 +203,6 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField nameJTextField;
     private javax.swing.JComboBox networkJComboBox;

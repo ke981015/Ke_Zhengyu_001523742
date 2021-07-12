@@ -130,7 +130,7 @@ public class ViewAnswer extends javax.swing.JPanel {
                 .addComponent(jLabel11)
                 .addGap(55, 55, 55)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                 .addComponent(backJButton)
                 .addGap(63, 63, 63))
         );

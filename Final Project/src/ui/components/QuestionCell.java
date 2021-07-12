@@ -21,7 +21,6 @@ import ui.AirQualityInspector.AirQualityInspectorWorkArea;
 import ui.Buyer.BuyerWorkArea;
 import ui.CustomerServiceRole.Answer;
 import ui.CustomerServiceRole.ViewAnswer;
-import ui.Seller.SellerWorkAreaJPanel;
 import ui.InspectorRole.InspectorWorkArea;
 
 /**

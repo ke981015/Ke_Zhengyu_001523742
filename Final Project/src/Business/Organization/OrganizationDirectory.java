@@ -33,7 +33,7 @@ public class OrganizationDirectory {
             organization = new BuyerOrganization();
             organizationList.add(organization);
         }
-        if (type.getValue().equals(Type.Appraiser.getValue())){
+        if (type.getValue().equals(Type.Accounter.getValue())){
             organization = new AppraiserOrganization();
             organizationList.add(organization);
         }

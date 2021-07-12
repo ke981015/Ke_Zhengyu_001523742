@@ -5,34 +5,36 @@
  */
 package ui.ReceptionistRole;
 
-import ui.CustomerServiceRole.*;
-import ui.Buyer.*;
-import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
+import Business.Global;
 import Business.Organization.Organization;
-import Business.Role.BuyerRole;
 import Business.Router;
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.AbstractQuestion;
-import Business.WorkQueue.WorkRequest;
-import java.awt.GridLayout;
-import javax.swing.JPanel;
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import ui.components.AppointmentCell;
-import ui.components.QuestionCell;
+import ui.components.ListingsCell;
 
 
 /**
  *
  * @author Ke
  */
+
 public class ReceptionistHome extends javax.swing.JPanel {
     private JPanel userProcessContainer;
     private Organization organization;
     private Enterprise enterprise;
     private UserAccount userAccount;
     private EcoSystem business;
-
+    /**
+     * Creates new form DoctorWorkAreaJPanel
+     */
     public ReceptionistHome(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
@@ -40,27 +42,10 @@ public class ReceptionistHome extends javax.swing.JPanel {
         this.enterprise = enterprise;
         this.userAccount = account;
         this.business = business;
-        initFiles(/*course.getFileDirectory()*/);
+        initCourses(/*business.getListingsDirectory()*/);
     }
 
-    private void initFiles(/*FileDirectory fileDir*/){
-
-        /*contentPanel.setLayout(new GridLayout(0,2));
-
-        int cell_H = contentPanel.getWidth() * 4 / 3;
-
-        for (File file : fileDir){
-            FileCell cell = new FileCell(file);
-            contentPanel.add(cell);
-            cell.setPreferredSize(new Dimension(contentPanel.getWidth(),contentPanel.getWidth() * 4 / 3));
-        }
-
-        scrollPanel.setSize(contentPanel.getWidth(), cell_H * fileDir.getList().size() / 2 + 1);
-
-        contentPanel.setSize(contentPanel.getWidth(), cell_H * fileDir.getList().size() / 2 + 1);
-
-        contentPanel.setPreferredSize(new Dimension(contentPanel.getWidth(), cell_H * fileDir.getList().size() / 2 + 1));
-        updateUI();*/
+    private void initCourses(/*CourseDirectory courseDir*/){
         contentPanel.setLayout(new GridLayout(0,2));
 
         for (AbstractQuestion request : business.getWorkQueue().getWorkRequestList()){
@@ -84,12 +69,17 @@ public class ReceptionistHome extends javax.swing.JPanel {
 
         scrollPanel = new javax.swing.JScrollPane();
         contentPanel = new javax.swing.JPanel();
-        backJButton2 = new javax.swing.JButton();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        titleLabel = new javax.swing.JLabel();
+        sidePanel = new javax.swing.JPanel();
+        logoutButton = new javax.swing.JButton();
+        nameLabel = new javax.swing.JLabel();
+        emailLabel = new javax.swing.JLabel();
+        line = new javax.swing.JSeparator();
 
         setBackground(new java.awt.Color(255, 255, 255));
-        setMinimumSize(new java.awt.Dimension(1024, 768));
+        setMaximumSize(new java.awt.Dimension(1500, 1000));
+        setMinimumSize(new java.awt.Dimension(1500, 1000));
+        setPreferredSize(new java.awt.Dimension(1500, 1000));
 
         contentPanel.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -97,79 +87,108 @@ public class ReceptionistHome extends javax.swing.JPanel {
         contentPanel.setLayout(contentPanelLayout);
         contentPanelLayout.setHorizontalGroup(
             contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 994, Short.MAX_VALUE)
+            .addGap(0, 1191, Short.MAX_VALUE)
         );
         contentPanelLayout.setVerticalGroup(
             contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1996, Short.MAX_VALUE)
+            .addGap(0, 2008, Short.MAX_VALUE)
         );
 
         scrollPanel.setViewportView(contentPanel);
 
-        backJButton2.setBackground(new java.awt.Color(255, 204, 204));
-        backJButton2.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        backJButton2.setForeground(new java.awt.Color(102, 153, 255));
-        backJButton2.setText("<< Back");
-        backJButton2.addActionListener(new java.awt.event.ActionListener() {
+        titleLabel.setFont(new java.awt.Font("Skia", 1, 36)); // NOI18N
+        titleLabel.setForeground(new java.awt.Color(99, 148, 249));
+        titleLabel.setText("DashBoard");
+
+        sidePanel.setBackground(new java.awt.Color(33, 135, 251));
+        sidePanel.setPreferredSize(new java.awt.Dimension(160, 768));
+
+        logoutButton.setText("Logout");
+        logoutButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButton2ActionPerformed(evt);
+                logoutButtonActionPerformed(evt);
             }
         });
 
-        jLabel10.setFont(new java.awt.Font("Skia", 1, 24)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(99, 148, 249));
-        jLabel10.setText("Pending appointment");
+        nameLabel.setFont(new java.awt.Font("PingFang HK", 1, 18)); // NOI18N
+        nameLabel.setForeground(new java.awt.Color(255, 255, 255));
+        nameLabel.setText("name");
 
-        jLabel8.setText("—————————————————————————————————————————————————");
+        emailLabel.setFont(new java.awt.Font("PingFang HK", 1, 16)); // NOI18N
+        emailLabel.setForeground(new java.awt.Color(255, 255, 255));
+        emailLabel.setText("email");
+
+        javax.swing.GroupLayout sidePanelLayout = new javax.swing.GroupLayout(sidePanel);
+        sidePanel.setLayout(sidePanelLayout);
+        sidePanelLayout.setHorizontalGroup(
+            sidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(sidePanelLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addGroup(sidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(sidePanelLayout.createSequentialGroup()
+                        .addComponent(logoutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(sidePanelLayout.createSequentialGroup()
+                        .addComponent(emailLabel)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(sidePanelLayout.createSequentialGroup()
+                        .addComponent(nameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
+                        .addGap(19, 19, 19))))
+        );
+        sidePanelLayout.setVerticalGroup(
+            sidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sidePanelLayout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(emailLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 784, Short.MAX_VALUE)
+                .addComponent(logoutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(65, 65, 65))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addComponent(sidePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(scrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 986, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(backJButton2)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(58, 58, 58)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel10)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(jLabel8)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 627, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(line))
+                    .addComponent(scrollPanel))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(backJButton2)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel10)
+                .addGap(28, 28, 28)
+                .addComponent(titleLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8)
+                .addComponent(line, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(scrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1298, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(scrollPanel)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(sidePanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1000, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void backJButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButton2ActionPerformed
-        Router.getInstance(null).back(0);
-    }//GEN-LAST:event_backJButton2ActionPerformed
+    private void logoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutButtonActionPerformed
+        // TODO add your handling code here:
+        Global.getInstance().logout();
+    }//GEN-LAST:event_logoutButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton2;
     private javax.swing.JPanel contentPanel;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel emailLabel;
+    private javax.swing.JSeparator line;
+    private javax.swing.JButton logoutButton;
+    private javax.swing.JLabel nameLabel;
     private javax.swing.JScrollPane scrollPanel;
+    private javax.swing.JPanel sidePanel;
+    private javax.swing.JLabel titleLabel;
     // End of variables declaration//GEN-END:variables
 }

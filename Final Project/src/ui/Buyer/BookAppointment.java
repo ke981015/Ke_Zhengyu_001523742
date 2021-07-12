@@ -19,7 +19,7 @@ import ui.SystemAdminRole.SystemAdminWorkAreaJPanel;
  *
  * @author Ke
  */
-public class BookAppointmentJPanel extends javax.swing.JPanel {
+public class BookAppointment extends javax.swing.JPanel {
     public JPanel container;
     public EcoSystem business;
     private AbstractQuestion course;
@@ -27,7 +27,7 @@ public class BookAppointmentJPanel extends javax.swing.JPanel {
     /**
      * Creates new form BookAppointmentJPanel
      */
-    public BookAppointmentJPanel(JPanel userProcessContainer, EcoSystem business, AbstractQuestion course) {
+    public BookAppointment(JPanel userProcessContainer, EcoSystem business, AbstractQuestion course) {
         initComponents();
         this.container = userProcessContainer;
         this.business = business;
@@ -51,33 +51,29 @@ public class BookAppointmentJPanel extends javax.swing.JPanel {
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 102));
         jLabel1.setText("Date:");
         add(jLabel1);
-        jLabel1.setBounds(380, 200, 40, 19);
+        jLabel1.setBounds(370, 220, 40, 18);
 
-        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 102));
         jLabel2.setText("Phone Number:");
         add(jLabel2);
-        jLabel2.setBounds(360, 260, 130, 19);
+        jLabel2.setBounds(350, 310, 130, 18);
 
-        jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 102));
         jLabel3.setText("Name:");
         add(jLabel3);
-        jLabel3.setBounds(380, 320, 50, 19);
+        jLabel3.setBounds(380, 390, 50, 18);
         add(jTextField1);
-        jTextField1.setBounds(500, 190, 115, 24);
+        jTextField1.setBounds(490, 220, 115, 24);
         add(jTextField2);
-        jTextField2.setBounds(500, 250, 115, 24);
+        jTextField2.setBounds(490, 310, 115, 24);
         add(jTextField3);
-        jTextField3.setBounds(500, 310, 115, 24);
+        jTextField3.setBounds(490, 390, 115, 24);
 
         jButton1.setBackground(new java.awt.Color(204, 255, 204));
         jButton1.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
@@ -89,12 +85,17 @@ public class BookAppointmentJPanel extends javax.swing.JPanel {
             }
         });
         add(jButton1);
-        jButton1.setBounds(450, 390, 83, 27);
+        jButton1.setBounds(450, 460, 83, 27);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/3439d73c70642d1039f6fdc9345403a3.jpeg"))); // NOI18N
-        jLabel4.setText("jLabel4");
-        add(jLabel4);
-        jLabel4.setBounds(-5, -4, 1300, 800);
+        jLabel10.setFont(new java.awt.Font("Skia", 1, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(99, 148, 249));
+        jLabel10.setText("Book appointment");
+        add(jLabel10);
+        jLabel10.setBounds(40, 10, 212, 120);
+
+        jLabel8.setText("—————————————————————————————————————————————————");
+        add(jLabel8);
+        jLabel8.setBounds(90, 60, 735, 100);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -109,9 +110,10 @@ public class BookAppointmentJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;

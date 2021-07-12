@@ -19,7 +19,6 @@ import javax.swing.JPanel;
 import ui.AirQualityInspector.AirQualityInspectorHome;
 import ui.AirQualityInspector.AirQualityInspectorWorkArea;
 import ui.Buyer.BuyerWorkArea;
-import ui.Seller.SellerWorkAreaJPanel;
 import ui.InspectorRole.InspectorWorkArea;
 
 /**

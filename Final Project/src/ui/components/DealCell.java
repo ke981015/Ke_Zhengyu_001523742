@@ -20,7 +20,6 @@ import ui.AirQualityInspector.AirQualityInspectorHome;
 import ui.AirQualityInspector.AirQualityInspectorWorkArea;
 import ui.Buyer.BuyerWorkArea;
 import ui.ReceptionistRole.ReceptionistWorkArea;
-import ui.Seller.SellerWorkAreaJPanel;
 import ui.InspectorRole.InspectorWorkArea;
 
 /**
@@ -145,7 +144,7 @@ public class DealCell extends javax.swing.JPanel {
 
     private void click(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_click
        //User user = Global.getInstance().getUser();
-        Router.getInstance(null).go(new ReceptionistWorkArea(userProcessContainer,userAccount,organization,enterprise,business,course));
+        //Router.getInstance(null).go(new ReceptionistWorkArea(userProcessContainer,userAccount,organization,enterprise,business,course));
   
     }//GEN-LAST:event_click
 

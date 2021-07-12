@@ -22,7 +22,7 @@ public abstract class Organization {
     private static int counter=0;
     
     public enum Type{
-        Admin("Admin Organization"), Seller("Seller Organization"), Buyer("Buyer Organization"), Appraiser("Appraiser Organization"), VehicleConditionInspector("Vehicle Condition Inspector Organization"), CustomerService("CustomerService Organization"), Warranter("Warranter Organization"), Receptionist("Receptionist Organization");
+        Admin("Admin Organization"), Seller("Seller Organization"), Buyer("Buyer Organization"), Accounter("Accounter Organization"), VehicleConditionInspector("Vehicle Condition Inspector Organization"), CustomerService("CustomerService Organization"), Warranter("Warranter Organization"), Receptionist("Receptionist Organization");
         private String value;
         private Type(String value) {
             this.value = value;

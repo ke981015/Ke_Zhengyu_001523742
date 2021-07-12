@@ -134,70 +134,50 @@ public class ViewListingInfo extends javax.swing.JPanel {
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel16.setText("State:");
 
-        txtMake.setBackground(new java.awt.Color(255, 204, 204));
-
         jLabel17.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(102, 153, 255));
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel17.setText("Community:");
-
-        txtModel.setBackground(new java.awt.Color(255, 204, 204));
 
         jLabel18.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(102, 153, 255));
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel18.setText("Address line1:");
 
-        txtYear.setBackground(new java.awt.Color(255, 204, 204));
-
         jLabel19.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(102, 153, 255));
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel19.setText("Address line2:");
-
-        txtCategory.setBackground(new java.awt.Color(255, 204, 204));
 
         jLabel20.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(102, 153, 255));
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel20.setText("Expected rent:");
 
-        txtState.setBackground(new java.awt.Color(255, 204, 204));
-
         jLabel21.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(102, 153, 255));
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel21.setText("Area:");
-
-        txtCity.setBackground(new java.awt.Color(255, 204, 204));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(102, 153, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel1.setText("Name:");
 
-        txtVin.setBackground(new java.awt.Color(255, 204, 204));
-
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(102, 153, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("Time:");
-
-        txtMileage.setBackground(new java.awt.Color(255, 204, 204));
 
         jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(102, 153, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Phone:");
 
-        txtHorsepower.setBackground(new java.awt.Color(255, 204, 204));
-
         jLabel22.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(102, 153, 255));
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel22.setText("City:");
-
-        txtMake1.setBackground(new java.awt.Color(255, 204, 204));
 
         contentPanel.setBackground(new java.awt.Color(255, 255, 255));
 

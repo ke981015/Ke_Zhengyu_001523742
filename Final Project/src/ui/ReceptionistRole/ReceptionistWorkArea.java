@@ -88,11 +88,11 @@ public class ReceptionistWorkArea extends javax.swing.JPanel {
         nameLabel = new javax.swing.JLabel();
         backButton = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
 
         setLayout(null);
@@ -111,26 +111,6 @@ public class ReceptionistWorkArea extends javax.swing.JPanel {
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(255, 204, 204));
-        jButton4.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(102, 153, 255));
-        jButton4.setText("View the vehicle valuation");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-
-        jButton5.setBackground(new java.awt.Color(255, 204, 204));
-        jButton5.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(102, 153, 255));
-        jButton5.setText("View the vehicle condition report");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-
         jButton2.setBackground(new java.awt.Color(255, 204, 204));
         jButton2.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jButton2.setForeground(new java.awt.Color(102, 153, 255));
@@ -138,16 +118,6 @@ public class ReceptionistWorkArea extends javax.swing.JPanel {
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
-            }
-        });
-
-        jButton3.setBackground(new java.awt.Color(255, 204, 204));
-        jButton3.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(102, 153, 255));
-        jButton3.setText("View vehicle information");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
             }
         });
 
@@ -161,35 +131,60 @@ public class ReceptionistWorkArea extends javax.swing.JPanel {
             }
         });
 
+        jButton5.setBackground(new java.awt.Color(255, 204, 204));
+        jButton5.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(102, 153, 255));
+        jButton5.setText("View the vehicle condition report");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        jButton7.setBackground(new java.awt.Color(255, 204, 204));
+        jButton7.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jButton7.setForeground(new java.awt.Color(102, 153, 255));
+        jButton7.setText("View air quality report");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setBackground(new java.awt.Color(255, 204, 204));
+        jButton3.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(102, 153, 255));
+        jButton3.setText("View vehicle information");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout SideBarLayout = new javax.swing.GroupLayout(SideBar);
         SideBar.setLayout(SideBarLayout);
         SideBarLayout.setHorizontalGroup(
             SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSeparator1)
             .addGroup(SideBarLayout.createSequentialGroup()
-                .addComponent(jButton3)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(SideBarLayout.createSequentialGroup()
                 .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(SideBarLayout.createSequentialGroup()
-                        .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(SideBarLayout.createSequentialGroup()
-                                .addGap(25, 25, 25)
-                                .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(SideBarLayout.createSequentialGroup()
-                                .addGap(30, 30, 30)
-                                .addComponent(backButton)))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SideBarLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton5))
+                        .addGap(25, 25, 25)
+                        .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(SideBarLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton4)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGap(30, 30, 30)
+                        .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(SideBarLayout.createSequentialGroup()
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jButton7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
+                            .addComponent(backButton))))
+                .addGap(36, 36, 36))
             .addGroup(SideBarLayout.createSequentialGroup()
-                .addGap(66, 66, 66)
+                .addGap(86, 86, 86)
                 .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton2)
                     .addGroup(SideBarLayout.createSequentialGroup()
@@ -204,17 +199,17 @@ public class ReceptionistWorkArea extends javax.swing.JPanel {
                 .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(71, 71, 71)
+                .addGap(88, 88, 88)
+                .addComponent(jButton3)
+                .addGap(40, 40, 40)
+                .addComponent(jButton5)
+                .addGap(34, 34, 34)
+                .addComponent(jButton7)
+                .addGap(47, 47, 47)
                 .addComponent(jButton2)
                 .addGap(45, 45, 45)
                 .addComponent(jButton6)
-                .addGap(78, 78, 78)
-                .addComponent(jButton4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton5)
-                .addGap(30, 30, 30)
-                .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 157, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 134, Short.MAX_VALUE)
                 .addComponent(backButton)
                 .addGap(47, 47, 47))
         );
@@ -228,40 +223,6 @@ public class ReceptionistWorkArea extends javax.swing.JPanel {
         add(jSplitPane1);
         jSplitPane1.setBounds(0, 0, 1150, 720);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        /*int selectedRow = workRequestJTable.getSelectedRow();
-        
-        if (selectedRow < 0){
-            JOptionPane.showMessageDialog(this,"Please choose a car!");
-            return;
-        }
-        
-        WorkRequest car =  (WorkRequest)workRequestJTable.getValueAt(selectedRow, 3);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        userProcessContainer.add("QuestionJPanel", new ViewVehicleInfoJPanel(userProcessContainer,business,car));
-        layout.next(userProcessContainer);*/
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        /*int selectedRow = workRequestJTable.getSelectedRow();
-        
-        if (selectedRow < 0){
-            JOptionPane.showMessageDialog(this,"Please choose a car!");
-            return;
-        }
-        
-        WorkRequest car =  (WorkRequest)workRequestJTable.getValueAt(selectedRow, 3);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        userProcessContainer.add("QuestionJPanel", new ViewVehicleValuationJPanel(userProcessContainer,business,car));
-        layout.next(userProcessContainer);*/
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-
-        ViewReport report = new ViewReport(userProcessContainer,business,userAccount,course);
-        jSplitPane1.setRightComponent(report);
-    }//GEN-LAST:event_jButton5ActionPerformed
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         Router.getInstance(null).back(0);
@@ -282,14 +243,32 @@ public class ReceptionistWorkArea extends javax.swing.JPanel {
         jSplitPane1.setRightComponent(report);
     }//GEN-LAST:event_jButton6ActionPerformed
 
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+
+        ViewReport report = new ViewReport(userProcessContainer,business,userAccount,course);
+        jSplitPane1.setRightComponent(report);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        ViewAirQualityReport report = new ViewAirQualityReport(userProcessContainer,business,userAccount,course);
+        jSplitPane1.setRightComponent(report);
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+
+        ViewListingInfo report = new ViewListingInfo(userProcessContainer,business,userAccount,course);
+        jSplitPane1.setRightComponent(report);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel SideBar;
     private javax.swing.JButton backButton;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSplitPane jSplitPane1;

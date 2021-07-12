@@ -68,7 +68,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
            for (Type type : Organization.Type.values()){
                 if (type.getValue().equals(Type.VehicleConditionInspector.getValue()))
                     organizationJComboBox.addItem(type);
-                if (type.getValue().equals(Type.Appraiser.getValue()))
+                if (type.getValue().equals(Type.Accounter.getValue()))
                     organizationJComboBox.addItem(type);
                 if (type.getValue().equals(Type.Warranter.getValue()))
                     organizationJComboBox.addItem(type);

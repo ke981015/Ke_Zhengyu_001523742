@@ -25,17 +25,16 @@ import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import ui.Accounter.AccounterHome;
 import ui.AirQualityInspector.AirQualityInspectorHome;
-import ui.Buyer.BuyerRegisterJPanel;
 import ui.Buyer.BuyerHome;
+import ui.Buyer.BuyerRegister;
 import ui.CustomerServiceRole.BuyerServiceWorkArea;
 import ui.CustomerServiceRole.SellerServiceWorkArea;
 import ui.ReceptionistRole.ReceptionistHome;
-import ui.Seller.SellerRegisterJPanel;
 import ui.Seller.SellerWorkArea;
-import ui.Seller.SellerWorkAreaJPanel;
 import ui.SystemAdminRole.SystemAdminWorkAreaJPanel;
 import ui.UserAdminRole.UserAdminWorkAreaJPanel;
 import ui.InspectorRole.InspectorHome;
+import ui.Seller.SellerRegister;
 
 
 /**
@@ -282,13 +281,15 @@ public class MainJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_loginJButtonActionPerformed
 
     private void btnBuyerRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuyerRegisterActionPerformed
-        BuyerRegisterJPanel buyerRegister = new BuyerRegisterJPanel(container, system);
-        Router.getInstance(null).go(buyerRegister);
+        BuyerRegister buyerRegister = new BuyerRegister(container, system);
+        jSplitPane1.setRightComponent(buyerRegister);
+        jSplitPane1.setDividerLocation(150);
     }//GEN-LAST:event_btnBuyerRegisterActionPerformed
 
     private void btnSellerRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSellerRegisterActionPerformed
-        SellerRegisterJPanel sellerRegister = new SellerRegisterJPanel(container, system);
-        Router.getInstance(null).go(sellerRegister);
+        SellerRegister sellerRegister = new SellerRegister(container, system);
+        jSplitPane1.setRightComponent(sellerRegister);
+        jSplitPane1.setDividerLocation(150);
     }//GEN-LAST:event_btnSellerRegisterActionPerformed
 
     /**

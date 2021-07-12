@@ -96,8 +96,8 @@ public class ManageUserAdminJPanel extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         passwordJPasswordField = new javax.swing.JPasswordField();
         backJButton = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
         enterpriseJTable.setBackground(new java.awt.Color(204, 255, 204));
@@ -127,11 +127,9 @@ public class ManageUserAdminJPanel extends javax.swing.JPanel {
         add(jScrollPane1);
         jScrollPane1.setBounds(310, 110, 523, 95);
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 204, 204));
         jLabel1.setText("Network");
         add(jLabel1);
-        jLabel1.setBounds(400, 280, 70, 19);
+        jLabel1.setBounds(400, 280, 70, 18);
 
         networkJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         networkJComboBox.addActionListener(new java.awt.event.ActionListener() {
@@ -142,19 +140,15 @@ public class ManageUserAdminJPanel extends javax.swing.JPanel {
         add(networkJComboBox);
         networkJComboBox.setBounds(520, 280, 136, 24);
 
-        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 204, 204));
         jLabel2.setText("Username");
         add(jLabel2);
-        jLabel2.setBounds(410, 390, 70, 19);
+        jLabel2.setBounds(410, 390, 70, 18);
         add(usernameJTextField);
         usernameJTextField.setBounds(520, 380, 136, 24);
 
-        jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 204, 204));
         jLabel3.setText("Enterprise");
         add(jLabel3);
-        jLabel3.setBounds(410, 340, 70, 19);
+        jLabel3.setBounds(410, 340, 70, 18);
 
         enterpriseJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         add(enterpriseJComboBox);
@@ -172,19 +166,15 @@ public class ManageUserAdminJPanel extends javax.swing.JPanel {
         add(submitJButton);
         submitJButton.setBounds(640, 530, 77, 27);
 
-        jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 204, 204));
         jLabel4.setText("Password");
         add(jLabel4);
-        jLabel4.setBounds(410, 430, 70, 19);
+        jLabel4.setBounds(410, 430, 70, 18);
         add(nameJTextField);
         nameJTextField.setBounds(520, 470, 136, 24);
 
-        jLabel5.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 204, 204));
         jLabel5.setText("Name");
         add(jLabel5);
-        jLabel5.setBounds(410, 470, 50, 19);
+        jLabel5.setBounds(410, 470, 50, 18);
         add(passwordJPasswordField);
         passwordJPasswordField.setBounds(520, 430, 134, 24);
 
@@ -199,11 +189,6 @@ public class ManageUserAdminJPanel extends javax.swing.JPanel {
         });
         add(backJButton);
         backJButton.setBounds(20, 10, 83, 27);
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/ae67090fd1792e2b791933fe901b6025.jpeg"))); // NOI18N
-        jLabel6.setText("jLabel6");
-        add(jLabel6);
-        jLabel6.setBounds(0, 0, 1210, 830);
     }// </editor-fold>//GEN-END:initComponents
 
     private void networkJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_networkJComboBoxActionPerformed
@@ -244,7 +229,6 @@ public class ManageUserAdminJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField nameJTextField;
     private javax.swing.JComboBox networkJComboBox;
