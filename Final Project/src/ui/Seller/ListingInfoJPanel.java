@@ -101,7 +101,7 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
         jLabel8.setText("—————————————————————————————————————————————————");
         add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(87, 86, -1, -1));
 
-        jLabel16.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Comic Sans MS", 1, 13)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(102, 153, 255));
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel16.setText("State:");
@@ -136,7 +136,7 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
         });
         add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 330, -1, -1));
 
-        jLabel21.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jLabel21.setFont(new java.awt.Font("Comic Sans MS", 1, 13)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(102, 153, 255));
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel21.setText("Area:");
@@ -186,7 +186,7 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
         });
         add(btnDashBoard, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 760, -1, -1));
 
-        jLabel22.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jLabel22.setFont(new java.awt.Font("Comic Sans MS", 1, 13)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(102, 153, 255));
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel22.setText("City:");

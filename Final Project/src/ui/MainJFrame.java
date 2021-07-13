@@ -94,29 +94,34 @@ public class MainJFrame extends javax.swing.JFrame {
         LoginJPanel.setBackground(new java.awt.Color(51, 153, 255));
         LoginJPanel.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("PingFang HK", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("User Name");
         LoginJPanel.add(jLabel1);
-        jLabel1.setBounds(20, 40, 90, 20);
+        jLabel1.setBounds(20, 50, 90, 20);
 
-        jLabel2.setFont(new java.awt.Font("PingFang HK", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Password");
         LoginJPanel.add(jLabel2);
-        jLabel2.setBounds(20, 140, 70, 20);
+        jLabel2.setBounds(20, 132, 80, 30);
         LoginJPanel.add(loginJLabel);
         loginJLabel.setBounds(132, 588, 0, 0);
+
+        userNameJTextField.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        userNameJTextField.setForeground(new java.awt.Color(51, 153, 255));
         LoginJPanel.add(userNameJTextField);
         userNameJTextField.setBounds(10, 80, 135, 30);
 
+        passwordField.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        passwordField.setForeground(new java.awt.Color(51, 153, 255));
         passwordField.setToolTipText("*");
         LoginJPanel.add(passwordField);
         passwordField.setBounds(10, 164, 135, 30);
 
-        loginJButton.setBackground(new java.awt.Color(255, 204, 204));
-        loginJButton.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        loginJButton.setForeground(new java.awt.Color(102, 153, 255));
+        loginJButton.setBackground(new java.awt.Color(255, 255, 255));
+        loginJButton.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        loginJButton.setForeground(new java.awt.Color(51, 153, 255));
         loginJButton.setText("Login");
         loginJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,9 +131,9 @@ public class MainJFrame extends javax.swing.JFrame {
         LoginJPanel.add(loginJButton);
         loginJButton.setBounds(20, 260, 109, 38);
 
-        btnBuyerRegister.setBackground(new java.awt.Color(255, 204, 204));
-        btnBuyerRegister.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        btnBuyerRegister.setForeground(new java.awt.Color(102, 153, 255));
+        btnBuyerRegister.setBackground(new java.awt.Color(255, 255, 255));
+        btnBuyerRegister.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        btnBuyerRegister.setForeground(new java.awt.Color(51, 153, 255));
         btnBuyerRegister.setText("New Buyer");
         btnBuyerRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,11 +141,11 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
         LoginJPanel.add(btnBuyerRegister);
-        btnBuyerRegister.setBounds(20, 400, 101, 38);
+        btnBuyerRegister.setBounds(20, 400, 109, 38);
 
-        btnSellerRegister.setBackground(new java.awt.Color(255, 204, 204));
-        btnSellerRegister.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        btnSellerRegister.setForeground(new java.awt.Color(102, 153, 255));
+        btnSellerRegister.setBackground(new java.awt.Color(255, 255, 255));
+        btnSellerRegister.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        btnSellerRegister.setForeground(new java.awt.Color(51, 153, 255));
         btnSellerRegister.setText("New Seller");
         btnSellerRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,7 +153,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
         LoginJPanel.add(btnSellerRegister);
-        btnSellerRegister.setBounds(20, 490, 103, 38);
+        btnSellerRegister.setBounds(20, 490, 111, 38);
 
         jPanel1.add(LoginJPanel);
         LoginJPanel.setBounds(0, 0, 200, 890);
@@ -160,15 +165,17 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(null);
 
-        jLabel4.setFont(new java.awt.Font("Skia", 1, 48)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(99, 148, 249));
-        jLabel4.setText("Second-hand house sale System");
+        jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 48)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel4.setText("Second-hand housing trading system");
         jPanel2.add(jLabel4);
-        jLabel4.setBounds(140, 260, 760, 120);
+        jLabel4.setBounds(70, 270, 880, 120);
 
+        jLabel6.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(51, 153, 255));
         jLabel6.setText("@ Zhengyu Ke");
         jPanel2.add(jLabel6);
-        jLabel6.setBounds(780, 460, 100, 18);
+        jLabel6.setBounds(760, 460, 120, 22);
 
         container.add(jPanel2, "card2");
 

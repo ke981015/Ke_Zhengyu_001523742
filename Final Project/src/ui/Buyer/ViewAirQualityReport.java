@@ -55,9 +55,9 @@ public class ViewAirQualityReport extends javax.swing.JPanel {
     }
     
     private void initCourses(){
-        jLabel3.setText(course.getTemperature()+" °C");
-        jLabel4.setText(course.getHumidity()+" %RH");
-        jLabel6.setText(course.getFormaldehyde());
+        jLabel3.setText(course.getTemperature().toString()+" °C");
+        jLabel4.setText(course.getHumidity().toString()+" %RH");
+        jLabel6.setText(course.getFormaldehyde().toString());
                
         updateUI();
     }

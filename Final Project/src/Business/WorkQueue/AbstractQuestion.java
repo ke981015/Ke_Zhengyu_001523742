@@ -44,9 +44,9 @@ public abstract class AbstractQuestion {
     private String dealmonth;
     private String dealdate;
     private Double dealprice;
-    private String temperature;
-    private String humidity;
-    private String Formaldehyde;
+    private Double temperature;
+    private Double humidity;
+    private Double Formaldehyde;
     private Double area;
     private String address1;
     private String address2;
@@ -410,27 +410,27 @@ public abstract class AbstractQuestion {
         this.kitchen5 = kitchen5;
     }
 
-    public String getTemperature() {
+    public Double getTemperature() {
         return temperature;
     }
 
-    public void setTemperature(String temperature) {
+    public void setTemperature(Double temperature) {
         this.temperature = temperature;
     }
 
-    public String getHumidity() {
+    public Double getHumidity() {
         return humidity;
     }
 
-    public void setHumidity(String humidity) {
+    public void setHumidity(Double humidity) {
         this.humidity = humidity;
     }
 
-    public String getFormaldehyde() {
+    public Double getFormaldehyde() {
         return Formaldehyde;
     }
 
-    public void setFormaldehyde(String Formaldehyde) {
+    public void setFormaldehyde(Double Formaldehyde) {
         this.Formaldehyde = Formaldehyde;
     }
 
