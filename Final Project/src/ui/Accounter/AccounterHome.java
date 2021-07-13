@@ -47,7 +47,7 @@ public class AccounterHome extends javax.swing.JPanel {
     }
 
     private void initCourses(/*CourseDirectory courseDir*/){
-        contentPanel.setLayout(new GridLayout(0,2));
+        contentPanel.setLayout(new GridLayout(0,1));
 
         for (AbstractQuestion request : business.getWorkQueue().getWorkRequestList()){
             if(request.isDone()== true){
@@ -76,6 +76,7 @@ public class AccounterHome extends javax.swing.JPanel {
         logoutButton = new javax.swing.JButton();
         nameLabel = new javax.swing.JLabel();
         emailLabel = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
         line = new javax.swing.JSeparator();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -118,6 +119,13 @@ public class AccounterHome extends javax.swing.JPanel {
         emailLabel.setForeground(new java.awt.Color(255, 255, 255));
         emailLabel.setText("email");
 
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2021", "2020", "2019", "2018" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout sidePanelLayout = new javax.swing.GroupLayout(sidePanel);
         sidePanel.setLayout(sidePanelLayout);
         sidePanelLayout.setHorizontalGroup(
@@ -134,6 +142,10 @@ public class AccounterHome extends javax.swing.JPanel {
                     .addGroup(sidePanelLayout.createSequentialGroup()
                         .addComponent(nameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
                         .addGap(19, 19, 19))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sidePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         sidePanelLayout.setVerticalGroup(
             sidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -142,6 +154,8 @@ public class AccounterHome extends javax.swing.JPanel {
                 .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(emailLabel)
+                .addGap(109, 109, 109)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(logoutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(65, 65, 65))
@@ -180,10 +194,24 @@ public class AccounterHome extends javax.swing.JPanel {
         Global.getInstance().logout();
     }//GEN-LAST:event_logoutButtonActionPerformed
 
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+        contentPanel.removeAll();
+        for (AbstractQuestion request : business.getWorkQueue().getWorkRequestList()){
+            if(request.isDone()== true && request.getDealyear().equals(jComboBox1.getSelectedItem().toString())){              
+                DealCell cell = new DealCell(userProcessContainer,userAccount,organization,enterprise,business,request);
+                contentPanel.add(cell);
+            }
+        }
+        
+        updateUI();
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel contentPanel;
     private javax.swing.JLabel emailLabel;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JSeparator line;
     private javax.swing.JButton logoutButton;
     private javax.swing.JLabel nameLabel;

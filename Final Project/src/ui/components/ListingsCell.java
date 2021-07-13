@@ -11,12 +11,10 @@ import Business.Organization.Organization;
 import Business.Role.AirQualityInspectorRole;
 import Business.Role.BuyerRole;
 import Business.Role.InspectorRole;
-import Business.Role.SellerRole;
 import Business.Router;
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.AbstractQuestion;
 import javax.swing.JPanel;
-import ui.AirQualityInspector.AirQualityInspectorHome;
 import ui.AirQualityInspector.AirQualityInspectorWorkArea;
 import ui.Buyer.BuyerWorkArea;
 import ui.InspectorRole.InspectorWorkArea;
@@ -45,7 +43,7 @@ public class ListingsCell extends javax.swing.JPanel {
         this.userAccount = account;
         this.business = business;
 
-        titleLabel.setText(course.getMake());
+        titleLabel.setText(course.getCity());
     }
 
     /**

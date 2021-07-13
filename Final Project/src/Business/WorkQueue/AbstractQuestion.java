@@ -40,8 +40,10 @@ public abstract class AbstractQuestion {
     private String kitchen4;
     private String kitchen5;
     private String question;
+    private String dealyear;
+    private String dealmonth;
     private String dealdate;
-    private String dealprice;
+    private Double dealprice;
     private String temperature;
     private String humidity;
     private String Formaldehyde;
@@ -54,31 +56,14 @@ public abstract class AbstractQuestion {
     private int livingroom;
     private int floor;
     private double rent;
+    private String state;
+    private String city;
+    private String date;
     
     private UserAccount sender;
     private UserAccount solver;
     private UserAccount publisher;
     private String answer;
-    private String make;
-    private String model;
-    private String year;
-    private String category;
-    private String state;
-    private String city;
-    private String vin;
-    private String mileage;
-    private String horsepower;
-    private String inColor;
-    private String fuelType;
-    private String transmission;
-    private String mpgCity;
-    private String mpgHwy;
-    private String drivetrain;
-    private String frontPicture;
-    private String backPicture;
-    private String dashBoardPicture;
-    private String valuation;
-    private String date;
     private String phone;
     private String name;
     private String contact;
@@ -121,38 +106,6 @@ public abstract class AbstractQuestion {
         this.answer = answer;
     }
 
-    public String getMake() {
-        return make;
-    }
-
-    public void setMake(String make) {
-        this.make = make;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public String getYear() {
-        return year;
-    }
-
-    public void setYear(String year) {
-        this.year = year;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
     public String getState() {
         return state;
     }
@@ -167,118 +120,6 @@ public abstract class AbstractQuestion {
 
     public void setCity(String city) {
         this.city = city;
-    }
-
-    public String getVin() {
-        return vin;
-    }
-
-    public void setVin(String vin) {
-        this.vin = vin;
-    }
-
-    public String getMileage() {
-        return mileage;
-    }
-
-    public void setMileage(String mileage) {
-        this.mileage = mileage;
-    }
-
-    public String getHorsepower() {
-        return horsepower;
-    }
-
-    public void setHorsepower(String horsepower) {
-        this.horsepower = horsepower;
-    }
-
-    public String getInColor() {
-        return inColor;
-    }
-
-    public void setInColor(String inColor) {
-        this.inColor = inColor;
-    }
-
-    public String getFuelType() {
-        return fuelType;
-    }
-
-    public void setFuelType(String fuelType) {
-        this.fuelType = fuelType;
-    }
-
-    public String getTransmission() {
-        return transmission;
-    }
-
-    public void setTransmission(String transmission) {
-        this.transmission = transmission;
-    }
-
-    public String getMpgCity() {
-        return mpgCity;
-    }
-
-    public void setMpgCity(String mpgCity) {
-        this.mpgCity = mpgCity;
-    }
-
-    public String getMpgHwy() {
-        return mpgHwy;
-    }
-
-    public void setMpgHwy(String mpgHwy) {
-        this.mpgHwy = mpgHwy;
-    }
-
-    public String getDrivetrain() {
-        return drivetrain;
-    }
-
-    public void setDrivetrain(String drivetrain) {
-        this.drivetrain = drivetrain;
-    }
-
-    public String getFrontPicture() {
-        return frontPicture;
-    }
-
-    public void setFrontPicture(String frontPicture) {
-        this.frontPicture = frontPicture;
-    }
-
-    public String getBackPicture() {
-        return backPicture;
-    }
-
-    public void setBackPicture(String backPicture) {
-        this.backPicture = backPicture;
-    }
-
-    public String getDashBoardPicture() {
-        return dashBoardPicture;
-    }
-
-    public void setDashBoardPicture(String dashBoardPicture) {
-        this.dashBoardPicture = dashBoardPicture;
-    }
-
-    public String getValuation() {
-        return valuation;
-    }
-
-    public void setValuation(String valuation) {
-        this.valuation = valuation;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
     }
 
     public String getPhone() {
@@ -313,6 +154,30 @@ public abstract class AbstractQuestion {
         this.publisher = publisher;
     }
 
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getDealyear() {
+        return dealyear;
+    }
+
+    public void setDealyear(String dealyear) {
+        this.dealyear = dealyear;
+    }
+
+    public String getDealmonth() {
+        return dealmonth;
+    }
+
+    public void setDealmonth(String dealmonth) {
+        this.dealmonth = dealmonth;
+    }
+
     public String getDealdate() {
         return dealdate;
     }
@@ -321,11 +186,11 @@ public abstract class AbstractQuestion {
         this.dealdate = dealdate;
     }
 
-    public String getDealprice() {
+    public Double getDealprice() {
         return dealprice;
     }
 
-    public void setDealprice(String dealprice) {
+    public void setDealprice(Double dealprice) {
         this.dealprice = dealprice;
     }
 

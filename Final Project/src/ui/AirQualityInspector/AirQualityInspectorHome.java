@@ -12,10 +12,7 @@ import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.AbstractQuestion;
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.List;
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
 import ui.components.ListingsCell;
 
 
@@ -47,7 +44,7 @@ public class AirQualityInspectorHome extends javax.swing.JPanel {
         contentPanel.setLayout(new GridLayout(0,2));
 
         for (AbstractQuestion request : business.getWorkQueue().getWorkRequestList()){
-            if(request.getMake()!=null){
+            if(request.getState()!=null){
                 ListingsCell cell = new ListingsCell(userProcessContainer,userAccount,organization,enterprise,business,request);
                 contentPanel.add(cell);
             }
