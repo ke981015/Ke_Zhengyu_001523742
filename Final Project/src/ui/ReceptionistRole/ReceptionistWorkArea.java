@@ -16,7 +16,6 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JPanel;
-
 /**
  *
  * @author Ke
@@ -34,35 +33,16 @@ public class ReceptionistWorkArea extends javax.swing.JPanel {
      */
     public ReceptionistWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AbstractQuestion course) {
         initComponents();
-        this.setSize(1024, 768);
-        
+        this.setSize(1024, 768);       
         this.userProcessContainer = userProcessContainer;
         this.organization = organization;
         this.enterprise = enterprise;
         this.userAccount = account;
         this.business = business;
         this.course = course;
-        initCourses(/*business.getListingsDirectory()*/);
+        nameLabel.setText(account.getUsername());
     }
-    
-    private void initCourses(/*ListingsDirectory courseDir*/){
 
-        /*for (Listings course : courseDir){
-            ListingsCell cell = new ListingsCell(course);
-            jPanel1.add(cell);
-            cell.setPreferredSize(new Dimension(jPanel1.getWidth(), cell_H));
-        }*/
-
-        //scrollPanel.setSize(contentPanel.getWidth(), cell_H * courseDir.getList().size() / 2 + 1);
-
-        /*jPanel1.setSize(jPanel1.getWidth(), cell_H * courseDir.getList().size() / 2 + 1);
-
-        jPanel1.setPreferredSize(new Dimension(jPanel1.getWidth(), cell_H * courseDir.getList().size() / 2 + 1));
-        updateUI();*/
-    }
-    
-
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -74,134 +54,99 @@ public class ReceptionistWorkArea extends javax.swing.JPanel {
 
         jSplitPane1 = new javax.swing.JSplitPane();
         SideBar = new javax.swing.JPanel();
-        nameLabel = new javax.swing.JLabel();
         backButton = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
-        jButton2 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        nameLabel = new javax.swing.JLabel();
+        jButton8 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
 
         setLayout(null);
 
-        SideBar.setBackground(new java.awt.Color(33, 135, 251));
+        SideBar.setBackground(new java.awt.Color(51, 153, 255));
         SideBar.setPreferredSize(new java.awt.Dimension(160, 666));
+        SideBar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        nameLabel.setFont(new java.awt.Font("Skia", 1, 18)); // NOI18N
-        nameLabel.setForeground(new java.awt.Color(255, 255, 255));
-        nameLabel.setText("name");
-
+        backButton.setBackground(new java.awt.Color(255, 255, 255));
+        backButton.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        backButton.setForeground(new java.awt.Color(51, 153, 255));
         backButton.setText("<< Back");
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backButtonActionPerformed(evt);
             }
         });
+        SideBar.add(backButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 725, -1, -1));
+        SideBar.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 111, 235, 10));
 
-        jButton2.setBackground(new java.awt.Color(255, 204, 204));
-        jButton2.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(102, 153, 255));
-        jButton2.setText("Contract");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        jButton6.setBackground(new java.awt.Color(255, 204, 204));
-        jButton6.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(102, 153, 255));
+        jButton6.setBackground(new java.awt.Color(255, 255, 255));
+        jButton6.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(51, 153, 255));
         jButton6.setText("Done");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
+        SideBar.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 530, 210, -1));
 
-        jButton5.setBackground(new java.awt.Color(255, 204, 204));
-        jButton5.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(102, 153, 255));
-        jButton5.setText("View the vehicle condition report");
+        jButton5.setBackground(new java.awt.Color(255, 255, 255));
+        jButton5.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(51, 153, 255));
+        jButton5.setText("View Housing Report");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
+        SideBar.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 210, -1));
 
-        jButton7.setBackground(new java.awt.Color(255, 204, 204));
-        jButton7.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(102, 153, 255));
-        jButton7.setText("View air quality report");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
-
-        jButton3.setBackground(new java.awt.Color(255, 204, 204));
-        jButton3.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(102, 153, 255));
-        jButton3.setText("View vehicle information");
+        jButton3.setBackground(new java.awt.Color(255, 255, 255));
+        jButton3.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(51, 153, 255));
+        jButton3.setText("View Housing Info");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
+        SideBar.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 210, -1));
 
-        javax.swing.GroupLayout SideBarLayout = new javax.swing.GroupLayout(SideBar);
-        SideBar.setLayout(SideBarLayout);
-        SideBarLayout.setHorizontalGroup(
-            SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSeparator1)
-            .addGroup(SideBarLayout.createSequentialGroup()
-                .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(SideBarLayout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(SideBarLayout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(SideBarLayout.createSequentialGroup()
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jButton7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
-                            .addComponent(backButton))))
-                .addGap(36, 36, 36))
-            .addGroup(SideBarLayout.createSequentialGroup()
-                .addGap(86, 86, 86)
-                .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2)
-                    .addGroup(SideBarLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jButton6)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        SideBarLayout.setVerticalGroup(
-            SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SideBarLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(88, 88, 88)
-                .addComponent(jButton3)
-                .addGap(40, 40, 40)
-                .addComponent(jButton5)
-                .addGap(34, 34, 34)
-                .addComponent(jButton7)
-                .addGap(47, 47, 47)
-                .addComponent(jButton2)
-                .addGap(45, 45, 45)
-                .addComponent(jButton6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 134, Short.MAX_VALUE)
-                .addComponent(backButton)
-                .addGap(47, 47, 47))
-        );
+        jButton7.setBackground(new java.awt.Color(255, 255, 255));
+        jButton7.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jButton7.setForeground(new java.awt.Color(51, 153, 255));
+        jButton7.setText("View Air Quality Report");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        SideBar.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 210, -1));
+
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Hello,");
+        SideBar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 32, -1, -1));
+
+        nameLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        nameLabel.setForeground(new java.awt.Color(255, 255, 255));
+        nameLabel.setText("name");
+        SideBar.add(nameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 65, 207, 39));
+
+        jButton8.setBackground(new java.awt.Color(255, 255, 255));
+        jButton8.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jButton8.setForeground(new java.awt.Color(51, 153, 255));
+        jButton8.setText("Contract");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+        SideBar.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, 210, -1));
 
         jSplitPane1.setLeftComponent(SideBar);
 
@@ -210,39 +155,8 @@ public class ReceptionistWorkArea extends javax.swing.JPanel {
         jSplitPane1.setRightComponent(jPanel2);
 
         add(jSplitPane1);
-        jSplitPane1.setBounds(0, 0, 1150, 720);
+        jSplitPane1.setBounds(0, 0, 1250, 820);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
-        Router.getInstance(null).back(0);
-    }//GEN-LAST:event_backButtonActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        File file = new File("src\\resource\\Home Sales Contract.pdf");
-        try {
-            java.awt.Desktop.getDesktop().open(file);
-        } catch (IOException ex) {
-            Logger.getLogger(ReceptionistWorkArea.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-        Deal report = new Deal(userProcessContainer,business,userAccount,course);
-        jSplitPane1.setRightComponent(report);
-    }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-
-        ViewHousingReport report = new ViewHousingReport(userProcessContainer,business,userAccount,course);
-        jSplitPane1.setRightComponent(report);
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-        ViewAirQualityReport report = new ViewAirQualityReport(userProcessContainer,business,userAccount,course);
-        jSplitPane1.setRightComponent(report);
-    }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
 
@@ -250,14 +164,47 @@ public class ReceptionistWorkArea extends javax.swing.JPanel {
         jSplitPane1.setRightComponent(report);
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+
+        ViewHousingReport report = new ViewHousingReport(userProcessContainer,business,userAccount,course);
+        jSplitPane1.setRightComponent(report);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+
+        Deal report = new Deal(userProcessContainer,business,userAccount,course);
+        jSplitPane1.setRightComponent(report);
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
+        Router.getInstance(null).back(0);
+    }//GEN-LAST:event_backButtonActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        ViewAirQualityReport report = new ViewAirQualityReport(userProcessContainer,business,userAccount,course);
+        jSplitPane1.setRightComponent(report);
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+        File file = new File("src\\resource\\Home Sales Contract.pdf");
+        try {
+            java.awt.Desktop.getDesktop().open(file);
+        } catch (IOException ex) {
+            Logger.getLogger(ReceptionistWorkArea.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton8ActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel SideBar;
     private javax.swing.JButton backButton;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSplitPane jSplitPane1;
