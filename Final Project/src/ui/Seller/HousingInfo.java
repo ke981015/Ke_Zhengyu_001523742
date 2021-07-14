@@ -65,8 +65,6 @@ public class HousingInfo extends javax.swing.JPanel {
         btnDashBoard = new javax.swing.JButton();
         jLabel22 = new javax.swing.JLabel();
         txtArea = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        contentPanel = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -85,84 +83,204 @@ public class HousingInfo extends javax.swing.JPanel {
         jLabel24 = new javax.swing.JLabel();
         jRadioButton2 = new javax.swing.JRadioButton();
         jLabel25 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        contentPanel = new javax.swing.JPanel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel10.setFont(new java.awt.Font("Skia", 1, 24)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(99, 148, 249));
+        jLabel10.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(51, 153, 255));
         jLabel10.setText("Create a new listing");
         add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 45, -1, -1));
 
         jLabel8.setText("—————————————————————————————————————————————————");
         add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(87, 86, -1, -1));
 
-        jLabel16.setFont(new java.awt.Font("Comic Sans MS", 1, 13)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(102, 153, 255));
+        jLabel16.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(51, 153, 255));
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel16.setText("State:");
-        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(86, 160, 49, -1));
+        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 49, -1));
 
-        jLabel18.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(102, 153, 255));
+        jLabel18.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(51, 153, 255));
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel18.setText("Address line1:");
-        add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(422, 157, -1, -1));
-        add(txtAd1, new org.netbeans.lib.awtextra.AbsoluteConstraints(549, 157, 390, -1));
+        add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, -1, -1));
 
-        jLabel19.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(102, 153, 255));
+        txtAd1.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        txtAd1.setForeground(new java.awt.Color(51, 153, 255));
+        add(txtAd1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, 390, -1));
+
+        jLabel19.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(51, 153, 255));
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel19.setText("Address line2:");
-        add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(422, 212, -1, -1));
-        add(txtAd2, new org.netbeans.lib.awtextra.AbsoluteConstraints(549, 209, 390, -1));
+        add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 210, -1, -1));
 
-        jLabel20.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(102, 153, 255));
+        txtAd2.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        txtAd2.setForeground(new java.awt.Color(51, 153, 255));
+        add(txtAd2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 210, 390, -1));
+
+        jLabel20.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(51, 153, 255));
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel20.setText("Expected rent:");
         add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 390, 121, -1));
-        add(txtRent, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 390, 130, -1));
 
+        txtRent.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        txtRent.setForeground(new java.awt.Color(51, 153, 255));
+        add(txtRent, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 390, 130, -1));
+
+        jRadioButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jRadioButton1.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jRadioButton1.setForeground(new java.awt.Color(51, 153, 255));
         jRadioButton1.setText("YES");
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton1ActionPerformed(evt);
             }
         });
-        add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 330, -1, -1));
+        add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 330, -1, -1));
 
-        jLabel21.setFont(new java.awt.Font("Comic Sans MS", 1, 13)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(102, 153, 255));
+        jLabel21.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(51, 153, 255));
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel21.setText("Area:");
-        add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 89, -1));
+        add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 89, -1));
 
+        btnSave.setBackground(new java.awt.Color(51, 153, 255));
+        btnSave.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        btnSave.setForeground(new java.awt.Color(255, 255, 255));
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSaveActionPerformed(evt);
             }
         });
-        add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 690, 330, -1));
+        add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 750, 210, -1));
 
-        btnDashBoard.setBackground(new java.awt.Color(255, 204, 204));
-        btnDashBoard.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        btnDashBoard.setForeground(new java.awt.Color(102, 153, 255));
-        btnDashBoard.setText("Upload dash board view");
+        btnDashBoard.setBackground(new java.awt.Color(51, 153, 255));
+        btnDashBoard.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        btnDashBoard.setForeground(new java.awt.Color(255, 255, 255));
+        btnDashBoard.setText("Upload picture");
         btnDashBoard.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDashBoardActionPerformed(evt);
             }
         });
-        add(btnDashBoard, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 690, -1, -1));
+        add(btnDashBoard, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 750, 180, -1));
 
-        jLabel22.setFont(new java.awt.Font("Comic Sans MS", 1, 13)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(102, 153, 255));
+        jLabel22.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(51, 153, 255));
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel22.setText("City:");
-        add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(86, 212, 49, -1));
-        add(txtArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(173, 270, 100, -1));
+        add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 49, -1));
+
+        txtArea.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        txtArea.setForeground(new java.awt.Color(51, 153, 255));
+        add(txtArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 100, -1));
+
+        jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel5.setText("Elevator:");
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 330, 80, -1));
+
+        jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel4.setText("Orientation:");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 90, -1));
+
+        jLabel6.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel6.setText("Unit type:");
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 270, 80, -1));
+
+        jLabel7.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel7.setText("Floor:");
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, -1, -1));
+
+        ComboState.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        ComboState.setForeground(new java.awt.Color(51, 153, 255));
+        ComboState.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "California", "Massachusetts", "New Jersey", "New York" }));
+        ComboState.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComboStateActionPerformed(evt);
+            }
+        });
+        add(ComboState, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, -1, -1));
+
+        ComboCity.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        ComboCity.setForeground(new java.awt.Color(51, 153, 255));
+        ComboCity.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Los Angeles", "Hollywood", "Compton", "San Francisco" }));
+        add(ComboCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, -1, -1));
+
+        jLabel23.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel23.setText("m^2");
+        add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 40, -1));
+
+        ComboOri.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        ComboOri.setForeground(new java.awt.Color(51, 153, 255));
+        ComboOri.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "East", "South", "West", "North" }));
+        add(ComboOri, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, 134, -1));
+
+        txtBath.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        txtBath.setForeground(new java.awt.Color(51, 153, 255));
+        add(txtBath, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 270, 30, -1));
+
+        jLabel9.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel9.setText("bathroom");
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 270, -1, -1));
+
+        txtBed.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        txtBed.setForeground(new java.awt.Color(51, 153, 255));
+        add(txtBed, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 270, 30, -1));
+
+        txtLiving.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        txtLiving.setForeground(new java.awt.Color(51, 153, 255));
+        add(txtLiving, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 270, 30, -1));
+
+        jLabel11.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel11.setText("bedroom");
+        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 270, -1, -1));
+
+        jLabel12.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel12.setText("living room");
+        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 270, -1, -1));
+
+        txtFl.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        txtFl.setForeground(new java.awt.Color(51, 153, 255));
+        add(txtFl, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, 100, -1));
+
+        jLabel24.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel24.setText("$ (every year)");
+        add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 390, 120, -1));
+
+        jRadioButton2.setBackground(new java.awt.Color(255, 255, 255));
+        jRadioButton2.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jRadioButton2.setForeground(new java.awt.Color(51, 153, 255));
+        jRadioButton2.setText("NO");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
+        add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 330, -1, -1));
+
+        jLabel25.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel25.setText("F");
+        add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 390, 20, -1));
 
         contentPanel.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -179,77 +297,7 @@ public class HousingInfo extends javax.swing.JPanel {
 
         jScrollPane1.setViewportView(contentPanel);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, 870, 230));
-
-        jLabel5.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(102, 153, 255));
-        jLabel5.setText("Elevator:");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 330, 60, -1));
-
-        jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(102, 153, 255));
-        jLabel4.setText("Orientation:");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 330, 90, -1));
-
-        jLabel6.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(102, 153, 255));
-        jLabel6.setText("Unit type:");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 270, 74, -1));
-
-        jLabel7.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(102, 153, 255));
-        jLabel7.setText("Floor:");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 390, -1, -1));
-
-        ComboState.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "California", "Massachusetts", "New Jersey", "New York" }));
-        ComboState.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ComboStateActionPerformed(evt);
-            }
-        });
-        add(ComboState, new org.netbeans.lib.awtextra.AbsoluteConstraints(173, 157, -1, -1));
-
-        ComboCity.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Los Angeles", "Hollywood", "Compton", "San Francisco" }));
-        add(ComboCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(173, 209, -1, -1));
-
-        jLabel23.setForeground(new java.awt.Color(102, 153, 255));
-        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel23.setText("㎡");
-        add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 270, 20, -1));
-
-        ComboOri.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "East", "South", "West", "North" }));
-        add(ComboOri, new org.netbeans.lib.awtextra.AbsoluteConstraints(173, 330, 134, -1));
-        add(txtBath, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 270, 30, -1));
-
-        jLabel9.setText("bathroom");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 270, -1, -1));
-        add(txtBed, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 270, 30, -1));
-        add(txtLiving, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 270, 30, -1));
-
-        jLabel11.setText("bedroom");
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 270, -1, -1));
-
-        jLabel12.setText("living room");
-        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 270, -1, -1));
-        add(txtFl, new org.netbeans.lib.awtextra.AbsoluteConstraints(173, 390, 100, -1));
-
-        jLabel24.setForeground(new java.awt.Color(102, 153, 255));
-        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel24.setText("$ (every year)");
-        add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 390, 120, -1));
-
-        jRadioButton2.setText("NO");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
-            }
-        });
-        add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 330, -1, -1));
-
-        jLabel25.setForeground(new java.awt.Color(102, 153, 255));
-        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel25.setText("F");
-        add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 390, 20, -1));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 440, 870, 300));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
@@ -339,7 +387,7 @@ public class HousingInfo extends javax.swing.JPanel {
             //System.out.println(img2.getWidth()+""+img2.getHeight());
             //icon.setImage(newImage);
             //img2.setIcon(icon);
-            contentPanel.setLayout(new GridLayout(0,2));
+            contentPanel.setLayout(new GridLayout(1,0));
             PictureCell cell = new PictureCell(container,userAccount,system,name);
             contentPanel.add(cell);
             updateUI();

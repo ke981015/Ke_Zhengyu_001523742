@@ -74,7 +74,7 @@ public class BuyerWorkArea extends javax.swing.JPanel {
                 backButtonActionPerformed(evt);
             }
         });
-        SideBar.add(backButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 725, -1, -1));
+        SideBar.add(backButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 730, -1, -1));
         SideBar.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 111, 235, 10));
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
