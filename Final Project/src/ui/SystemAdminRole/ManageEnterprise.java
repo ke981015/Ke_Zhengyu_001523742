@@ -9,6 +9,7 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Router;
+import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.awt.Component;
 import javax.swing.JOptionPane;
@@ -19,18 +20,20 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Ke
  */
-public class ManageEnterpriseJPanel extends javax.swing.JPanel {
+public class ManageEnterprise extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
     private EcoSystem system;
+    private UserAccount account;
 
     /**
      * Creates new form ManageEnterpriseJPanel
      */
-    public ManageEnterpriseJPanel(JPanel userProcessContainer, EcoSystem system) {
+    public ManageEnterprise(JPanel userProcessContainer, UserAccount account, EcoSystem system) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.system = system;
+        this.account = account;
 
         populateTable();
         populateComboBox();
@@ -84,14 +87,16 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         enterpriseTypeJComboBox = new javax.swing.JComboBox();
         submitJButton = new javax.swing.JButton();
-        backJButton = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        btnBack = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        enterpriseJTable.setBackground(new java.awt.Color(204, 255, 204));
         enterpriseJTable.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        enterpriseJTable.setFont(new java.awt.Font("Lucida Grande", 1, 12)); // NOI18N
+        enterpriseJTable.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        enterpriseJTable.setForeground(new java.awt.Color(51, 153, 255));
         enterpriseJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -114,26 +119,39 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(enterpriseJTable);
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(310, 150, 523, 95);
+        jScrollPane1.setBounds(250, 140, 650, 240);
 
-        jLabel1.setText("Network");
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel1.setText("Network:");
         add(jLabel1);
-        jLabel1.setBounds(370, 340, 70, 18);
+        jLabel1.setBounds(470, 410, 90, 22);
 
+        networkJComboBox.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        networkJComboBox.setForeground(new java.awt.Color(51, 153, 255));
         networkJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         add(networkJComboBox);
-        networkJComboBox.setBounds(520, 330, 136, 24);
+        networkJComboBox.setBounds(600, 410, 136, 28);
 
-        jLabel2.setText("Name");
+        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel2.setText("Name:");
         add(jLabel2);
-        jLabel2.setBounds(370, 440, 50, 18);
+        jLabel2.setBounds(490, 540, 50, 22);
+
+        nameJTextField.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        nameJTextField.setForeground(new java.awt.Color(51, 153, 255));
         add(nameJTextField);
-        nameJTextField.setBounds(520, 440, 136, 24);
+        nameJTextField.setBounds(600, 540, 136, 28);
 
-        jLabel3.setText("Enterprise Type");
+        jLabel3.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel3.setText("Enterprise Type:");
         add(jLabel3);
-        jLabel3.setBounds(370, 400, 120, 18);
+        jLabel3.setBounds(420, 470, 140, 22);
 
+        enterpriseTypeJComboBox.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        enterpriseTypeJComboBox.setForeground(new java.awt.Color(51, 153, 255));
         enterpriseTypeJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         enterpriseTypeJComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,11 +159,11 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
             }
         });
         add(enterpriseTypeJComboBox);
-        enterpriseTypeJComboBox.setBounds(520, 390, 136, 24);
+        enterpriseTypeJComboBox.setBounds(600, 470, 136, 28);
 
-        submitJButton.setBackground(new java.awt.Color(255, 204, 204));
-        submitJButton.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        submitJButton.setForeground(new java.awt.Color(102, 153, 255));
+        submitJButton.setBackground(new java.awt.Color(51, 153, 255));
+        submitJButton.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        submitJButton.setForeground(new java.awt.Color(255, 255, 255));
         submitJButton.setText("Submit");
         submitJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -153,19 +171,29 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
             }
         });
         add(submitJButton);
-        submitJButton.setBounds(760, 480, 77, 27);
+        submitJButton.setBounds(510, 610, 120, 31);
 
-        backJButton.setBackground(new java.awt.Color(255, 204, 204));
-        backJButton.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        backJButton.setForeground(new java.awt.Color(102, 153, 255));
-        backJButton.setText("<< Back");
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        jLabel10.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel10.setText("Manage enterprise");
+        add(jLabel10);
+        jLabel10.setBounds(40, 40, 240, 34);
+
+        jLabel8.setText("—————————————————————————————————————————————————");
+        add(jLabel8);
+        jLabel8.setBounds(110, 80, 735, 18);
+
+        btnBack.setBackground(new java.awt.Color(51, 153, 255));
+        btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        btnBack.setForeground(new java.awt.Color(255, 255, 255));
+        btnBack.setText("<< Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
-        add(backJButton);
-        backJButton.setBounds(20, 40, 83, 27);
+        add(btnBack);
+        btnBack.setBounds(40, 700, 100, 30);
     }// </editor-fold>//GEN-END:initComponents
 
     private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
@@ -187,22 +215,24 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
 
     }//GEN-LAST:event_submitJButtonActionPerformed
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
-        SystemAdminWorkAreaJPanel home = new SystemAdminWorkAreaJPanel(userProcessContainer, system);
-        Router.getInstance(null).go(home);
-    }//GEN-LAST:event_backJButtonActionPerformed
-
     private void enterpriseTypeJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterpriseTypeJComboBoxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_enterpriseTypeJComboBoxActionPerformed
 
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        SystemAdminWorkArea home = new SystemAdminWorkArea(userProcessContainer, account, system);
+        Router.getInstance(null).go(home);
+    }//GEN-LAST:event_btnBackActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton;
+    private javax.swing.JButton btnBack;
     private javax.swing.JTable enterpriseJTable;
     private javax.swing.JComboBox enterpriseTypeJComboBox;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField nameJTextField;
     private javax.swing.JComboBox networkJComboBox;

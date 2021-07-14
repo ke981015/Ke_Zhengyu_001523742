@@ -31,7 +31,7 @@ import ui.CustomerServiceRole.BuyerServiceHome;
 import ui.CustomerServiceRole.SellerServiceHome;
 import ui.ReceptionistRole.ReceptionistHome;
 import ui.Seller.SellerWorkArea;
-import ui.SystemAdminRole.SystemAdminWorkAreaJPanel;
+import ui.SystemAdminRole.SystemAdminWorkArea;
 import ui.InspectorRole.InspectorHome;
 import ui.Seller.SellerRegister;
 import ui.UserAdminRole.UserAdminWorkArea;
@@ -242,7 +242,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 Router.getInstance(null).go(home);
             }
             else if(userAccount.getRole() instanceof SystemAdminRole){
-                SystemAdminWorkAreaJPanel home = new SystemAdminWorkAreaJPanel(container, system);
+                SystemAdminWorkArea home = new SystemAdminWorkArea(container, userAccount, system);
                 Router.getInstance(null).go(home);
             }
             else if(userAccount.getRole() instanceof UserAdminRole){

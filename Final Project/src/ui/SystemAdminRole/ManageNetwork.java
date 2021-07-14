@@ -8,8 +8,10 @@ import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
 import Business.Network.Network;
 import Business.Router;
+import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.awt.Component;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
@@ -17,20 +19,22 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Ke
  */
-public class ManageNetworkJPanel extends javax.swing.JPanel {
+public class ManageNetwork extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
     private EcoSystem system;
+    private UserAccount account;
 
     /**
      *
      * Creates new form ManageNetworkJPanel
      */
-    public ManageNetworkJPanel(JPanel userProcessContainer, EcoSystem system) {
+    public ManageNetwork(JPanel userProcessContainer, UserAccount account, EcoSystem system) {
         initComponents();
 
         this.userProcessContainer = userProcessContainer;
         this.system = system;
+        this.account = account;
 
         populateNetworkTable();
     }
@@ -60,14 +64,16 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         lblName = new javax.swing.JLabel();
         btnSubmit = new javax.swing.JButton();
         txtNetworkName = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        networkJTable.setBackground(new java.awt.Color(204, 255, 204));
         networkJTable.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        networkJTable.setFont(new java.awt.Font("Lucida Grande", 1, 12)); // NOI18N
+        networkJTable.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        networkJTable.setForeground(new java.awt.Color(51, 153, 255));
         networkJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null},
@@ -100,15 +106,17 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         }
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(390, 220, 404, 91);
+        jScrollPane1.setBounds(280, 180, 580, 210);
 
+        lblName.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        lblName.setForeground(new java.awt.Color(51, 153, 255));
         lblName.setText("Name:");
         add(lblName);
-        lblName.setBounds(400, 420, 50, 18);
+        lblName.setBounds(400, 480, 50, 22);
 
-        btnSubmit.setBackground(new java.awt.Color(255, 204, 204));
-        btnSubmit.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        btnSubmit.setForeground(new java.awt.Color(102, 153, 255));
+        btnSubmit.setBackground(new java.awt.Color(51, 153, 255));
+        btnSubmit.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        btnSubmit.setForeground(new java.awt.Color(255, 255, 255));
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,13 +124,26 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
             }
         });
         add(btnSubmit);
-        btnSubmit.setBounds(680, 420, 77, 27);
-        add(txtNetworkName);
-        txtNetworkName.setBounds(460, 420, 181, 24);
+        btnSubmit.setBounds(680, 480, 100, 31);
 
-        btnBack.setBackground(new java.awt.Color(255, 204, 204));
-        btnBack.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        btnBack.setForeground(new java.awt.Color(102, 153, 255));
+        txtNetworkName.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        txtNetworkName.setForeground(new java.awt.Color(51, 153, 255));
+        add(txtNetworkName);
+        txtNetworkName.setBounds(460, 480, 181, 28);
+
+        jLabel10.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel10.setText("Manage network");
+        add(jLabel10);
+        jLabel10.setBounds(40, 40, 187, 34);
+
+        jLabel8.setText("—————————————————————————————————————————————————");
+        add(jLabel8);
+        jLabel8.setBounds(110, 80, 735, 18);
+
+        btnBack.setBackground(new java.awt.Color(51, 153, 255));
+        btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        btnBack.setForeground(new java.awt.Color(255, 255, 255));
         btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,11 +151,15 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
             }
         });
         add(btnBack);
-        btnBack.setBounds(30, 30, 83, 27);
+        btnBack.setBounds(40, 700, 100, 30);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
 
+        if(txtNetworkName.getText()==null){
+            JOptionPane.showMessageDialog(this, "Please input the Name.");
+            return;
+        }    
         String name = txtNetworkName.getText();
 
         Network network = system.createAndAddNetwork();
@@ -145,13 +170,15 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        SystemAdminWorkAreaJPanel home = new SystemAdminWorkAreaJPanel(userProcessContainer, system);
+        SystemAdminWorkArea home = new SystemAdminWorkArea(userProcessContainer, account, system);
         Router.getInstance(null).go(home);
     }//GEN-LAST:event_btnBackActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnSubmit;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblName;
     private javax.swing.JTable networkJTable;

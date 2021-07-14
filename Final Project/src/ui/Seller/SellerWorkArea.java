@@ -7,6 +7,7 @@ package ui.Seller;
 import ui.Buyer.*;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
+import Business.Global;
 import Business.Organization.Organization;
 import Business.Router;
 import Business.UserAccount.UserAccount;
@@ -65,13 +66,13 @@ public class SellerWorkArea extends javax.swing.JPanel {
         backButton.setBackground(new java.awt.Color(255, 255, 255));
         backButton.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         backButton.setForeground(new java.awt.Color(51, 153, 255));
-        backButton.setText("<< Back");
+        backButton.setText("Logout");
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backButtonActionPerformed(evt);
             }
         });
-        SideBar.add(backButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 740, -1, -1));
+        SideBar.add(backButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 740, 90, -1));
         SideBar.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 111, 235, 10));
 
         jButton5.setBackground(new java.awt.Color(255, 255, 255));
@@ -129,7 +130,7 @@ public class SellerWorkArea extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
-        Router.getInstance(null).back(0);
+        Global.getInstance().logout();
     }//GEN-LAST:event_backButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
