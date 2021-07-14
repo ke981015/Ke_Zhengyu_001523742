@@ -78,9 +78,12 @@ public class BuyerQuestion extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(1024, 768));
 
-        sidePanel.setBackground(new java.awt.Color(33, 135, 251));
+        sidePanel.setBackground(new java.awt.Color(51, 153, 255));
         sidePanel.setPreferredSize(new java.awt.Dimension(160, 768));
 
+        logoutButton.setBackground(new java.awt.Color(255, 255, 255));
+        logoutButton.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        logoutButton.setForeground(new java.awt.Color(51, 153, 255));
         logoutButton.setText("<< Back");
         logoutButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,8 +96,8 @@ public class BuyerQuestion extends javax.swing.JPanel {
         jLabel1.setText("Question:");
 
         requestTestJButton.setBackground(new java.awt.Color(255, 255, 255));
-        requestTestJButton.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        requestTestJButton.setForeground(new java.awt.Color(102, 153, 255));
+        requestTestJButton.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        requestTestJButton.setForeground(new java.awt.Color(51, 153, 255));
         requestTestJButton.setText("Ask");
         requestTestJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,6 +106,8 @@ public class BuyerQuestion extends javax.swing.JPanel {
         });
 
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jTextArea1.setForeground(new java.awt.Color(51, 153, 255));
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 

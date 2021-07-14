@@ -5,12 +5,11 @@
  */
 package ui.Seller;
 
-import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
-import Business.Role.SellerRole;
-import Business.Router;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import Business.DB4OUtil.DB4OUtil;
+import Business.Role.SellerRole;
 
 /**
  *
@@ -43,136 +42,140 @@ public class SellerRegister extends javax.swing.JPanel {
         jLabel10 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        txtName = new javax.swing.JTextField();
         txtPassword = new javax.swing.JPasswordField();
         txtRepassword = new javax.swing.JPasswordField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel10.setFont(new java.awt.Font("Skia", 1, 24)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(99, 148, 249));
+        jLabel10.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(51, 153, 255));
         jLabel10.setText("Create a new seller");
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 45, -1, -1));
 
         jLabel8.setText("—————————————————————————————————————————————————");
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(87, 86, -1, -1));
 
+        jButton1.setBackground(new java.awt.Color(51, 153, 255));
+        jButton1.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Register");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(426, 553, 148, 37));
 
-        jLabel1.setText("Name:");
-
+        jLabel3.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 153, 255));
         jLabel3.setText("Password:");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 350, -1, -1));
 
+        jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(51, 153, 255));
         jLabel4.setText("RePassword:");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 420, -1, -1));
 
+        txtPassword.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        txtPassword.setForeground(new java.awt.Color(51, 153, 255));
         txtPassword.setToolTipText("*");
+        add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 169, -1));
 
+        txtRepassword.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        txtRepassword.setForeground(new java.awt.Color(51, 153, 255));
         txtRepassword.setToolTipText("*");
+        add(txtRepassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 420, 169, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(59, 59, 59)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel10)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(28, 28, 28)
-                                .addComponent(jLabel8))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(349, 349, 349)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(txtName, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtPassword, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtRepassword, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(391, 391, 391)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(196, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addComponent(jLabel10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8)
-                .addGap(77, 77, 77)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(155, 155, 155)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(88, 88, 88)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(txtRepassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(129, Short.MAX_VALUE))
-        );
+        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel2.setText("Phone Number:");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 280, 130, -1));
+
+        jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel5.setText("Name:");
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 50, -1));
+
+        jTextField2.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jTextField2.setForeground(new java.awt.Color(51, 153, 255));
+        jTextField2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextField2KeyPressed(evt);
+            }
+        });
+        add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 280, 170, -1));
+
+        jTextField3.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jTextField3.setForeground(new java.awt.Color(51, 153, 255));
+        add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 170, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
-        String userName = txtName.getText();
-        String password =  txtPassword.getText();
-        String repassword = txtRepassword.getText();        
+        if(jTextField3.getText()==null){
+            JOptionPane.showMessageDialog(this, "Please input the Name.");
+            return;
+        }    
+        String userName = jTextField3.getText();
         
-        if(userName.isEmpty() || password.isEmpty() || repassword.isEmpty())
-        {
-            JOptionPane.showMessageDialog(null, "Please input username or password!");
+        if(jTextField2.getText()==null){
+            JOptionPane.showMessageDialog(this, "Please input the Phone.");
             return;
         }
-        /*if(email.isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Please input your email!");
+        if(jTextField2.getText().length()!=16){
+            JOptionPane.showMessageDialog(this, "Please input the correct type in Phone.");
             return;
-        }*/
+        }
+        String phone = jTextField2.getText();
+
+        if(txtPassword.getText()==null || txtRepassword.getText()==null){
+            JOptionPane.showMessageDialog(this, "Please input the Password.");
+            return;
+        }    
+        String password = txtPassword.getText();
+        String repassword = txtRepassword.getText();                
    
         if(!repassword.equals(password))
         {
             JOptionPane.showMessageDialog(null, "Password and Re_Password are not same, Please Check!");
             return;
         }
-
         
-        system.getUserAccountDirectory().createUserAccount(userName, password, new SellerRole());
+        system.getUserAccountDirectory().createUserAccount(userName, password, phone, new SellerRole());
         DB4OUtil.getInstance().storeSystem(system);
-        JOptionPane.showMessageDialog(null, "Register Buyer Successfully!");
+        JOptionPane.showMessageDialog(null, "Register Seller Successfully!");
         
-        txtName.setText("");
         txtPassword.setText("");
         txtRepassword.setText("");
-        //txtEmail.setText("");
-        //txtPhoneNum.setText("");
+        jTextField2.setText("");
+        jTextField3.setText("");
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField2KeyPressed
+        // TODO add your handling code here:
+        if(jTextField2.getText().length()==3)
+            jTextField2.setText(jTextField2.getText()+" - ");
+        if(jTextField2.getText().length()==9)
+            jTextField2.setText(jTextField2.getText()+" - ");
+    }//GEN-LAST:event_jTextField2KeyPressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JTextField txtName;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
     private javax.swing.JPasswordField txtPassword;
     private javax.swing.JPasswordField txtRepassword;
     // End of variables declaration//GEN-END:variables

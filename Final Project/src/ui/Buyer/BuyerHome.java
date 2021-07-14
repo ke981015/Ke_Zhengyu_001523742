@@ -72,9 +72,9 @@ public class BuyerHome extends javax.swing.JPanel {
         titleLabel = new javax.swing.JLabel();
         sidePanel = new javax.swing.JPanel();
         logoutButton = new javax.swing.JButton();
-        nameLabel = new javax.swing.JLabel();
-        emailLabel = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        nameLabel = new javax.swing.JLabel();
         line = new javax.swing.JSeparator();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -97,13 +97,16 @@ public class BuyerHome extends javax.swing.JPanel {
 
         scrollPanel.setViewportView(contentPanel);
 
-        titleLabel.setFont(new java.awt.Font("Skia", 1, 36)); // NOI18N
-        titleLabel.setForeground(new java.awt.Color(99, 148, 249));
+        titleLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
+        titleLabel.setForeground(new java.awt.Color(51, 153, 255));
         titleLabel.setText("DashBoard");
 
-        sidePanel.setBackground(new java.awt.Color(33, 135, 251));
+        sidePanel.setBackground(new java.awt.Color(51, 153, 255));
         sidePanel.setPreferredSize(new java.awt.Dimension(160, 768));
 
+        logoutButton.setBackground(new java.awt.Color(255, 255, 255));
+        logoutButton.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        logoutButton.setForeground(new java.awt.Color(51, 153, 255));
         logoutButton.setText("Logout");
         logoutButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,17 +114,9 @@ public class BuyerHome extends javax.swing.JPanel {
             }
         });
 
-        nameLabel.setFont(new java.awt.Font("PingFang HK", 1, 18)); // NOI18N
-        nameLabel.setForeground(new java.awt.Color(255, 255, 255));
-        nameLabel.setText("name");
-
-        emailLabel.setFont(new java.awt.Font("PingFang HK", 1, 16)); // NOI18N
-        emailLabel.setForeground(new java.awt.Color(255, 255, 255));
-        emailLabel.setText("email");
-
-        jButton1.setBackground(new java.awt.Color(255, 204, 204));
-        jButton1.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(102, 153, 255));
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(51, 153, 255));
         jButton1.setText("Q&A");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,36 +124,44 @@ public class BuyerHome extends javax.swing.JPanel {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Hello,");
+
+        nameLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        nameLabel.setForeground(new java.awt.Color(255, 255, 255));
+        nameLabel.setText("name");
+
         javax.swing.GroupLayout sidePanelLayout = new javax.swing.GroupLayout(sidePanel);
         sidePanel.setLayout(sidePanelLayout);
         sidePanelLayout.setHorizontalGroup(
             sidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(sidePanelLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
+                .addContainerGap()
                 .addGroup(sidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(sidePanelLayout.createSequentialGroup()
-                        .addComponent(logoutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(sidePanelLayout.createSequentialGroup()
-                        .addComponent(emailLabel)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(sidePanelLayout.createSequentialGroup()
-                        .addComponent(nameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
-                        .addGap(19, 19, 19))))
+                        .addComponent(jLabel1)
+                        .addContainerGap(81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)))
             .addGroup(sidePanelLayout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(jButton1)
+                .addGroup(sidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, sidePanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(sidePanelLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(logoutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         sidePanelLayout.setVerticalGroup(
             sidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sidePanelLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
+                .addGap(56, 56, 56)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(emailLabel)
-                .addGap(131, 131, 131)
-                .addComponent(jButton1)
+                .addGap(150, 150, 150)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(logoutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(65, 65, 65))
@@ -175,8 +178,8 @@ public class BuyerHome extends javax.swing.JPanel {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 627, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(line))
-                    .addComponent(scrollPanel))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(scrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1252, Short.MAX_VALUE))
+                .addContainerGap(74, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -186,9 +189,9 @@ public class BuyerHome extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(line, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(scrollPanel)
-                .addContainerGap(29, Short.MAX_VALUE))
-            .addComponent(sidePanel, javax.swing.GroupLayout.DEFAULT_SIZE, 2133, Short.MAX_VALUE)
+                .addComponent(scrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 892, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(sidePanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1000, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -206,8 +209,8 @@ public class BuyerHome extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel contentPanel;
-    private javax.swing.JLabel emailLabel;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JSeparator line;
     private javax.swing.JButton logoutButton;
     private javax.swing.JLabel nameLabel;

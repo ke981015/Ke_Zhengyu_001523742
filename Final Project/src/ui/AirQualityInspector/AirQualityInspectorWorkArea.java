@@ -96,7 +96,7 @@ public class AirQualityInspectorWorkArea extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 153, 255));
         jLabel1.setText("Site temperature:");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 219, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(402, 220, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(51, 153, 255));

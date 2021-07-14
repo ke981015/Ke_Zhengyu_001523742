@@ -355,7 +355,7 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Please enter the correct type in Phone.");
             return;
         }
-        car.setPhone(txtPh.getText());
+        car.setSellerphone(txtPh.getText());
         
         system.getWorkQueue().getWorkRequestList().add(car);
         DB4OUtil.getInstance().storeSystem(system);

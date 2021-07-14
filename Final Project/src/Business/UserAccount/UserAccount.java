@@ -15,6 +15,7 @@ public class UserAccount {
     
     private String username;
     private String password;
+    private String phone;
     private Role role;
     private WorkQueue workQueue;
 
@@ -57,7 +58,13 @@ public class UserAccount {
     public String toString() {
         return username;
     }
-    
-    
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
     
 }

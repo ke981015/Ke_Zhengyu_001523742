@@ -58,13 +58,16 @@ public abstract class AbstractQuestion {
     private double rent;
     private String state;
     private String city;
-    private String date;
+    private String sellerphone;
+    private String buyerphone;
+    private String bookyear;
+    private String bookmonth;
+    private String bookdate;
     
     private UserAccount sender;
     private UserAccount solver;
     private UserAccount publisher;
-    private String answer;
-    private String phone;
+    private String answer;   
     private String name;
     private String contact;
     private boolean elevator;
@@ -122,12 +125,12 @@ public abstract class AbstractQuestion {
         this.city = city;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getSellerphone() {
+        return sellerphone;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setSellerphone(String sellerphone) {
+        this.sellerphone = sellerphone;
     }
 
     public String getName() {
@@ -152,14 +155,6 @@ public abstract class AbstractQuestion {
 
     public void setPublisher(UserAccount publisher) {
         this.publisher = publisher;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
     }
 
     public String getDealyear() {
@@ -512,6 +507,38 @@ public abstract class AbstractQuestion {
 
     public void setRent(double rent) {
         this.rent = rent;
+    }
+
+    public String getBuyerphone() {
+        return buyerphone;
+    }
+
+    public void setBuyerphone(String buyerphone) {
+        this.buyerphone = buyerphone;
+    }
+
+    public String getBookyear() {
+        return bookyear;
+    }
+
+    public void setBookyear(String bookyear) {
+        this.bookyear = bookyear;
+    }
+
+    public String getBookmonth() {
+        return bookmonth;
+    }
+
+    public void setBookmonth(String bookmonth) {
+        this.bookmonth = bookmonth;
+    }
+
+    public String getBookdate() {
+        return bookdate;
+    }
+
+    public void setBookdate(String bookdate) {
+        this.bookdate = bookdate;
     }
  
 

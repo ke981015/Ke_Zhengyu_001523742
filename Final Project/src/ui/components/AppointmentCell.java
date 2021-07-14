@@ -46,7 +46,7 @@ public class AppointmentCell extends javax.swing.JPanel {
         this.userAccount = account;
         this.business = business;
 
-        titleLabel.setText(course.getDate());
+        titleLabel.setText(course.getBookdate());
         titleLabel1.setText(course.getCity());
     }
 

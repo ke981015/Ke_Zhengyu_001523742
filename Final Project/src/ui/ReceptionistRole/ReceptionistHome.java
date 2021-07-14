@@ -44,7 +44,7 @@ public class ReceptionistHome extends javax.swing.JPanel {
         contentPanel.setLayout(new GridLayout(0,2));
 
         for (AbstractQuestion request : business.getWorkQueue().getWorkRequestList()){
-            if(request.getDate() != null){
+            if(request.getBookyear() != null){
                 AppointmentCell cell = new AppointmentCell(userProcessContainer,userAccount,organization,enterprise,business,request);
                 contentPanel.add(cell);    
             }

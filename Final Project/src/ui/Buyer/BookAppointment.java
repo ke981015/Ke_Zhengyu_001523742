@@ -47,74 +47,186 @@ public class BookAppointment extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel25 = new javax.swing.JLabel();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        jLabel26 = new javax.swing.JLabel();
+        jComboBox3 = new javax.swing.JComboBox<>();
+        jLabel27 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
-        setLayout(null);
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 153, 255));
         jLabel1.setText("Date:");
-        add(jLabel1);
-        jLabel1.setBounds(370, 220, 40, 18);
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 240, 70, -1));
 
+        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 153, 255));
         jLabel2.setText("Phone Number:");
-        add(jLabel2);
-        jLabel2.setBounds(350, 310, 130, 18);
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 330, 130, -1));
 
+        jLabel3.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 153, 255));
         jLabel3.setText("Name:");
-        add(jLabel3);
-        jLabel3.setBounds(380, 390, 50, 18);
-        add(jTextField1);
-        jTextField1.setBounds(490, 220, 115, 24);
-        add(jTextField2);
-        jTextField2.setBounds(490, 310, 115, 24);
-        add(jTextField3);
-        jTextField3.setBounds(490, 390, 115, 24);
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(285, 420, 50, -1));
 
-        jButton1.setBackground(new java.awt.Color(204, 255, 204));
-        jButton1.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(102, 153, 255));
+        jTextField2.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jTextField2.setForeground(new java.awt.Color(51, 153, 255));
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
+        add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 330, 115, -1));
+
+        jTextField3.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jTextField3.setForeground(new java.awt.Color(51, 153, 255));
+        add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 420, 115, -1));
+
+        jButton1.setBackground(new java.awt.Color(51, 153, 255));
+        jButton1.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Reserve");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1);
-        jButton1.setBounds(450, 460, 83, 27);
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 560, 100, -1));
 
-        jLabel10.setFont(new java.awt.Font("Skia", 1, 24)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(99, 148, 249));
+        jLabel10.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(51, 153, 255));
         jLabel10.setText("Book appointment");
-        add(jLabel10);
-        jLabel10.setBounds(40, 10, 212, 120);
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, 120));
 
         jLabel8.setText("—————————————————————————————————————————————————");
-        add(jLabel8);
-        jLabel8.setBounds(90, 60, 735, 100);
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, -1, 100));
+
+        jComboBox1.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jComboBox1.setForeground(new java.awt.Color(51, 153, 255));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2021", "2020", "2019", "2018" }));
+        add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, -1, -1));
+
+        jLabel25.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel25.setText("year");
+        add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 240, -1, -1));
+
+        jComboBox2.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jComboBox2.setForeground(new java.awt.Color(51, 153, 255));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" }));
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox2ActionPerformed(evt);
+            }
+        });
+        add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 240, -1, -1));
+
+        jLabel26.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel26.setText("month");
+        add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 240, -1, -1));
+
+        jComboBox3.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jComboBox3.setForeground(new java.awt.Color(51, 153, 255));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+        add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 240, -1, -1));
+
+        jLabel27.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel27.setText("date");
+        add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 240, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        course.setDate(jTextField1.getText());
-        course.setPhone(jTextField2.getText());
+        course.setBookyear(jComboBox1.getSelectedItem().toString());
+        course.setBookmonth(jComboBox2.getSelectedItem().toString());
+        course.setBookdate(jComboBox3.getSelectedItem().toString());
+        
+        if(jTextField2.getText()==null){
+            JOptionPane.showMessageDialog(this, "Please enter the Phone.");
+            return;
+        }
+        if(jTextField2.getText().length()!=16){
+            JOptionPane.showMessageDialog(this, "Please enter the correct type in Phone.");
+            return;
+        }
+        course.setBuyerphone(jTextField2.getText());
+
+        if(jTextField3.getText()==null){
+            JOptionPane.showMessageDialog(this, "Please enter the Name.");
+            return;
+        }
         course.setName(jTextField3.getText());
+
         DB4OUtil.getInstance().storeSystem(business);
         JOptionPane.showMessageDialog(this, "Saved.");
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        // TODO add your handling code here:
+        if(jComboBox2.getSelectedItem().toString().equals("February")){
+            jComboBox3.removeAllItems();
+            jComboBox3.addItem("1");jComboBox3.addItem("2");jComboBox3.addItem("3");jComboBox3.addItem("4");jComboBox3.addItem("5");jComboBox3.addItem("6");
+            jComboBox3.addItem("7");jComboBox3.addItem("8");jComboBox3.addItem("9");jComboBox3.addItem("10");jComboBox3.addItem("11");jComboBox3.addItem("12");
+            jComboBox3.addItem("13");jComboBox3.addItem("14");jComboBox3.addItem("15");jComboBox3.addItem("16");jComboBox3.addItem("17");jComboBox3.addItem("18");
+            jComboBox3.addItem("19");jComboBox3.addItem("20");jComboBox3.addItem("21");jComboBox3.addItem("22");jComboBox3.addItem("23");jComboBox3.addItem("24");
+            jComboBox3.addItem("25");jComboBox3.addItem("26");jComboBox3.addItem("27");jComboBox3.addItem("28");
+            if(jComboBox1.getSelectedItem().toString().equals("2020")){
+                jComboBox3.addItem("29");
+            }
+        }
+        else if(jComboBox2.getSelectedItem().toString().equals("April")||jComboBox2.getSelectedItem().toString().equals("June")||
+            jComboBox2.getSelectedItem().toString().equals("August")||jComboBox2.getSelectedItem().toString().equals("October")||
+            jComboBox2.getSelectedItem().toString().equals("December")){
+            jComboBox3.removeAllItems();
+            jComboBox3.addItem("1");jComboBox3.addItem("2");jComboBox3.addItem("3");jComboBox3.addItem("4");jComboBox3.addItem("5");jComboBox3.addItem("6");
+            jComboBox3.addItem("7");jComboBox3.addItem("8");jComboBox3.addItem("9");jComboBox3.addItem("10");jComboBox3.addItem("11");jComboBox3.addItem("12");
+            jComboBox3.addItem("13");jComboBox3.addItem("14");jComboBox3.addItem("15");jComboBox3.addItem("16");jComboBox3.addItem("17");jComboBox3.addItem("18");
+            jComboBox3.addItem("19");jComboBox3.addItem("20");jComboBox3.addItem("21");jComboBox3.addItem("22");jComboBox3.addItem("23");jComboBox3.addItem("24");
+            jComboBox3.addItem("25");jComboBox3.addItem("26");jComboBox3.addItem("27");jComboBox3.addItem("28");jComboBox3.addItem("29");jComboBox3.addItem("30");
+        }
+        else if(jComboBox2.getSelectedItem().toString().equals("January")||jComboBox2.getSelectedItem().toString().equals("March")||
+            jComboBox2.getSelectedItem().toString().equals("May")||jComboBox2.getSelectedItem().toString().equals("July")||
+            jComboBox2.getSelectedItem().toString().equals("September")||jComboBox2.getSelectedItem().toString().equals("November")){
+            jComboBox3.removeAllItems();
+            jComboBox3.addItem("1");jComboBox3.addItem("2");jComboBox3.addItem("3");jComboBox3.addItem("4");jComboBox3.addItem("5");jComboBox3.addItem("6");
+            jComboBox3.addItem("7");jComboBox3.addItem("8");jComboBox3.addItem("9");jComboBox3.addItem("10");jComboBox3.addItem("11");jComboBox3.addItem("12");
+            jComboBox3.addItem("13");jComboBox3.addItem("14");jComboBox3.addItem("15");jComboBox3.addItem("16");jComboBox3.addItem("17");jComboBox3.addItem("18");
+            jComboBox3.addItem("19");jComboBox3.addItem("20");jComboBox3.addItem("21");jComboBox3.addItem("22");jComboBox3.addItem("23");jComboBox3.addItem("24");
+            jComboBox3.addItem("25");jComboBox3.addItem("26");jComboBox3.addItem("27");jComboBox3.addItem("28");jComboBox3.addItem("29");jComboBox3.addItem("30");
+            jComboBox3.addItem("31");
+        }
+    }//GEN-LAST:event_jComboBox2ActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables

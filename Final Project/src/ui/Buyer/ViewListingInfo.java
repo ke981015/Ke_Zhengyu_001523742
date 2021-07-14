@@ -75,7 +75,7 @@ public class ViewListingInfo extends javax.swing.JPanel {
             txtEle.setText("NO");
         txtRent.setText(String.valueOf(course.getRent()));
         txtName.setText(course.getName());
-        txtPh.setText(course.getPhone());
+        txtPh.setText(course.getSellerphone());
         
         contentPanel.setLayout(new GridLayout(0,2));
         if(path == null)
