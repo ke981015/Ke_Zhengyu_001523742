@@ -27,8 +27,8 @@ import ui.Accounter.AccounterHome;
 import ui.AirQualityInspector.AirQualityInspectorHome;
 import ui.Buyer.BuyerHome;
 import ui.Buyer.BuyerRegister;
-import ui.CustomerServiceRole.BuyerServiceWorkArea;
-import ui.CustomerServiceRole.SellerServiceWorkArea;
+import ui.CustomerServiceRole.BuyerServiceHome;
+import ui.CustomerServiceRole.SellerServiceHome;
 import ui.ReceptionistRole.ReceptionistHome;
 import ui.Seller.SellerWorkArea;
 import ui.SystemAdminRole.SystemAdminWorkAreaJPanel;
@@ -262,11 +262,11 @@ public class MainJFrame extends javax.swing.JFrame {
                 Router.getInstance(null).go(home);
             }
             else if(userAccount.getRole() instanceof BuyerServiceRole){
-                BuyerServiceWorkArea home = new BuyerServiceWorkArea(container, userAccount, inOrganization, inEnterprise, system);
+                BuyerServiceHome home = new BuyerServiceHome(container, userAccount, inOrganization, inEnterprise, system);
                 Router.getInstance(null).go(home);
             }
             else if(userAccount.getRole() instanceof SellerServiceRole){
-                SellerServiceWorkArea home = new SellerServiceWorkArea(container, userAccount, inOrganization, inEnterprise, system);
+                SellerServiceHome home = new SellerServiceHome(container, userAccount, inOrganization, inEnterprise, system);
                 Router.getInstance(null).go(home);
             }
             else if(userAccount.getRole() instanceof ReceptionistRole){

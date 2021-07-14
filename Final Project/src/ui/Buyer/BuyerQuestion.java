@@ -15,6 +15,7 @@ import Business.UserAccount.UserAccount;
 import Business.WorkQueue.AbstractQuestion;
 import Business.WorkQueue.WorkRequest;
 import java.awt.GridLayout;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import ui.components.QuestionCell;
 
@@ -192,6 +193,7 @@ public class BuyerQuestion extends javax.swing.JPanel {
         QuestionCell cell = new QuestionCell(userProcessContainer,userAccount,organization,enterprise,business,question);
         contentPanel.add(cell);  
         DB4OUtil.getInstance().storeSystem(business);
+        JOptionPane.showMessageDialog(this, "Saved");
         updateUI();
         //enterprise.getWorkQueue().getWorkRequestList().add(question);
 

@@ -69,7 +69,6 @@ public class InspectorWorkArea extends javax.swing.JPanel {
 
         jLabel10 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        backJButton = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jCheckBox1 = new javax.swing.JCheckBox();
@@ -101,28 +100,19 @@ public class InspectorWorkArea extends javax.swing.JPanel {
         jCheckBox23 = new javax.swing.JCheckBox();
         jCheckBox24 = new javax.swing.JCheckBox();
         jCheckBox25 = new javax.swing.JCheckBox();
+        backJButton = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel10.setFont(new java.awt.Font("Skia", 1, 24)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(99, 148, 249));
+        jLabel10.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(51, 153, 255));
         jLabel10.setText("Create a report");
 
         jLabel8.setText("—————————————————————————————————————————————————");
 
-        backJButton.setBackground(new java.awt.Color(255, 204, 204));
-        backJButton.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        backJButton.setForeground(new java.awt.Color(102, 153, 255));
-        backJButton.setText("<< Back");
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
-            }
-        });
-
-        jButton1.setBackground(new java.awt.Color(255, 204, 204));
-        jButton1.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(102, 153, 255));
+        jButton1.setBackground(new java.awt.Color(51, 153, 255));
+        jButton1.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Save");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,18 +121,26 @@ public class InspectorWorkArea extends javax.swing.JPanel {
         });
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Tag"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tag", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 15), new java.awt.Color(51, 153, 255))); // NOI18N
 
         jCheckBox1.setBackground(new java.awt.Color(255, 255, 255));
+        jCheckBox1.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jCheckBox1.setForeground(new java.awt.Color(51, 153, 255));
         jCheckBox1.setText("Free property fee");
 
         jCheckBox2.setBackground(new java.awt.Color(255, 255, 255));
+        jCheckBox2.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jCheckBox2.setForeground(new java.awt.Color(51, 153, 255));
         jCheckBox2.setText("Independent balcony");
 
         jCheckBox3.setBackground(new java.awt.Color(255, 255, 255));
+        jCheckBox3.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jCheckBox3.setForeground(new java.awt.Color(51, 153, 255));
         jCheckBox3.setText("Close to the subway");
 
         jCheckBox4.setBackground(new java.awt.Color(255, 255, 255));
+        jCheckBox4.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jCheckBox4.setForeground(new java.awt.Color(51, 153, 255));
         jCheckBox4.setText("High greening rate");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -173,24 +171,36 @@ public class InspectorWorkArea extends javax.swing.JPanel {
         );
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Bedroom facilities"));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Bedroom facilities", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 15), new java.awt.Color(51, 153, 255))); // NOI18N
 
         jCheckBox5.setBackground(new java.awt.Color(255, 255, 255));
+        jCheckBox5.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jCheckBox5.setForeground(new java.awt.Color(51, 153, 255));
         jCheckBox5.setText("air conditioning");
 
         jCheckBox6.setBackground(new java.awt.Color(255, 255, 255));
+        jCheckBox6.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jCheckBox6.setForeground(new java.awt.Color(51, 153, 255));
         jCheckBox6.setText("wardrobe");
 
         jCheckBox7.setBackground(new java.awt.Color(255, 255, 255));
+        jCheckBox7.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jCheckBox7.setForeground(new java.awt.Color(51, 153, 255));
         jCheckBox7.setText("bed");
 
         jCheckBox8.setBackground(new java.awt.Color(255, 255, 255));
+        jCheckBox8.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jCheckBox8.setForeground(new java.awt.Color(51, 153, 255));
         jCheckBox8.setText("mattress");
 
         jCheckBox9.setBackground(new java.awt.Color(255, 255, 255));
+        jCheckBox9.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jCheckBox9.setForeground(new java.awt.Color(51, 153, 255));
         jCheckBox9.setText("table");
 
         jCheckBox10.setBackground(new java.awt.Color(255, 255, 255));
+        jCheckBox10.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jCheckBox10.setForeground(new java.awt.Color(51, 153, 255));
         jCheckBox10.setText("chair");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -202,18 +212,20 @@ public class InspectorWorkArea extends javax.swing.JPanel {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jCheckBox5)
-                        .addGap(30, 30, 30)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jCheckBox6))
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                            .addComponent(jCheckBox7)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jCheckBox8))
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                            .addComponent(jCheckBox9)
-                            .addGap(74, 74, 74)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(jCheckBox9)
+                                .addGap(74, 74, 74))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jCheckBox7)
+                                .addGap(84, 84, 84)))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCheckBox8)
                             .addComponent(jCheckBox10))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -226,29 +238,39 @@ public class InspectorWorkArea extends javax.swing.JPanel {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBox7)
                     .addComponent(jCheckBox8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBox9)
                     .addComponent(jCheckBox10))
-                .addContainerGap())
+                .addGap(18, 18, 18))
         );
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Kitchen facilities"));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Kitchen facilities", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 15), new java.awt.Color(51, 153, 255))); // NOI18N
 
         jCheckBox11.setBackground(new java.awt.Color(255, 255, 255));
+        jCheckBox11.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jCheckBox11.setForeground(new java.awt.Color(51, 153, 255));
         jCheckBox11.setText("Microwave oven");
 
         jCheckBox12.setBackground(new java.awt.Color(255, 255, 255));
+        jCheckBox12.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jCheckBox12.setForeground(new java.awt.Color(51, 153, 255));
         jCheckBox12.setText("Gas stoves");
 
         jCheckBox13.setBackground(new java.awt.Color(255, 255, 255));
+        jCheckBox13.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jCheckBox13.setForeground(new java.awt.Color(51, 153, 255));
         jCheckBox13.setText("Range hood");
 
         jCheckBox14.setBackground(new java.awt.Color(255, 255, 255));
+        jCheckBox14.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jCheckBox14.setForeground(new java.awt.Color(51, 153, 255));
         jCheckBox14.setText("refrigerator");
 
         jCheckBox15.setBackground(new java.awt.Color(255, 255, 255));
+        jCheckBox15.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jCheckBox15.setForeground(new java.awt.Color(51, 153, 255));
         jCheckBox15.setText("Water heater");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -259,18 +281,18 @@ public class InspectorWorkArea extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jCheckBox13)
-                        .addGap(62, 62, 62)
-                        .addComponent(jCheckBox14)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jCheckBox15)
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(jCheckBox11)
                                 .addGap(30, 30, 30)
                                 .addComponent(jCheckBox12)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(20, Short.MAX_VALUE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jCheckBox13)
+                        .addGap(58, 58, 58)
+                        .addComponent(jCheckBox14)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -279,22 +301,26 @@ public class InspectorWorkArea extends javax.swing.JPanel {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBox11)
                     .addComponent(jCheckBox12))
-                .addGap(18, 18, 18)
+                .addGap(27, 27, 27)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBox13)
                     .addComponent(jCheckBox14))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addComponent(jCheckBox15)
                 .addContainerGap())
         );
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Bathroom facilities"));
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Bathroom facilities", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 15), new java.awt.Color(51, 153, 255))); // NOI18N
 
         jCheckBox16.setBackground(new java.awt.Color(255, 255, 255));
+        jCheckBox16.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jCheckBox16.setForeground(new java.awt.Color(51, 153, 255));
         jCheckBox16.setText("washing machine");
 
         jCheckBox17.setBackground(new java.awt.Color(255, 255, 255));
+        jCheckBox17.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jCheckBox17.setForeground(new java.awt.Color(51, 153, 255));
         jCheckBox17.setText("Water heater");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -319,30 +345,46 @@ public class InspectorWorkArea extends javax.swing.JPanel {
         );
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Living room facilities"));
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Living room facilities", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 15), new java.awt.Color(51, 153, 255))); // NOI18N
 
         jCheckBox18.setBackground(java.awt.Color.white);
+        jCheckBox18.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jCheckBox18.setForeground(new java.awt.Color(51, 153, 255));
         jCheckBox18.setText("router");
 
         jCheckBox19.setBackground(java.awt.Color.white);
+        jCheckBox19.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jCheckBox19.setForeground(new java.awt.Color(51, 153, 255));
         jCheckBox19.setText("TV");
 
         jCheckBox20.setBackground(java.awt.Color.white);
+        jCheckBox20.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jCheckBox20.setForeground(new java.awt.Color(51, 153, 255));
         jCheckBox20.setText("coffee table");
 
         jCheckBox21.setBackground(java.awt.Color.white);
+        jCheckBox21.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jCheckBox21.setForeground(new java.awt.Color(51, 153, 255));
         jCheckBox21.setText("sofa");
 
         jCheckBox22.setBackground(java.awt.Color.white);
+        jCheckBox22.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jCheckBox22.setForeground(new java.awt.Color(51, 153, 255));
         jCheckBox22.setText("Shoebox");
 
         jCheckBox23.setBackground(new java.awt.Color(255, 255, 255));
+        jCheckBox23.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jCheckBox23.setForeground(new java.awt.Color(51, 153, 255));
         jCheckBox23.setText("chair");
 
         jCheckBox24.setBackground(new java.awt.Color(255, 255, 255));
+        jCheckBox24.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jCheckBox24.setForeground(new java.awt.Color(51, 153, 255));
         jCheckBox24.setText("table");
 
         jCheckBox25.setBackground(new java.awt.Color(255, 255, 255));
+        jCheckBox25.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jCheckBox25.setForeground(new java.awt.Color(51, 153, 255));
         jCheckBox25.setText("air conditioning");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -352,26 +394,21 @@ public class InspectorWorkArea extends javax.swing.JPanel {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jCheckBox20)
+                    .addComponent(jCheckBox22)
+                    .addComponent(jCheckBox24)
+                    .addComponent(jCheckBox18))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jCheckBox25)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(jCheckBox18)
-                                .addGap(30, 30, 30)
-                                .addComponent(jCheckBox19))
-                            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(jPanel5Layout.createSequentialGroup()
-                                    .addComponent(jCheckBox20)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jCheckBox21))
-                                .addGroup(jPanel5Layout.createSequentialGroup()
-                                    .addComponent(jCheckBox22)
-                                    .addGap(74, 74, 74)
-                                    .addComponent(jCheckBox23))))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jCheckBox24)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jCheckBox25))))
+                            .addComponent(jCheckBox19)
+                            .addComponent(jCheckBox23)
+                            .addComponent(jCheckBox21))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -395,6 +432,16 @@ public class InspectorWorkArea extends javax.swing.JPanel {
                 .addContainerGap(54, Short.MAX_VALUE))
         );
 
+        backJButton.setBackground(new java.awt.Color(51, 153, 255));
+        backJButton.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        backJButton.setForeground(new java.awt.Color(255, 255, 255));
+        backJButton.setText("<< Back");
+        backJButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backJButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -402,42 +449,40 @@ public class InspectorWorkArea extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(backJButton))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(59, 59, 59)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel10)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(28, 28, 28)
+                                .addComponent(jLabel8))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(151, 151, 151)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel8)
-                                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(138, 138, 138)
-                                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(127, 127, 127)
-                                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGap(115, 115, 115)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addGap(348, 348, 348)
-                            .addComponent(jButton1)
-                            .addGap(359, 359, 359))))
-                .addContainerGap(390, Short.MAX_VALUE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(51, 51, 51)
+                                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(40, 40, 40)
+                                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(115, 115, 115)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(backJButton))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(556, 556, 556)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(350, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(11, 11, 11)
-                .addComponent(backJButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(45, 45, 45)
                 .addComponent(jLabel10)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel8)
@@ -449,22 +494,19 @@ public class InspectorWorkArea extends javax.swing.JPanel {
                         .addGap(8, 8, 8)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(50, 50, 50)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(27, 27, 27))
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(56, 56, 56)))
+                        .addGap(29, 29, 29)))
+                .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addContainerGap(619, Short.MAX_VALUE))
+                .addGap(16, 16, 16)
+                .addComponent(backJButton)
+                .addContainerGap(561, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
-
-        Router.getInstance(null).back(0);
-    }//GEN-LAST:event_backJButtonActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if(jCheckBox1.isSelected())
@@ -520,6 +562,11 @@ public class InspectorWorkArea extends javax.swing.JPanel {
         DB4OUtil.getInstance().storeSystem(system);
         JOptionPane.showMessageDialog(this, "Saved.");
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+
+        Router.getInstance(null).back(0);
+    }//GEN-LAST:event_backJButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
