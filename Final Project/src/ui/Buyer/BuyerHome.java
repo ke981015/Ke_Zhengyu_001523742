@@ -41,10 +41,11 @@ public class BuyerHome extends javax.swing.JPanel {
         this.enterprise = enterprise;
         this.userAccount = account;
         this.business = business;
-        initCourses(/*business.getListingsDirectory()*/);
+        nameLabel.setText(account.getUsername());
+        initCourses();
     }
 
-    private void initCourses(/*CourseDirectory courseDir*/){
+    private void initCourses(){
         contentPanel.setLayout(new GridLayout(0,2));
 
         for (AbstractQuestion request : business.getWorkQueue().getWorkRequestList()){

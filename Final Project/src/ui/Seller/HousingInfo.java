@@ -21,7 +21,7 @@ import ui.components.PictureCell;
  *
  * @author Ke
  */
-public class ListingInfoJPanel extends javax.swing.JPanel {
+public class HousingInfo extends javax.swing.JPanel {
 
     /**
      * Creates new form FileJPanel
@@ -33,7 +33,7 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
     String[] path = new String[10];
     int i = 0;
     
-    public ListingInfoJPanel(JPanel userProcessContainer, EcoSystem system, UserAccount userAccount) {
+    public HousingInfo(JPanel userProcessContainer, EcoSystem system, UserAccount userAccount) {
         initComponents();
         this.container = userProcessContainer;
         this.system = system;
@@ -61,10 +61,6 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
         txtRent = new javax.swing.JTextField();
         jRadioButton1 = new javax.swing.JRadioButton();
         jLabel21 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        txtName = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        txtPh = new javax.swing.JTextField();
         btnSave = new javax.swing.JButton();
         btnDashBoard = new javax.swing.JButton();
         jLabel22 = new javax.swing.JLabel();
@@ -142,38 +138,13 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
         jLabel21.setText("Area:");
         add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 89, -1));
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(102, 153, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel1.setText("Name:");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 89, -1));
-        add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(173, 450, 100, -1));
-
-        jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(102, 153, 255));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel3.setText("Phone:");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 450, 89, -1));
-
-        txtPh.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtPhActionPerformed(evt);
-            }
-        });
-        txtPh.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                txtPhKeyPressed(evt);
-            }
-        });
-        add(txtPh, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 450, 190, -1));
-
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSaveActionPerformed(evt);
             }
         });
-        add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 760, 330, -1));
+        add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 690, 330, -1));
 
         btnDashBoard.setBackground(new java.awt.Color(255, 204, 204));
         btnDashBoard.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
@@ -184,7 +155,7 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
                 btnDashBoardActionPerformed(evt);
             }
         });
-        add(btnDashBoard, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 760, -1, -1));
+        add(btnDashBoard, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 690, -1, -1));
 
         jLabel22.setFont(new java.awt.Font("Comic Sans MS", 1, 13)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(102, 153, 255));
@@ -208,7 +179,7 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
 
         jScrollPane1.setViewportView(contentPanel);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 510, 870, 230));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, 870, 230));
 
         jLabel5.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(102, 153, 255));
@@ -288,7 +259,7 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
         car.setCity(ComboCity.getSelectedItem().toString());
         
         if(txtAd1.getText()==null||txtAd2.getText()==null){
-            JOptionPane.showMessageDialog(this, "Please enter the Address.");
+            JOptionPane.showMessageDialog(this, "Please input the Address.");
             return;
         }
         car.setAddress1(txtAd1.getText());
@@ -298,7 +269,7 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
             car.setArea(Double.parseDouble(txtArea.getText()));
         }
         catch(Exception e){
-            JOptionPane.showMessageDialog(this, "Please enter the correct type in Area.");
+            JOptionPane.showMessageDialog(this, "Please input the correct type in Area.");
             return;
         }
         
@@ -310,7 +281,7 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
             car.setBathroom(Integer.parseInt(txtBath.getText()));
         }
         catch(Exception e){
-            JOptionPane.showMessageDialog(this, "Please enter the correct type in Unit type.");
+            JOptionPane.showMessageDialog(this, "Please input the correct type in Unit type.");
             return;
         }
         
@@ -318,12 +289,13 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
             car.setFloor(Integer.parseInt(txtFl.getText()));
         }
         catch(Exception e){
-            JOptionPane.showMessageDialog(this, "Please enter the correct type in Floor.");
+            JOptionPane.showMessageDialog(this, "Please input the correct type in Floor.");
             return;
         }
         
         if(jRadioButton1.isSelected()==false && jRadioButton2.isSelected()==false){
             JOptionPane.showMessageDialog(this, "Please choose whether there is an elevator.");
+            return;
         }
         else{
             if(jRadioButton1.isSelected())
@@ -336,27 +308,12 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
             car.setRent(Double.parseDouble(txtRent.getText()));
         }
         catch(Exception e){
-            JOptionPane.showMessageDialog(this, "Please enter the correct type in Expected rent.");
+            JOptionPane.showMessageDialog(this, "Please input the correct type in Expected rent.");
             return;
-        }
+        }      
         
-        if(txtName.getText()==null){
-            JOptionPane.showMessageDialog(this, "Please enter the Name.");
-            return;
-        }
-        car.setName(txtName.getText());
-        
-        
-        if(txtPh.getText()==null){
-            JOptionPane.showMessageDialog(this, "Please enter the Phone.");
-            return;
-        }
-        if(txtPh.getText().length()!=16){
-            JOptionPane.showMessageDialog(this, "Please enter the correct type in Phone.");
-            return;
-        }
-        car.setSellerphone(txtPh.getText());
-        
+        car.setPath(path);
+        car.setPublisher(userAccount);
         system.getWorkQueue().getWorkRequestList().add(car);
         DB4OUtil.getInstance().storeSystem(system);
         JOptionPane.showMessageDialog(this, "Used car information saved.");
@@ -440,18 +397,6 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
-    private void txtPhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPhActionPerformed
-
-    }//GEN-LAST:event_txtPhActionPerformed
-
-    private void txtPhKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPhKeyPressed
-        // TODO add your handling code here:
-        if(txtPh.getText().length()==3)
-            txtPh.setText(txtPh.getText()+" - ");
-        if(txtPh.getText().length()==9)
-            txtPh.setText(txtPh.getText()+" - ");
-    }//GEN-LAST:event_txtPhKeyPressed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> ComboCity;
@@ -460,7 +405,6 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnDashBoard;
     private javax.swing.JButton btnSave;
     private javax.swing.JPanel contentPanel;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -473,7 +417,6 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -490,8 +433,6 @@ public class ListingInfoJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtBed;
     private javax.swing.JTextField txtFl;
     private javax.swing.JTextField txtLiving;
-    private javax.swing.JTextField txtName;
-    private javax.swing.JTextField txtPh;
     private javax.swing.JTextField txtRent;
     // End of variables declaration//GEN-END:variables
 

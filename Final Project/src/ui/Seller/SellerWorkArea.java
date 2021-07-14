@@ -176,7 +176,7 @@ public class SellerWorkArea extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        ListingInfoJPanel listingInfoJPanel = new ListingInfoJPanel(userProcessContainer, business,userAccount);
+        HousingInfo listingInfoJPanel = new HousingInfo(userProcessContainer, business,userAccount);
         jSplitPane1.setRightComponent(listingInfoJPanel);
     }//GEN-LAST:event_jButton1ActionPerformed
 

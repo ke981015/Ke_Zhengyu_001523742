@@ -6,26 +6,11 @@ package ui.Buyer;
 
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
-import Business.Global;
-import Business.Listings;
-import Business.ListingsDirectory;
 import Business.Organization.Organization;
-import Business.Organization.SellerOrganization;
-import Business.Role.BuyerRole;
 import Business.Router;
 import Business.UserAccount.UserAccount;
-import Business.WorkQueue.WorkRequest;
 import Business.WorkQueue.AbstractQuestion;
-import java.awt.CardLayout;
-import java.awt.Dimension;
-import java.awt.GridLayout;
-import java.io.File;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author Ke
@@ -43,14 +28,14 @@ public class BuyerWorkArea extends javax.swing.JPanel {
      */
     public BuyerWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, AbstractQuestion course) {
         initComponents();
-        this.setSize(1024, 768);
-        
+        this.setSize(1024, 768);       
         this.userProcessContainer = userProcessContainer;
         this.organization = organization;
         this.enterprise = enterprise;
         this.userAccount = account;
         this.business = business;
         this.course = course;
+        nameLabel.setText(account.getUsername());
     }
 
     /**
@@ -64,119 +49,87 @@ public class BuyerWorkArea extends javax.swing.JPanel {
 
         jSplitPane1 = new javax.swing.JSplitPane();
         SideBar = new javax.swing.JPanel();
-        nameLabel = new javax.swing.JLabel();
         backButton = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jButton6 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        nameLabel = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
 
         setLayout(null);
 
-        SideBar.setBackground(new java.awt.Color(33, 135, 251));
+        SideBar.setBackground(new java.awt.Color(51, 153, 255));
         SideBar.setPreferredSize(new java.awt.Dimension(160, 666));
+        SideBar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        nameLabel.setFont(new java.awt.Font("Skia", 1, 18)); // NOI18N
-        nameLabel.setForeground(new java.awt.Color(255, 255, 255));
-        nameLabel.setText("name");
-
+        backButton.setBackground(new java.awt.Color(255, 255, 255));
+        backButton.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        backButton.setForeground(new java.awt.Color(51, 153, 255));
         backButton.setText("<< Back");
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backButtonActionPerformed(evt);
             }
         });
+        SideBar.add(backButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 725, -1, -1));
+        SideBar.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 111, 235, 10));
 
-        jButton6.setBackground(new java.awt.Color(255, 204, 204));
-        jButton6.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(102, 153, 255));
-        jButton6.setText("Book an on-site view");
+        jButton6.setBackground(new java.awt.Color(255, 255, 255));
+        jButton6.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(51, 153, 255));
+        jButton6.setText("Book an On-site View");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
+        SideBar.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, 210, -1));
 
-        jButton5.setBackground(new java.awt.Color(255, 204, 204));
-        jButton5.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(102, 153, 255));
-        jButton5.setText("View the vehicle condition report");
+        jButton5.setBackground(new java.awt.Color(255, 255, 255));
+        jButton5.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(51, 153, 255));
+        jButton5.setText("View Housing Report");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
+        SideBar.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 210, -1));
 
-        jButton3.setBackground(new java.awt.Color(255, 204, 204));
-        jButton3.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(102, 153, 255));
-        jButton3.setText("View vehicle information");
+        jButton3.setBackground(new java.awt.Color(255, 255, 255));
+        jButton3.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(51, 153, 255));
+        jButton3.setText("View Housing Info");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
+        SideBar.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 210, -1));
 
-        jButton7.setBackground(new java.awt.Color(255, 204, 204));
-        jButton7.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(102, 153, 255));
-        jButton7.setText("View air quality report");
+        jButton7.setBackground(new java.awt.Color(255, 255, 255));
+        jButton7.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jButton7.setForeground(new java.awt.Color(51, 153, 255));
+        jButton7.setText("View Air Quality Report");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
         });
+        SideBar.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 210, -1));
 
-        javax.swing.GroupLayout SideBarLayout = new javax.swing.GroupLayout(SideBar);
-        SideBar.setLayout(SideBarLayout);
-        SideBarLayout.setHorizontalGroup(
-            SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSeparator1)
-            .addGroup(SideBarLayout.createSequentialGroup()
-                .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(SideBarLayout.createSequentialGroup()
-                        .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(SideBarLayout.createSequentialGroup()
-                                .addGap(25, 25, 25)
-                                .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(SideBarLayout.createSequentialGroup()
-                                .addGap(30, 30, 30)
-                                .addComponent(backButton))
-                            .addGroup(SideBarLayout.createSequentialGroup()
-                                .addGap(33, 33, 33)
-                                .addComponent(jButton6)))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SideBarLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton3))
-                    .addGroup(SideBarLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
-                .addContainerGap())
-        );
-        SideBarLayout.setVerticalGroup(
-            SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SideBarLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(82, 82, 82)
-                .addComponent(jButton6)
-                .addGap(94, 94, 94)
-                .addComponent(jButton3)
-                .addGap(40, 40, 40)
-                .addComponent(jButton5)
-                .addGap(34, 34, 34)
-                .addComponent(jButton7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 265, Short.MAX_VALUE)
-                .addComponent(backButton)
-                .addGap(47, 47, 47))
-        );
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Hello,");
+        SideBar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 32, -1, -1));
+
+        nameLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        nameLabel.setForeground(new java.awt.Color(255, 255, 255));
+        nameLabel.setText("name");
+        SideBar.add(nameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 65, 207, 39));
 
         jSplitPane1.setLeftComponent(SideBar);
 
@@ -190,13 +143,13 @@ public class BuyerWorkArea extends javax.swing.JPanel {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
 
-        ViewListingInfo report = new ViewListingInfo(userProcessContainer,business,userAccount,course);
+        ViewHousingInfo report = new ViewHousingInfo(userProcessContainer,business,userAccount,course);
         jSplitPane1.setRightComponent(report);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
 
-        ViewReport report = new ViewReport(userProcessContainer,business,userAccount,course);
+        ViewHousingReport report = new ViewHousingReport(userProcessContainer,business,userAccount,course);
         jSplitPane1.setRightComponent(report);
     }//GEN-LAST:event_jButton5ActionPerformed
 
@@ -223,6 +176,7 @@ public class BuyerWorkArea extends javax.swing.JPanel {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSplitPane jSplitPane1;

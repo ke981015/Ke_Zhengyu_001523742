@@ -7,26 +7,15 @@ package ui.ReceptionistRole;
 import ui.Buyer.*;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
-import Business.Global;
-import Business.Listings;
-import Business.ListingsDirectory;
 import Business.Organization.Organization;
-import Business.Organization.SellerOrganization;
-import Business.Role.BuyerRole;
 import Business.Router;
 import Business.UserAccount.UserAccount;
-import Business.WorkQueue.WorkRequest;
 import Business.WorkQueue.AbstractQuestion;
-import java.awt.CardLayout;
-import java.awt.Dimension;
-import java.awt.GridLayout;
 import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -245,7 +234,7 @@ public class ReceptionistWorkArea extends javax.swing.JPanel {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
 
-        ViewReport report = new ViewReport(userProcessContainer,business,userAccount,course);
+        ViewHousingReport report = new ViewHousingReport(userProcessContainer,business,userAccount,course);
         jSplitPane1.setRightComponent(report);
     }//GEN-LAST:event_jButton5ActionPerformed
 
@@ -257,7 +246,7 @@ public class ReceptionistWorkArea extends javax.swing.JPanel {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
 
-        ViewListingInfo report = new ViewListingInfo(userProcessContainer,business,userAccount,course);
+        ViewHousingInfo report = new ViewHousingInfo(userProcessContainer,business,userAccount,course);
         jSplitPane1.setRightComponent(report);
     }//GEN-LAST:event_jButton3ActionPerformed
 

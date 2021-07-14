@@ -289,7 +289,7 @@ public class InspectorWorkArea extends javax.swing.JPanel {
         );
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Toilet facilities"));
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Bathroom facilities"));
 
         jCheckBox16.setBackground(new java.awt.Color(255, 255, 255));
         jCheckBox16.setText("washing machine");

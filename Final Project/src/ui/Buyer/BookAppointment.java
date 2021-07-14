@@ -44,11 +44,6 @@ public class BookAppointment extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -62,34 +57,6 @@ public class BookAppointment extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(51, 153, 255));
-        jLabel1.setText("Date:");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 240, 70, -1));
-
-        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(51, 153, 255));
-        jLabel2.setText("Phone Number:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 330, 130, -1));
-
-        jLabel3.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(51, 153, 255));
-        jLabel3.setText("Name:");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(285, 420, 50, -1));
-
-        jTextField2.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(51, 153, 255));
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
-        add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 330, 115, -1));
-
-        jTextField3.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
-        jTextField3.setForeground(new java.awt.Color(51, 153, 255));
-        add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 420, 115, -1));
-
         jButton1.setBackground(new java.awt.Color(51, 153, 255));
         jButton1.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -99,7 +66,7 @@ public class BookAppointment extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 560, 100, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, 100, -1));
 
         jLabel10.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(51, 153, 255));
@@ -112,13 +79,13 @@ public class BookAppointment extends javax.swing.JPanel {
         jComboBox1.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jComboBox1.setForeground(new java.awt.Color(51, 153, 255));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2021", "2020", "2019", "2018" }));
-        add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, -1, -1));
+        add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 340, -1, -1));
 
         jLabel25.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(51, 153, 255));
         jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel25.setText("year");
-        add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 240, -1, -1));
+        add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, -1, -1));
 
         jComboBox2.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jComboBox2.setForeground(new java.awt.Color(51, 153, 255));
@@ -128,46 +95,30 @@ public class BookAppointment extends javax.swing.JPanel {
                 jComboBox2ActionPerformed(evt);
             }
         });
-        add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 240, -1, -1));
+        add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 340, -1, -1));
 
         jLabel26.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel26.setForeground(new java.awt.Color(51, 153, 255));
         jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel26.setText("month");
-        add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 240, -1, -1));
+        add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 340, -1, -1));
 
         jComboBox3.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jComboBox3.setForeground(new java.awt.Color(51, 153, 255));
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
-        add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 240, -1, -1));
+        add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 340, -1, -1));
 
         jLabel27.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(51, 153, 255));
         jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel27.setText("date");
-        add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 240, -1, -1));
+        add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 340, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         course.setBookyear(jComboBox1.getSelectedItem().toString());
         course.setBookmonth(jComboBox2.getSelectedItem().toString());
         course.setBookdate(jComboBox3.getSelectedItem().toString());
-        
-        if(jTextField2.getText()==null){
-            JOptionPane.showMessageDialog(this, "Please enter the Phone.");
-            return;
-        }
-        if(jTextField2.getText().length()!=16){
-            JOptionPane.showMessageDialog(this, "Please enter the correct type in Phone.");
-            return;
-        }
-        course.setBuyerphone(jTextField2.getText());
-
-        if(jTextField3.getText()==null){
-            JOptionPane.showMessageDialog(this, "Please enter the Name.");
-            return;
-        }
-        course.setName(jTextField3.getText());
 
         DB4OUtil.getInstance().storeSystem(business);
         JOptionPane.showMessageDialog(this, "Saved.");
@@ -209,25 +160,16 @@ public class BookAppointment extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
 }
