@@ -22,7 +22,7 @@ import ui.SystemAdminRole.SystemAdminWorkArea;
  *
  * @author Ke
  */
-public class ManageOrganizationJPanel extends javax.swing.JPanel {
+public class ManageOrganization extends javax.swing.JPanel {
 
     //private OrganizationDirectory directory;
     private JPanel userProcessContainer;
@@ -32,7 +32,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
     /**
      * Creates new form ManageOrganizationJPanel
      */
-    public ManageOrganizationJPanel(JPanel userProcessContainer,EcoSystem system,Enterprise enterprise) {
+    public ManageOrganization(JPanel userProcessContainer,EcoSystem system,Enterprise enterprise) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.system = system;
@@ -95,13 +95,15 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         addJButton = new javax.swing.JButton();
         organizationJComboBox = new javax.swing.JComboBox();
         jLabel1 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        addJButton.setBackground(new java.awt.Color(255, 204, 204));
-        addJButton.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        addJButton.setForeground(new java.awt.Color(102, 153, 255));
+        addJButton.setBackground(new java.awt.Color(51, 153, 255));
+        addJButton.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        addJButton.setForeground(new java.awt.Color(255, 255, 255));
         addJButton.setText("Add Organization");
         addJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,8 +111,10 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
             }
         });
         add(addJButton);
-        addJButton.setBounds(420, 350, 143, 27);
+        addJButton.setBounds(380, 490, 160, 31);
 
+        organizationJComboBox.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        organizationJComboBox.setForeground(new java.awt.Color(51, 153, 255));
         organizationJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         organizationJComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,12 +122,23 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
             }
         });
         add(organizationJComboBox);
-        organizationJComboBox.setBounds(550, 230, 160, 24);
+        organizationJComboBox.setBounds(510, 310, 160, 28);
 
-        jLabel1.setForeground(new java.awt.Color(102, 153, 255));
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 153, 255));
         jLabel1.setText("Organization Type ");
         add(jLabel1);
-        jLabel1.setBounds(330, 230, 144, 18);
+        jLabel1.setBounds(290, 310, 138, 22);
+
+        jLabel10.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel10.setText("Manage organization");
+        add(jLabel10);
+        jLabel10.setBounds(40, 40, 240, 34);
+
+        jLabel8.setText("—————————————————————————————————————————————————");
+        add(jLabel8);
+        jLabel8.setBounds(110, 80, 735, 18);
     }// </editor-fold>//GEN-END:initComponents
 
     private void addJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJButtonActionPerformed
@@ -141,6 +156,8 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addJButton;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JComboBox organizationJComboBox;
     // End of variables declaration//GEN-END:variables
 }

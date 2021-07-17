@@ -69,11 +69,11 @@ public class QuestionCell extends javax.swing.JPanel {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(0, 0, 204));
 
         titleLabel.setBackground(new java.awt.Color(255, 255, 255));
-        titleLabel.setFont(new java.awt.Font("STIXNonUnicode", 1, 16)); // NOI18N
-        titleLabel.setForeground(new java.awt.Color(121, 121, 251));
+        titleLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 16)); // NOI18N
+        titleLabel.setForeground(new java.awt.Color(255, 255, 255));
         titleLabel.setText("jLabel1");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

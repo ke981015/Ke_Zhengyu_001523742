@@ -8,19 +8,11 @@ package ui.components;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
-import Business.Role.AirQualityInspectorRole;
-import Business.Role.BuyerRole;
-import Business.Role.InspectorRole;
-import Business.Role.SellerRole;
 import Business.Router;
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.AbstractQuestion;
 import javax.swing.JPanel;
-import ui.AirQualityInspector.AirQualityInspectorHome;
-import ui.AirQualityInspector.AirQualityInspectorWorkArea;
-import ui.Buyer.BuyerWorkArea;
 import ui.ReceptionistRole.ReceptionistWorkArea;
-import ui.InspectorRole.InspectorWorkArea;
 
 /**
  *
@@ -71,14 +63,14 @@ public class AppointmentCell extends javax.swing.JPanel {
             }
         });
 
-        jPanel2.setBackground(new java.awt.Color(177, 177, 248));
+        jPanel2.setBackground(new java.awt.Color(51, 153, 255));
         jPanel2.setPreferredSize(new java.awt.Dimension(320, 240));
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(0, 0, 204));
 
         titleLabel.setBackground(new java.awt.Color(255, 255, 255));
-        titleLabel.setFont(new java.awt.Font("STIXNonUnicode", 1, 16)); // NOI18N
-        titleLabel.setForeground(new java.awt.Color(121, 121, 251));
+        titleLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 16)); // NOI18N
+        titleLabel.setForeground(new java.awt.Color(255, 255, 255));
         titleLabel.setText("jLabel1");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -101,8 +93,8 @@ public class AppointmentCell extends javax.swing.JPanel {
         titleLabel.getAccessibleContext().setAccessibleName("titleLabel");
 
         titleLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        titleLabel1.setFont(new java.awt.Font("STIXNonUnicode", 1, 16)); // NOI18N
-        titleLabel1.setForeground(new java.awt.Color(121, 121, 251));
+        titleLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        titleLabel1.setForeground(new java.awt.Color(255, 255, 255));
         titleLabel1.setText("jLabel2");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -118,9 +110,9 @@ public class AppointmentCell extends javax.swing.JPanel {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(42, 42, 42)
+                .addGap(53, 53, 53)
                 .addComponent(titleLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -147,7 +139,27 @@ public class AppointmentCell extends javax.swing.JPanel {
         Router.getInstance(null).go(new ReceptionistWorkArea(userProcessContainer,userAccount,organization,enterprise,business,course));
   
     }//GEN-LAST:event_click
+/*private AbstractQuestion course;
+    private JPanel userProcessContainer;
+    private Organization organization;
+    private Enterprise enterprise;
+    private UserAccount userAccount;
+    private EcoSystem business;
+    /**
+     * Creates new form CourseCell
+     */
+    /*public DealCell(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,AbstractQuestion course) {
+        initComponents();
+        this.course = course;
+        this.userProcessContainer = userProcessContainer;
+        this.organization = organization;
+        this.enterprise = enterprise;
+        this.userAccount = account;
+        this.business = business;
 
+        titleLabel.setText(course.getDealmonth()+"  "+course.getDealdate()+"  "+course.getDealyear());
+        titleLabel1.setText(course.getDealprice().toString());
+    }*/
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;

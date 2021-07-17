@@ -63,8 +63,8 @@ public class TagCell extends javax.swing.JPanel {
         });
 
         titleLabel.setBackground(new java.awt.Color(255, 255, 255));
-        titleLabel.setFont(new java.awt.Font("STIXNonUnicode", 1, 16)); // NOI18N
-        titleLabel.setForeground(new java.awt.Color(121, 121, 251));
+        titleLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 16)); // NOI18N
+        titleLabel.setForeground(new java.awt.Color(0, 0, 204));
         titleLabel.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

@@ -42,7 +42,7 @@ public class AccounterHome extends javax.swing.JPanel {
     }
 
     private void initCourses(){
-        contentPanel.setLayout(new GridLayout(0,1));
+        contentPanel.setLayout(new GridLayout(0,2));
 
         for (AbstractQuestion request : business.getWorkQueue().getWorkRequestList()){
             if(request.isDone()== true){

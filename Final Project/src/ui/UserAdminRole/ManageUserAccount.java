@@ -19,16 +19,16 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Ke
  */
-public class ManageUserAccountJPanel extends javax.swing.JPanel {
+public class ManageUserAccount extends javax.swing.JPanel {
 
     /**
-     * Creates new form ManageUserAccountJPanel
+     * Creates new form ManageUserAccount
      */
     private JPanel container;
     private Enterprise enterprise;
     EcoSystem system;
 
-    public ManageUserAccountJPanel(JPanel container, EcoSystem system,Enterprise enterprise) {
+    public ManageUserAccount(JPanel container, EcoSystem system,Enterprise enterprise) {
         initComponents();
         this.enterprise = enterprise;
         this.system = system;
@@ -91,13 +91,15 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         organizationJComboBox = new javax.swing.JComboBox();
         jLabel4 = new javax.swing.JLabel();
         roleJComboBox = new javax.swing.JComboBox();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        createUserJButton.setBackground(new java.awt.Color(255, 204, 204));
-        createUserJButton.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        createUserJButton.setForeground(new java.awt.Color(102, 153, 255));
+        createUserJButton.setBackground(new java.awt.Color(51, 153, 255));
+        createUserJButton.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        createUserJButton.setForeground(new java.awt.Color(255, 255, 255));
         createUserJButton.setText("Create");
         createUserJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,19 +107,22 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
             }
         });
         add(createUserJButton);
-        createUserJButton.setBounds(750, 490, 75, 27);
-        add(nameJTextField);
-        nameJTextField.setBounds(590, 410, 146, 24);
+        createUserJButton.setBounds(430, 660, 110, 31);
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 204, 204));
+        nameJTextField.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        nameJTextField.setForeground(new java.awt.Color(51, 153, 255));
+        add(nameJTextField);
+        nameJTextField.setBounds(490, 520, 146, 28);
+
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 153, 255));
         jLabel1.setText("User Name");
         add(jLabel1);
-        jLabel1.setBounds(440, 420, 80, 19);
+        jLabel1.setBounds(350, 520, 80, 22);
 
-        userJTable.setBackground(new java.awt.Color(204, 255, 204));
         userJTable.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        userJTable.setFont(new java.awt.Font("Lucida Grande", 1, 12)); // NOI18N
+        userJTable.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        userJTable.setForeground(new java.awt.Color(51, 153, 255));
         userJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -148,22 +153,27 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         }
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(430, 100, 375, 179);
+        jScrollPane1.setBounds(290, 170, 410, 179);
 
-        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 204, 204));
+        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 153, 255));
         jLabel2.setText("Password");
         add(jLabel2);
-        jLabel2.setBounds(440, 460, 70, 19);
-        add(passwordJTextField);
-        passwordJTextField.setBounds(590, 450, 146, 24);
+        jLabel2.setBounds(370, 580, 70, 22);
 
-        jLabel5.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 204, 204));
+        passwordJTextField.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        passwordJTextField.setForeground(new java.awt.Color(51, 153, 255));
+        add(passwordJTextField);
+        passwordJTextField.setBounds(490, 580, 146, 28);
+
+        jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(51, 153, 255));
         jLabel5.setText("Organization");
         add(jLabel5);
-        jLabel5.setBounds(440, 340, 90, 19);
+        jLabel5.setBounds(340, 400, 90, 22);
 
+        organizationJComboBox.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        organizationJComboBox.setForeground(new java.awt.Color(51, 153, 255));
         organizationJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         organizationJComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,17 +181,29 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
             }
         });
         add(organizationJComboBox);
-        organizationJComboBox.setBounds(580, 330, 146, 24);
+        organizationJComboBox.setBounds(490, 400, 146, 28);
 
-        jLabel4.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 204, 204));
+        jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(51, 153, 255));
         jLabel4.setText("Role");
         add(jLabel4);
-        jLabel4.setBounds(440, 380, 30, 19);
+        jLabel4.setBounds(400, 460, 30, 22);
 
+        roleJComboBox.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        roleJComboBox.setForeground(new java.awt.Color(51, 153, 255));
         roleJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         add(roleJComboBox);
-        roleJComboBox.setBounds(580, 370, 146, 24);
+        roleJComboBox.setBounds(490, 460, 146, 28);
+
+        jLabel10.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel10.setText("Manage user account");
+        add(jLabel10);
+        jLabel10.setBounds(40, 40, 290, 34);
+
+        jLabel8.setText("—————————————————————————————————————————————————");
+        add(jLabel8);
+        jLabel8.setBounds(110, 80, 735, 18);
     }// </editor-fold>//GEN-END:initComponents
 
     private void createUserJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createUserJButtonActionPerformed
@@ -206,9 +228,11 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton createUserJButton;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField nameJTextField;
     private javax.swing.JComboBox organizationJComboBox;

@@ -44,7 +44,7 @@ public class PictureCell extends javax.swing.JPanel {
         ImageIcon icon = new ImageIcon(path);
         //Image image = icon.getImage();
         //Image newImage = image.getScaledInstance(img2.getWidth(), img2.getHeight(), Image.SCALE_DEFAULT);
-        System.out.println(img2.getWidth()+""+img2.getHeight());
+        //System.out.println(img2.getWidth()+""+img2.getHeight());
         //icon.setImage(newImage);
         img2.setIcon(icon);
 
@@ -69,13 +69,12 @@ public class PictureCell extends javax.swing.JPanel {
             }
         });
 
-        jPanel2.setBackground(new java.awt.Color(177, 177, 248));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setPreferredSize(new java.awt.Dimension(320, 240));
 
         img2.setBackground(new java.awt.Color(255, 255, 255));
         img2.setFont(new java.awt.Font("STIXNonUnicode", 1, 16)); // NOI18N
         img2.setForeground(new java.awt.Color(121, 121, 251));
-        img2.setText("jLabel2");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
