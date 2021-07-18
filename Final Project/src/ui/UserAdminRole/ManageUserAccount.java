@@ -12,6 +12,7 @@ import Business.Role.Role;
 import Business.Router;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
@@ -209,6 +210,16 @@ public class ManageUserAccount extends javax.swing.JPanel {
     private void createUserJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createUserJButtonActionPerformed
         String userName = nameJTextField.getText();
         String password = passwordJTextField.getText();
+        
+        if(userName.equals("")){
+            JOptionPane.showMessageDialog(this, "Please input the Username.");
+            return;
+        }
+        
+        if(password.equals("")){
+            JOptionPane.showMessageDialog(this, "Please input the Password.");
+            return;
+        }
         Organization organization = (Organization) organizationJComboBox.getSelectedItem();
         Role role = (Role) roleJComboBox.getSelectedItem();
         

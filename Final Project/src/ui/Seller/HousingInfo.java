@@ -306,7 +306,7 @@ public class HousingInfo extends javax.swing.JPanel {
         car.setState(ComboState.getSelectedItem().toString());
         car.setCity(ComboCity.getSelectedItem().toString());
         
-        if(txtAd1.getText()==null||txtAd2.getText()==null){
+        if(txtAd1.getText().equals("")||txtAd2.getText().equals("")){
             JOptionPane.showMessageDialog(this, "Please input the Address.");
             return;
         }

@@ -10,18 +10,18 @@ import Business.Organization.Organization;
 import Business.Organization.SellerOrganization;
 import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
-import ui.Accounter.AccounterHome;
+import ui.Accountant.AccountantHome;
 import ui.Buyer.BuyerHome;
 
 /**
  *
  * @author raunak
  */
-public class AccounterRole extends Role {
+public class AccountantRole extends Role {
 
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
-        return new AccounterHome(userProcessContainer, account, organization, enterprise, business);
+        return new AccountantHome(userProcessContainer, account, organization, enterprise, business);
     }
     
 }

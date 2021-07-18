@@ -20,7 +20,7 @@ public class Buy extends Enterprise {
     //private Organization buyerOrganization;
     
     public Buy(String name){
-        super(name,EnterpriseType.Rent);
+        super(name,EnterpriseType.Purchase);
         //buyerOrganization = this.getOrganizationDirectory().createOrganization(Organization.Type.Buyer);
     }
     

@@ -4,7 +4,7 @@
  */
 package Business.Organization;
 
-import Business.Role.AccounterRole;
+import Business.Role.AccountantRole;
 import Business.Role.AirQualityInspectorRole;
 import Business.Role.BuyerRole;
 import Business.Role.Role;
@@ -24,7 +24,7 @@ public class AppraiserOrganization extends Organization{
     public ArrayList<Role> getSupportedRole() {
         ArrayList<Role> roles = new ArrayList();
         roles.add(new AirQualityInspectorRole());
-        roles.add(new AccounterRole());
+        roles.add(new AccountantRole());
         return roles;
     }
      

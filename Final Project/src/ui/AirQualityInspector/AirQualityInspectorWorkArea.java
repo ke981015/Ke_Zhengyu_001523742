@@ -146,12 +146,12 @@ public class AirQualityInspectorWorkArea extends javax.swing.JPanel {
             if(Double.parseDouble(jTextField1.getText())> -50 && Double.parseDouble(jTextField1.getText())< 50)
                 course.setTemperature(Double.parseDouble(jTextField1.getText()));
             else{
-                JOptionPane.showMessageDialog(this, "Please enter the correct value in Temperature.");
+                JOptionPane.showMessageDialog(this, "Please input the correct value in Temperature.");
                 return;
             }
         }
         catch(Exception e){
-            JOptionPane.showMessageDialog(this, "Please enter the correct type in Temperature.");
+            JOptionPane.showMessageDialog(this, "Please input the correct type in Temperature.");
             return;
         }
         
@@ -159,12 +159,12 @@ public class AirQualityInspectorWorkArea extends javax.swing.JPanel {
             if(Double.parseDouble(jTextField2.getText())>0 && Double.parseDouble(jTextField2.getText())< 100)
                 course.setHumidity(Double.parseDouble(jTextField2.getText()));
             else{
-                JOptionPane.showMessageDialog(this, "Please enter the correct value in Humidity.");
+                JOptionPane.showMessageDialog(this, "Please input the correct value in Humidity.");
                 return;
             }
         }
         catch(Exception e){
-            JOptionPane.showMessageDialog(this, "Please enter the correct type in Humidity.");
+            JOptionPane.showMessageDialog(this, "Please input the correct type in Humidity.");
             return;
         }
         
@@ -172,12 +172,12 @@ public class AirQualityInspectorWorkArea extends javax.swing.JPanel {
             if(Double.parseDouble(jTextField3.getText())>=0 && Double.parseDouble(jTextField3.getText())< 1)
                 course.setFormaldehyde(Double.parseDouble(jTextField3.getText()));
             else{
-                JOptionPane.showMessageDialog(this, "Please enter the correct value in Formaldehyde.");
+                JOptionPane.showMessageDialog(this, "Please input the correct value in Formaldehyde.");
                 return;
             }
         }
         catch(Exception e){
-            JOptionPane.showMessageDialog(this, "Please enter the correct type in Formaldehyde.");
+            JOptionPane.showMessageDialog(this, "Please input the correct type in Formaldehyde.");
             return;
         }
         

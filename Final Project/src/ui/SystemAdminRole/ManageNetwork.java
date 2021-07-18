@@ -155,13 +155,14 @@ public class ManageNetwork extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
-
-        if(txtNetworkName.getText()==null){
+   
+        String name = txtNetworkName.getText();
+        
+        if(name.equals("")){
             JOptionPane.showMessageDialog(this, "Please input the Name.");
             return;
-        }    
-        String name = txtNetworkName.getText();
-
+        }
+        
         Network network = system.createAndAddNetwork();
         network.setName(name);
         DB4OUtil.getInstance().storeSystem(system);

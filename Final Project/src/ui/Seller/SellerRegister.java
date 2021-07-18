@@ -118,13 +118,13 @@ public class SellerRegister extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if(jTextField3.getText()==null){
+        if(jTextField3.getText().equals("")){
             JOptionPane.showMessageDialog(this, "Please input the Name.");
             return;
         }    
         String userName = jTextField3.getText();
         
-        if(jTextField2.getText()==null){
+        if(jTextField2.getText().equals("")){
             JOptionPane.showMessageDialog(this, "Please input the Phone.");
             return;
         }
@@ -134,7 +134,7 @@ public class SellerRegister extends javax.swing.JPanel {
         }
         String phone = jTextField2.getText();
 
-        if(txtPassword.getText()==null || txtRepassword.getText()==null){
+        if(txtPassword.getText().equals("") || txtRepassword.getText().equals("")){
             JOptionPane.showMessageDialog(this, "Please input the Password.");
             return;
         }    

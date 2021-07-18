@@ -9,7 +9,7 @@ import Business.DB4OUtil.DB4OUtil;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.Organization;
-import Business.Role.AccounterRole;
+import Business.Role.AccountantRole;
 import Business.Role.AirQualityInspectorRole;
 import Business.Role.BuyerRole;
 import Business.Role.BuyerServiceRole;
@@ -23,7 +23,7 @@ import Business.Router;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
-import ui.Accounter.AccounterHome;
+import ui.Accountant.AccountantHome;
 import ui.AirQualityInspector.AirQualityInspectorHome;
 import ui.Buyer.BuyerHome;
 import ui.Buyer.BuyerRegister;
@@ -167,9 +167,9 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 48)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(51, 153, 255));
-        jLabel4.setText("Second-hand housing trading system");
+        jLabel4.setText("Second-hand housing transaction system");
         jPanel2.add(jLabel4);
-        jLabel4.setBounds(70, 270, 880, 120);
+        jLabel4.setBounds(40, 270, 970, 120);
 
         jLabel6.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(51, 153, 255));
@@ -187,6 +187,9 @@ public class MainJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginJButtonActionPerformed
+
+        jSplitPane1.setRightComponent(jPanel2);
+        jSplitPane1.setDividerLocation(150);
         // Get user name
         String userName = userNameJTextField.getText();
         // Get Password
@@ -273,8 +276,8 @@ public class MainJFrame extends javax.swing.JFrame {
                 ReceptionistHome home = new ReceptionistHome(container, userAccount, inOrganization, inEnterprise, system);
                 Router.getInstance(null).go(home);
             }
-            else if(userAccount.getRole() instanceof AccounterRole){
-                AccounterHome home = new AccounterHome(container, userAccount, inOrganization, inEnterprise, system);
+            else if(userAccount.getRole() instanceof AccountantRole){
+                AccountantHome home = new AccountantHome(container, userAccount, inOrganization, inEnterprise, system);
                 Router.getInstance(null).go(home);
             }
             else{

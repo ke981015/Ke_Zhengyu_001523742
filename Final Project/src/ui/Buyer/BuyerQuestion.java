@@ -183,6 +183,11 @@ public class BuyerQuestion extends javax.swing.JPanel {
     private void requestTestJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_requestTestJButtonActionPerformed
 
         String q = jTextArea1.getText();
+        
+        if(q.equals("")){
+            JOptionPane.showMessageDialog(this, "Please input the Question.");
+            return;
+        }
 
         WorkRequest question = new WorkRequest();
         question.setQuestion(q);

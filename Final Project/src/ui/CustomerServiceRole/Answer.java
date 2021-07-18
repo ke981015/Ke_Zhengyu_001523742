@@ -119,6 +119,10 @@ public class Answer extends javax.swing.JPanel {
     private void requestTestJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_requestTestJButtonActionPerformed
 
         String a = jTextArea3.getText();
+        if(a.equals("")){
+            JOptionPane.showMessageDialog(this, "Please input the Answer.");
+            return;
+        }
         course.setAnswer(a);
         DB4OUtil.getInstance().storeSystem(business);
         JOptionPane.showMessageDialog(this, "Saved");

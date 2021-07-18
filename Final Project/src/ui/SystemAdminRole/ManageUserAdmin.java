@@ -11,8 +11,7 @@ import Business.Network.Network;
 import Business.Role.UserAdminRole;
 import Business.Router;
 import Business.UserAccount.UserAccount;
-import java.awt.CardLayout;
-import java.awt.Component;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
@@ -245,6 +244,21 @@ public class ManageUserAdmin extends javax.swing.JPanel {
         String username = usernameJTextField.getText();
         String password = String.valueOf(passwordJPasswordField.getPassword());
         String name = nameJTextField.getText();
+        
+        if(username.equals("")){
+            JOptionPane.showMessageDialog(this, "Please input the Username.");
+            return;
+        }
+        
+        if(password.equals("")){
+            JOptionPane.showMessageDialog(this, "Please input the Password.");
+            return;
+        }
+        
+        if(name.equals("")){
+            JOptionPane.showMessageDialog(this, "Please input the Name.");
+            return;
+        }
         
         UserAccount account = enterprise.getUserAccountDirectory().createUserAccount(username, password, new UserAdminRole());
         DB4OUtil.getInstance().storeSystem(system);

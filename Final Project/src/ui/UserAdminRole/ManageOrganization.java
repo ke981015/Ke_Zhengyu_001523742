@@ -43,7 +43,7 @@ public class ManageOrganization extends javax.swing.JPanel {
     
     private void populateCombo(){
         organizationJComboBox.removeAllItems();
-        if(enterprise.getEnterpriseType().getValue().equals(EnterpriseType.Rent.getValue()))
+        if(enterprise.getEnterpriseType().getValue().equals(EnterpriseType.Purchase.getValue()))
         {
            for (Type type : Organization.Type.values()){
                 if (type.getValue().equals(Type.Buyer.getValue()))

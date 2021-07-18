@@ -207,6 +207,11 @@ public class ManageEnterprise extends javax.swing.JPanel {
         }DB4OUtil.getInstance().storeSystem(system);
 
         String name = nameJTextField.getText();
+        
+        if(name.equals("")){
+            JOptionPane.showMessageDialog(this, "Please input the Name.");
+            return;
+        }
 
         Enterprise enterprise = network.getEnterpriseDirectory().createAndAddEnterprise(name, type);
         DB4OUtil.getInstance().storeSystem(system);

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ui.Accounter;
+package ui.Accountant;
 
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
@@ -21,7 +21,7 @@ import ui.components.DealCell;
  * @author Ke
  */
 
-public class AccounterHome extends javax.swing.JPanel {
+public class AccountantHome extends javax.swing.JPanel {
     private JPanel userProcessContainer;
     private Organization organization;
     private Enterprise enterprise;
@@ -30,7 +30,7 @@ public class AccounterHome extends javax.swing.JPanel {
     /**
      * Creates new form DoctorWorkAreaJPanel
      */
-    public AccounterHome(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
+    public AccountantHome(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.organization = organization;
