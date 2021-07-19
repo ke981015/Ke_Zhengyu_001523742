@@ -32,15 +32,15 @@ public class EnterpriseDirectory {
     public Enterprise createAndAddEnterprise(String name,Enterprise.EnterpriseType type){
         Enterprise enterprise=null;
         if(type==Enterprise.EnterpriseType.Purchase){
-            enterprise=new Buy(name);
+            enterprise=new Purchase(name);
             enterpriseList.add(enterprise);
         }
-        if(type==Enterprise.EnterpriseType.Publish){
-            enterprise=new Sell(name);
+        if(type==Enterprise.EnterpriseType.UploadHousingInfo){
+            enterprise=new UploadHousingInfo(name);
             enterpriseList.add(enterprise);
         }
-        if(type==Enterprise.EnterpriseType.RentService){
-            enterprise=new CarService(name);
+        if(type==Enterprise.EnterpriseType.Account){
+            enterprise=new Account(name);
             enterpriseList.add(enterprise);
         }
         if(type==Enterprise.EnterpriseType.CustomerService){

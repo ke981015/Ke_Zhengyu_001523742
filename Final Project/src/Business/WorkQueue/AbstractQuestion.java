@@ -8,12 +8,12 @@ import Business.UserAccount.UserAccount;
 
 /**
  *
- * @author raunak
+ * @author Ke
  */
 public abstract class AbstractQuestion {
 
     String[] path = new String[10];
-    private boolean done;
+    private boolean done = false;
     private String tag1;
     private String tag2;
     private String tag3;
@@ -70,7 +70,7 @@ public abstract class AbstractQuestion {
     private String answer;   
     private String name;
     private String contact;
-    private boolean elevator;
+    private boolean elevator = false;
     
     
     public AbstractQuestion(){

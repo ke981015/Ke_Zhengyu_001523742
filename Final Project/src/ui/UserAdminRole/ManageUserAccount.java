@@ -9,9 +9,7 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
 import Business.Role.Role;
-import Business.Router;
 import Business.UserAccount.UserAccount;
-import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -46,7 +44,7 @@ public class ManageUserAccount extends javax.swing.JPanel {
 
         for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
             organizationJComboBox.addItem(organization);
-        }     
+        }
     }
     
     private void populateRoleComboBox(Organization organization){
@@ -113,13 +111,13 @@ public class ManageUserAccount extends javax.swing.JPanel {
         nameJTextField.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         nameJTextField.setForeground(new java.awt.Color(51, 153, 255));
         add(nameJTextField);
-        nameJTextField.setBounds(490, 520, 146, 28);
+        nameJTextField.setBounds(400, 520, 310, 28);
 
         jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 153, 255));
         jLabel1.setText("User Name");
         add(jLabel1);
-        jLabel1.setBounds(350, 520, 80, 22);
+        jLabel1.setBounds(260, 520, 80, 22);
 
         userJTable.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         userJTable.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
@@ -133,7 +131,7 @@ public class ManageUserAccount extends javax.swing.JPanel {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
                 true, false
@@ -154,24 +152,24 @@ public class ManageUserAccount extends javax.swing.JPanel {
         }
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(290, 170, 410, 179);
+        jScrollPane1.setBounds(190, 170, 670, 179);
 
         jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(51, 153, 255));
         jLabel2.setText("Password");
         add(jLabel2);
-        jLabel2.setBounds(370, 580, 70, 22);
+        jLabel2.setBounds(280, 580, 70, 22);
 
         passwordJTextField.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         passwordJTextField.setForeground(new java.awt.Color(51, 153, 255));
         add(passwordJTextField);
-        passwordJTextField.setBounds(490, 580, 146, 28);
+        passwordJTextField.setBounds(400, 580, 310, 28);
 
         jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(51, 153, 255));
         jLabel5.setText("Organization");
         add(jLabel5);
-        jLabel5.setBounds(340, 400, 90, 22);
+        jLabel5.setBounds(250, 400, 90, 22);
 
         organizationJComboBox.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         organizationJComboBox.setForeground(new java.awt.Color(51, 153, 255));
@@ -182,19 +180,19 @@ public class ManageUserAccount extends javax.swing.JPanel {
             }
         });
         add(organizationJComboBox);
-        organizationJComboBox.setBounds(490, 400, 146, 28);
+        organizationJComboBox.setBounds(400, 400, 310, 28);
 
         jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(51, 153, 255));
         jLabel4.setText("Role");
         add(jLabel4);
-        jLabel4.setBounds(400, 460, 30, 22);
+        jLabel4.setBounds(310, 460, 30, 22);
 
         roleJComboBox.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         roleJComboBox.setForeground(new java.awt.Color(51, 153, 255));
         roleJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         add(roleJComboBox);
-        roleJComboBox.setBounds(490, 460, 146, 28);
+        roleJComboBox.setBounds(400, 460, 310, 28);
 
         jLabel10.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(51, 153, 255));

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Zhe Li
+ * @author Ke
  */
 public class BuyerDirectory {
     private ArrayList<Buyer> BuyerList;

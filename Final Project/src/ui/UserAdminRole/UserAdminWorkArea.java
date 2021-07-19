@@ -83,7 +83,7 @@ public class UserAdminWorkArea extends javax.swing.JPanel {
                 jButton5ActionPerformed(evt);
             }
         });
-        SideBar.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 190, -1));
+        SideBar.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 190, -1));
 
         jButton3.setBackground(new java.awt.Color(255, 255, 255));
         jButton3.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
@@ -94,7 +94,7 @@ public class UserAdminWorkArea extends javax.swing.JPanel {
                 jButton3ActionPerformed(evt);
             }
         });
-        SideBar.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 190, -1));
+        SideBar.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 190, -1));
 
         jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));

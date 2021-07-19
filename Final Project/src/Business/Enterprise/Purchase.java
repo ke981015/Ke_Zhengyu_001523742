@@ -15,11 +15,11 @@ import Business.UserAccount.UserAccount;
 import java.util.ArrayList;
 
 
-public class Buy extends Enterprise {
+public class Purchase extends Enterprise {
     
     //private Organization buyerOrganization;
     
-    public Buy(String name){
+    public Purchase(String name){
         super(name,EnterpriseType.Purchase);
         //buyerOrganization = this.getOrganizationDirectory().createOrganization(Organization.Type.Buyer);
     }
@@ -47,7 +47,6 @@ public class Buy extends Enterprise {
     public ArrayList<Organization> getSupportedOrganization() {
         ArrayList<Organization> organizations = new ArrayList();
         organizations.add(new BuyerOrganization());
-        organizations.add(new CustomerServiceOrganization());
         organizations.add(new ReceptionistOrganization());
         return organizations;
     }

@@ -86,7 +86,7 @@ public class ReceptionistWorkArea extends javax.swing.JPanel {
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jButton6.setForeground(new java.awt.Color(51, 153, 255));
-        jButton6.setText("Done");
+        jButton6.setText("Seal the Deal");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -177,7 +177,8 @@ public class ReceptionistWorkArea extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
-        Router.getInstance(null).back(0);
+        ReceptionistHome home = new ReceptionistHome(userProcessContainer, userAccount, organization, enterprise, business);
+        Router.getInstance(null).go(home);
     }//GEN-LAST:event_backButtonActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed

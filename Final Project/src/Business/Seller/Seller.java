@@ -9,7 +9,7 @@ import Business.UserAccount.UserAccount;
 
 /**
  *
- * @author Zhe Li
+ * @author Ke
  */
 public class Seller {
     private String email;

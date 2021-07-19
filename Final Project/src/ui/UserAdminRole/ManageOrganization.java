@@ -10,13 +10,8 @@ import Business.Enterprise.Enterprise;
 import Business.Enterprise.Enterprise.EnterpriseType;
 import Business.Organization.Organization;
 import Business.Organization.Organization.Type;
-import Business.Organization.OrganizationDirectory;
-import Business.Router;
-import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.table.DefaultTableModel;
-import ui.SystemAdminRole.SystemAdminWorkArea;
 
 /**
  *
@@ -48,29 +43,23 @@ public class ManageOrganization extends javax.swing.JPanel {
            for (Type type : Organization.Type.values()){
                 if (type.getValue().equals(Type.Buyer.getValue()))
                     organizationJComboBox.addItem(type);
-                if (type.getValue().equals(Type.CustomerService.getValue()))
-                    organizationJComboBox.addItem(type);
                 if (type.getValue().equals(Type.Receptionist.getValue()))
                     organizationJComboBox.addItem(type);
             } 
         }
-        if(enterprise.getEnterpriseType().getValue().equals(EnterpriseType.Publish.getValue()))
+        if(enterprise.getEnterpriseType().getValue().equals(EnterpriseType.UploadHousingInfo.getValue()))
         {
            for (Type type : Organization.Type.values()){
                 if (type.getValue().equals(Type.Seller.getValue()))
                     organizationJComboBox.addItem(type);
-                if (type.getValue().equals(Type.CustomerService.getValue()))
+                if (type.getValue().equals(Type.Inspector.getValue()))
                     organizationJComboBox.addItem(type);
             } 
         }
-        if(enterprise.getEnterpriseType().getValue().equals(EnterpriseType.RentService.getValue()))
+        if(enterprise.getEnterpriseType().getValue().equals(EnterpriseType.Account.getValue()))
         {
            for (Type type : Organization.Type.values()){
-                if (type.getValue().equals(Type.VehicleConditionInspector.getValue()))
-                    organizationJComboBox.addItem(type);
-                if (type.getValue().equals(Type.Accounter.getValue()))
-                    organizationJComboBox.addItem(type);
-                if (type.getValue().equals(Type.Warranter.getValue()))
+                if (type.getValue().equals(Type.Accountant.getValue()))
                     organizationJComboBox.addItem(type);
             } 
         }

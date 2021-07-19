@@ -33,16 +33,16 @@ public class OrganizationDirectory {
             organization = new BuyerOrganization();
             organizationList.add(organization);
         }
-        if (type.getValue().equals(Type.Accounter.getValue())){
-            organization = new AppraiserOrganization();
+        if (type.getValue().equals(Type.Accountant.getValue())){
+            organization = new AccountantOrganization();
             organizationList.add(organization);
         }
         if (type.getValue().equals(Type.Receptionist.getValue())){
             organization = new ReceptionistOrganization();
             organizationList.add(organization);
         }
-        if (type.getValue().equals(Type.VehicleConditionInspector.getValue())){
-            organization = new VehicleConditionInspectorOrganization();
+        if (type.getValue().equals(Type.Inspector.getValue())){
+            organization = new InspectorOrganization();
             organizationList.add(organization);
         }
         if (type.getValue().equals(Type.CustomerService.getValue())){

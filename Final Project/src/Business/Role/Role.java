@@ -15,6 +15,7 @@ import javax.swing.JPanel;
  * @author Ke
  */
 public abstract class Role {
+    private RoleType roleType;
     public enum RoleType{
         Admin("Admin"),
         Buyer("Buyer"),
@@ -35,6 +36,14 @@ public abstract class Role {
             return value;
         }
     }
+    
+     public RoleType getRoleType() {
+        return roleType;
+    }
+
+    public void setEnterpriseType(RoleType roleType) {
+        this.roleType = roleType;
+    }   
     
     public abstract JPanel createWorkArea(JPanel userProcessContainer, 
             UserAccount account, 

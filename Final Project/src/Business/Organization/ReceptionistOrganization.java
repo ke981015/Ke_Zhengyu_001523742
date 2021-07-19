@@ -4,11 +4,8 @@
  */
 package Business.Organization;
 
-import Business.Role.BuyerRole;
 import Business.Role.Role;
-import Business.Role.BuyerServiceRole;
 import Business.Role.ReceptionistRole;
-import Business.Role.SellerServiceRole;
 import java.util.ArrayList;
 
 /**
@@ -26,9 +23,6 @@ public class ReceptionistOrganization extends Organization{
         ArrayList<Role> roles = new ArrayList();
         roles.add(new ReceptionistRole());
         return roles;
-    }
-     
-   
-    
+    }    
     
 }

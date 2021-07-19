@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import Business.Buyer.Buyer;
 import Business.DB4OUtil.DB4OUtil;
-import Business.Enterprise.Buy;
+import Business.Enterprise.Purchase;
 import Business.Role.BuyerRole;
 import Business.Router;
 

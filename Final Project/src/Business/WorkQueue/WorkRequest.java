@@ -6,7 +6,7 @@ package Business.WorkQueue;
 
 /**
  *
- * @author raunak
+ * @author Ke
  */
 public class WorkRequest extends AbstractQuestion{
     

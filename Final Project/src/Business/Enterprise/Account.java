@@ -5,11 +5,10 @@
  */
 package Business.Enterprise;
 
+import Business.Organization.AccountantOrganization;
 import Business.Organization.BuyerOrganization;
-import Business.Organization.CustomerServiceOrganization;
 import Business.Organization.Organization;
-import Business.Organization.VehicleConditionInspectorOrganization;
-import Business.Organization.SellerOrganization;
+import Business.Organization.InspectorOrganization;
 import Business.Role.Role;
 import java.util.ArrayList;
 
@@ -17,10 +16,10 @@ import java.util.ArrayList;
  *
  * @author Ke
  */
-public class Sell extends Enterprise {
+public class Account extends Enterprise {
     
-    public Sell(String name){
-        super(name,EnterpriseType.Publish);
+    public Account(String name){
+        super(name,EnterpriseType.Account);
     }
     @Override
     public ArrayList<Role> getSupportedRole() {
@@ -30,8 +29,7 @@ public class Sell extends Enterprise {
     @Override
     public ArrayList<Organization> getSupportedOrganization() {
         ArrayList<Organization> organizations = new ArrayList();
-        organizations.add(new SellerOrganization());
-        organizations.add(new CustomerServiceOrganization());
+        organizations.add(new AccountantOrganization());
         return organizations;
     }
     

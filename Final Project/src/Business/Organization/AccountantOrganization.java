@@ -4,8 +4,9 @@
  */
 package Business.Organization;
 
+import Business.Role.AccountantRole;
+import Business.Role.AirQualityInspectorRole;
 import Business.Role.BuyerRole;
-import Business.Role.InspectorRole;
 import Business.Role.Role;
 import java.util.ArrayList;
 
@@ -13,16 +14,16 @@ import java.util.ArrayList;
  *
  * @author Ke
  */
-public class VehicleConditionInspectorOrganization extends Organization{
+public class AccountantOrganization extends Organization{
 
-    public VehicleConditionInspectorOrganization() {
-        super(Organization.Type.VehicleConditionInspector.getValue());
+    public AccountantOrganization() {
+        super(Organization.Type.Accountant.getValue());
     }
 
     @Override
     public ArrayList<Role> getSupportedRole() {
         ArrayList<Role> roles = new ArrayList();
-        roles.add(new InspectorRole());
+        roles.add(new AccountantRole());
         return roles;
     }
      
