@@ -134,7 +134,7 @@ public class ManageUserAdmin extends javax.swing.JPanel {
         jLabel1.setForeground(new java.awt.Color(51, 153, 255));
         jLabel1.setText("Network:");
         add(jLabel1);
-        jLabel1.setBounds(400, 390, 70, 18);
+        jLabel1.setBounds(360, 390, 70, 18);
 
         networkJComboBox.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         networkJComboBox.setForeground(new java.awt.Color(51, 153, 255));
@@ -145,30 +145,30 @@ public class ManageUserAdmin extends javax.swing.JPanel {
             }
         });
         add(networkJComboBox);
-        networkJComboBox.setBounds(510, 390, 136, 24);
+        networkJComboBox.setBounds(470, 390, 190, 24);
 
         jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(51, 153, 255));
         jLabel2.setText("Username:");
         add(jLabel2);
-        jLabel2.setBounds(390, 490, 90, 18);
+        jLabel2.setBounds(350, 490, 90, 18);
 
         usernameJTextField.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         usernameJTextField.setForeground(new java.awt.Color(51, 153, 255));
         add(usernameJTextField);
-        usernameJTextField.setBounds(510, 480, 136, 28);
+        usernameJTextField.setBounds(470, 480, 190, 28);
 
         jLabel3.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(51, 153, 255));
         jLabel3.setText("Enterprise:");
         add(jLabel3);
-        jLabel3.setBounds(390, 440, 100, 18);
+        jLabel3.setBounds(350, 440, 100, 18);
 
         enterpriseJComboBox.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         enterpriseJComboBox.setForeground(new java.awt.Color(51, 153, 255));
         enterpriseJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         add(enterpriseJComboBox);
-        enterpriseJComboBox.setBounds(510, 430, 136, 28);
+        enterpriseJComboBox.setBounds(470, 430, 190, 28);
 
         submitJButton.setBackground(new java.awt.Color(51, 153, 255));
         submitJButton.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
@@ -186,23 +186,23 @@ public class ManageUserAdmin extends javax.swing.JPanel {
         jLabel4.setForeground(new java.awt.Color(51, 153, 255));
         jLabel4.setText("Password:");
         add(jLabel4);
-        jLabel4.setBounds(400, 540, 90, 18);
+        jLabel4.setBounds(360, 540, 90, 18);
 
         nameJTextField.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         nameJTextField.setForeground(new java.awt.Color(51, 153, 255));
         add(nameJTextField);
-        nameJTextField.setBounds(510, 580, 136, 28);
+        nameJTextField.setBounds(470, 580, 190, 28);
 
         jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(51, 153, 255));
         jLabel5.setText("Name:");
         add(jLabel5);
-        jLabel5.setBounds(420, 590, 50, 18);
+        jLabel5.setBounds(380, 590, 50, 18);
 
         passwordJPasswordField.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         passwordJPasswordField.setForeground(new java.awt.Color(51, 153, 255));
         add(passwordJPasswordField);
-        passwordJPasswordField.setBounds(510, 530, 134, 28);
+        passwordJPasswordField.setBounds(470, 530, 190, 28);
 
         btnBack.setBackground(new java.awt.Color(51, 153, 255));
         btnBack.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N

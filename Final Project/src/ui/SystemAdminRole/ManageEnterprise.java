@@ -123,30 +123,30 @@ public class ManageEnterprise extends javax.swing.JPanel {
         jLabel1.setForeground(new java.awt.Color(51, 153, 255));
         jLabel1.setText("Network:");
         add(jLabel1);
-        jLabel1.setBounds(470, 410, 90, 22);
+        jLabel1.setBounds(420, 410, 90, 22);
 
         networkJComboBox.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         networkJComboBox.setForeground(new java.awt.Color(51, 153, 255));
         networkJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         add(networkJComboBox);
-        networkJComboBox.setBounds(600, 410, 136, 28);
+        networkJComboBox.setBounds(550, 410, 210, 28);
 
         jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(51, 153, 255));
         jLabel2.setText("Name:");
         add(jLabel2);
-        jLabel2.setBounds(490, 540, 50, 22);
+        jLabel2.setBounds(440, 540, 50, 22);
 
         nameJTextField.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         nameJTextField.setForeground(new java.awt.Color(51, 153, 255));
         add(nameJTextField);
-        nameJTextField.setBounds(600, 540, 136, 28);
+        nameJTextField.setBounds(550, 540, 210, 28);
 
         jLabel3.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(51, 153, 255));
         jLabel3.setText("Enterprise Type:");
         add(jLabel3);
-        jLabel3.setBounds(420, 470, 140, 22);
+        jLabel3.setBounds(370, 470, 140, 22);
 
         enterpriseTypeJComboBox.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         enterpriseTypeJComboBox.setForeground(new java.awt.Color(51, 153, 255));
@@ -157,7 +157,7 @@ public class ManageEnterprise extends javax.swing.JPanel {
             }
         });
         add(enterpriseTypeJComboBox);
-        enterpriseTypeJComboBox.setBounds(600, 470, 136, 28);
+        enterpriseTypeJComboBox.setBounds(550, 470, 210, 28);
 
         submitJButton.setBackground(new java.awt.Color(51, 153, 255));
         submitJButton.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
