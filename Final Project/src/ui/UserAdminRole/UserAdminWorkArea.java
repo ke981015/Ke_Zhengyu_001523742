@@ -23,15 +23,18 @@ public class UserAdminWorkArea extends javax.swing.JPanel {
     JPanel userProcessContainer;
     Enterprise enterprise;
     EcoSystem system;
+    UserAccount account;
     /**
      * Creates new form DoctorWorkAreaJPanel
      */
-    public UserAdminWorkArea(JPanel userProcessContainer, EcoSystem system, Enterprise enterprise) {
+    public UserAdminWorkArea(JPanel userProcessContainer, EcoSystem system, UserAccount account, Enterprise enterprise) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.system = system;
         this.enterprise = enterprise;
+        this.account = account;
         valueLabel.setText(enterprise.getName());
+        nameLabel.setText(account.getUsername());
     }
 
     /**
@@ -121,11 +124,11 @@ public class UserAdminWorkArea extends javax.swing.JPanel {
         valueLabel.setForeground(new java.awt.Color(51, 153, 255));
         valueLabel.setText("<value>");
         jPanel2.add(valueLabel);
-        valueLabel.setBounds(490, 430, 110, 34);
+        valueLabel.setBounds(490, 430, 390, 34);
 
         jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(51, 153, 255));
-        jLabel2.setText("My Work Area -Adminstrative Role");
+        jLabel2.setText("My Work Area - User Admin Role");
         jPanel2.add(jLabel2);
         jLabel2.setBounds(250, 290, 450, 34);
 

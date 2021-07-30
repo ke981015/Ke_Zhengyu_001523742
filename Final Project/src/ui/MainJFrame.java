@@ -165,17 +165,17 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(null);
 
-        jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 48)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 60)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(51, 153, 255));
-        jLabel4.setText("Second-hand housing transaction system");
+        jLabel4.setText("            HousingBuy");
         jPanel2.add(jLabel4);
-        jLabel4.setBounds(40, 270, 970, 120);
+        jLabel4.setBounds(10, 270, 970, 120);
 
-        jLabel6.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Comic Sans MS", 1, 20)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(51, 153, 255));
         jLabel6.setText("@ Zhengyu Ke");
         jPanel2.add(jLabel6);
-        jLabel6.setBounds(760, 460, 120, 22);
+        jLabel6.setBounds(770, 550, 140, 28);
 
         container.add(jPanel2, "card2");
 
@@ -249,7 +249,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 Router.getInstance(null).go(home);
             }
             else if(userAccount.getRole() instanceof UserAdminRole){
-                UserAdminWorkArea home = new UserAdminWorkArea(container, system, inEnterprise);
+                UserAdminWorkArea home = new UserAdminWorkArea(container, system, userAccount,inEnterprise);
                 Router.getInstance(null).go(home);
             }
             else if(userAccount.getRole() instanceof SellerRole){
