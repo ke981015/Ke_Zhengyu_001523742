@@ -155,7 +155,7 @@ public class BuyerWorkArea extends javax.swing.JPanel {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
 
-        BookAppointment report = new BookAppointment(userProcessContainer,business,course);
+        BookAppointment report = new BookAppointment(userProcessContainer,business, userAccount,course);
         jSplitPane1.setRightComponent(report);
     }//GEN-LAST:event_jButton6ActionPerformed
 

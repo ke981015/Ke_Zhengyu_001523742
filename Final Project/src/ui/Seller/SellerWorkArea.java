@@ -56,6 +56,7 @@ public class SellerWorkArea extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         nameLabel = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
 
         setLayout(null);
 
@@ -111,6 +112,13 @@ public class SellerWorkArea extends javax.swing.JPanel {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(null);
+
+        jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 60)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel4.setText("            HousingBuy");
+        jPanel2.add(jLabel4);
+        jLabel4.setBounds(0, 300, 970, 120);
+
         jSplitPane1.setRightComponent(jPanel2);
 
         add(jSplitPane1);
@@ -139,6 +147,7 @@ public class SellerWorkArea extends javax.swing.JPanel {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSplitPane jSplitPane1;

@@ -55,33 +55,23 @@ public class HousingInfo extends javax.swing.JPanel {
         jLabel16 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         txtAd1 = new javax.swing.JTextField();
-        jLabel19 = new javax.swing.JLabel();
-        txtAd2 = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
         txtRent = new javax.swing.JTextField();
-        jRadioButton1 = new javax.swing.JRadioButton();
         jLabel21 = new javax.swing.JLabel();
         btnSave = new javax.swing.JButton();
         btnDashBoard = new javax.swing.JButton();
         jLabel22 = new javax.swing.JLabel();
         txtArea = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         ComboState = new javax.swing.JComboBox<>();
         ComboCity = new javax.swing.JComboBox<>();
         jLabel23 = new javax.swing.JLabel();
-        ComboOri = new javax.swing.JComboBox<>();
         txtBath = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         txtBed = new javax.swing.JTextField();
-        txtLiving = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        txtFl = new javax.swing.JTextField();
+        txtArea2 = new javax.swing.JTextField();
         jLabel24 = new javax.swing.JLabel();
-        jRadioButton2 = new javax.swing.JRadioButton();
         jLabel25 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         contentPanel = new javax.swing.JPanel();
@@ -91,7 +81,7 @@ public class HousingInfo extends javax.swing.JPanel {
 
         jLabel10.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(51, 153, 255));
-        jLabel10.setText("Create a new listing");
+        jLabel10.setText("Create a new housing");
         add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 45, -1, -1));
 
         jLabel8.setText("—————————————————————————————————————————————————");
@@ -106,49 +96,28 @@ public class HousingInfo extends javax.swing.JPanel {
         jLabel18.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(51, 153, 255));
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel18.setText("Address line1:");
-        add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, -1, -1));
+        jLabel18.setText("Address:");
+        add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, -1, -1));
 
         txtAd1.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         txtAd1.setForeground(new java.awt.Color(51, 153, 255));
         add(txtAd1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, 390, -1));
 
-        jLabel19.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(51, 153, 255));
-        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel19.setText("Address line2:");
-        add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 210, -1, -1));
-
-        txtAd2.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
-        txtAd2.setForeground(new java.awt.Color(51, 153, 255));
-        add(txtAd2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 210, 390, -1));
-
         jLabel20.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(51, 153, 255));
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel20.setText("Expected rent:");
-        add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 390, 121, -1));
+        add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 340, 121, -1));
 
         txtRent.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         txtRent.setForeground(new java.awt.Color(51, 153, 255));
-        add(txtRent, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 390, 130, -1));
-
-        jRadioButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jRadioButton1.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
-        jRadioButton1.setForeground(new java.awt.Color(51, 153, 255));
-        jRadioButton1.setText("YES");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
-            }
-        });
-        add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 330, -1, -1));
+        add(txtRent, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 340, 130, -1));
 
         jLabel21.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(51, 153, 255));
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel21.setText("Area:");
-        add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 89, -1));
+        add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 89, -1));
 
         btnSave.setBackground(new java.awt.Color(51, 153, 255));
         btnSave.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
@@ -176,31 +145,16 @@ public class HousingInfo extends javax.swing.JPanel {
         jLabel22.setForeground(new java.awt.Color(51, 153, 255));
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel22.setText("City:");
-        add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 49, -1));
+        add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, 49, -1));
 
         txtArea.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         txtArea.setForeground(new java.awt.Color(51, 153, 255));
-        add(txtArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 100, -1));
-
-        jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(51, 153, 255));
-        jLabel5.setText("Elevator:");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 330, 80, -1));
-
-        jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(51, 153, 255));
-        jLabel4.setText("Orientation:");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 90, -1));
+        add(txtArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 320, 100, -1));
 
         jLabel6.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(51, 153, 255));
         jLabel6.setText("Unit type:");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 270, 80, -1));
-
-        jLabel7.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(51, 153, 255));
-        jLabel7.setText("Floor:");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, -1, -1));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 240, 80, -1));
 
         ComboState.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         ComboState.setForeground(new java.awt.Color(51, 153, 255));
@@ -215,72 +169,47 @@ public class HousingInfo extends javax.swing.JPanel {
         ComboCity.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         ComboCity.setForeground(new java.awt.Color(51, 153, 255));
         ComboCity.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Los Angeles", "Hollywood", "Compton", "San Francisco" }));
-        add(ComboCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, -1, -1));
+        add(ComboCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, -1, -1));
 
         jLabel23.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(51, 153, 255));
         jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel23.setText("m^2");
-        add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 40, -1));
-
-        ComboOri.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
-        ComboOri.setForeground(new java.awt.Color(51, 153, 255));
-        ComboOri.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "East", "South", "West", "North" }));
-        add(ComboOri, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, 134, -1));
+        jLabel23.setText("sqft");
+        add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, 40, -1));
 
         txtBath.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         txtBath.setForeground(new java.awt.Color(51, 153, 255));
-        add(txtBath, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 270, 30, -1));
+        add(txtBath, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 240, 30, -1));
 
         jLabel9.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(51, 153, 255));
         jLabel9.setText("bathroom");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 270, -1, -1));
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 240, -1, -1));
 
         txtBed.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         txtBed.setForeground(new java.awt.Color(51, 153, 255));
-        add(txtBed, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 270, 30, -1));
-
-        txtLiving.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
-        txtLiving.setForeground(new java.awt.Color(51, 153, 255));
-        add(txtLiving, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 270, 30, -1));
+        add(txtBed, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 240, 30, -1));
 
         jLabel11.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(51, 153, 255));
         jLabel11.setText("bedroom");
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 270, -1, -1));
+        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 240, -1, -1));
 
-        jLabel12.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(51, 153, 255));
-        jLabel12.setText("living room");
-        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 270, -1, -1));
-
-        txtFl.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
-        txtFl.setForeground(new java.awt.Color(51, 153, 255));
-        add(txtFl, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, 100, -1));
+        txtArea2.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        txtArea2.setForeground(new java.awt.Color(51, 153, 255));
+        add(txtArea2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 370, 100, -1));
 
         jLabel24.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(51, 153, 255));
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel24.setText("$ (every year)");
-        add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 390, 120, -1));
-
-        jRadioButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jRadioButton2.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
-        jRadioButton2.setForeground(new java.awt.Color(51, 153, 255));
-        jRadioButton2.setText("NO");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
-            }
-        });
-        add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 330, -1, -1));
+        jLabel24.setText("$ ");
+        add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 340, 30, -1));
 
         jLabel25.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(51, 153, 255));
         jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel25.setText("F");
-        add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 390, 20, -1));
+        jLabel25.setText("sqft lot");
+        add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 370, 60, -1));
 
         contentPanel.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -306,50 +235,28 @@ public class HousingInfo extends javax.swing.JPanel {
         car.setState(ComboState.getSelectedItem().toString());
         car.setCity(ComboCity.getSelectedItem().toString());
         
-        if(txtAd1.getText().equals("")||txtAd2.getText().equals("")){
+        if(txtAd1.getText().equals("")){
             JOptionPane.showMessageDialog(this, "Please input the Address.");
             return;
         }
         car.setAddress1(txtAd1.getText());
-        car.setAddress2(txtAd2.getText());
         
         try{
             car.setArea(Double.parseDouble(txtArea.getText()));
+            car.setArea2(Double.parseDouble(txtArea2.getText()));
         }
         catch(Exception e){
             JOptionPane.showMessageDialog(this, "Please input the correct type in Area.");
             return;
         }
-        
-        car.setOrientation(ComboOri.getSelectedItem().toString());
-        
+              
         try{
             car.setBedroom(Integer.parseInt(txtBed.getText()));
-            car.setLivingroom(Integer.parseInt(txtLiving.getText()));
             car.setBathroom(Integer.parseInt(txtBath.getText()));
         }
         catch(Exception e){
             JOptionPane.showMessageDialog(this, "Please input the correct type in Unit type.");
             return;
-        }
-        
-        try{
-            car.setFloor(Integer.parseInt(txtFl.getText()));
-        }
-        catch(Exception e){
-            JOptionPane.showMessageDialog(this, "Please input the correct type in Floor.");
-            return;
-        }
-        
-        if(jRadioButton1.isSelected()==false && jRadioButton2.isSelected()==false){
-            JOptionPane.showMessageDialog(this, "Please choose whether there is an elevator.");
-            return;
-        }
-        else{
-            if(jRadioButton1.isSelected())
-                car.setElevator(true);
-            else if(jRadioButton2.isSelected())
-                car.setElevator(false);
         }
         
         try{
@@ -362,6 +269,7 @@ public class HousingInfo extends javax.swing.JPanel {
         
         car.setPath(path);
         car.setPublisher(userAccount);
+        car.setSellerphone(userAccount.getPhone());
         system.getWorkQueue().getWorkRequestList().add(car);
         DB4OUtil.getInstance().storeSystem(system);
         JOptionPane.showMessageDialog(this, "Used car information saved.");
@@ -431,56 +339,32 @@ public class HousingInfo extends javax.swing.JPanel {
             
     }//GEN-LAST:event_ComboStateActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        // TODO add your handling code here:
-        if(jRadioButton1.isSelected()){
-            jRadioButton2.setSelected(false);
-        }
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
-
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
-        // TODO add your handling code here:
-        if(jRadioButton2.isSelected()){
-            jRadioButton1.setSelected(false);
-        }
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> ComboCity;
-    private javax.swing.JComboBox<String> ComboOri;
     private javax.swing.JComboBox<String> ComboState;
     private javax.swing.JButton btnDashBoard;
     private javax.swing.JButton btnSave;
     private javax.swing.JPanel contentPanel;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField txtAd1;
-    private javax.swing.JTextField txtAd2;
     private javax.swing.JTextField txtArea;
+    private javax.swing.JTextField txtArea2;
     private javax.swing.JTextField txtBath;
     private javax.swing.JTextField txtBed;
-    private javax.swing.JTextField txtFl;
-    private javax.swing.JTextField txtLiving;
     private javax.swing.JTextField txtRent;
     // End of variables declaration//GEN-END:variables
 

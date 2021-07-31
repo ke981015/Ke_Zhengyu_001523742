@@ -48,7 +48,7 @@ public class ManageUserAccount extends javax.swing.JPanel {
     }
     
     private void populateRoleComboBox(Organization organization){
-        //roleJComboBox.removeAllItems();
+        roleJComboBox.removeAllItems();
         for (Role role : organization.getSupportedRole()){
             roleJComboBox.addItem(role);
         }
@@ -92,6 +92,8 @@ public class ManageUserAccount extends javax.swing.JPanel {
         roleJComboBox = new javax.swing.JComboBox();
         jLabel10 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        phoneJTextField = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
@@ -111,13 +113,13 @@ public class ManageUserAccount extends javax.swing.JPanel {
         nameJTextField.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         nameJTextField.setForeground(new java.awt.Color(51, 153, 255));
         add(nameJTextField);
-        nameJTextField.setBounds(400, 520, 310, 28);
+        nameJTextField.setBounds(410, 470, 310, 28);
 
         jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 153, 255));
         jLabel1.setText("User Name");
         add(jLabel1);
-        jLabel1.setBounds(260, 520, 80, 22);
+        jLabel1.setBounds(270, 470, 80, 22);
 
         userJTable.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         userJTable.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
@@ -152,24 +154,24 @@ public class ManageUserAccount extends javax.swing.JPanel {
         }
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(190, 170, 670, 179);
+        jScrollPane1.setBounds(200, 120, 670, 179);
 
         jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(51, 153, 255));
         jLabel2.setText("Password");
         add(jLabel2);
-        jLabel2.setBounds(280, 580, 70, 22);
+        jLabel2.setBounds(290, 530, 70, 22);
 
         passwordJTextField.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         passwordJTextField.setForeground(new java.awt.Color(51, 153, 255));
         add(passwordJTextField);
-        passwordJTextField.setBounds(400, 580, 310, 28);
+        passwordJTextField.setBounds(410, 530, 310, 28);
 
         jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(51, 153, 255));
         jLabel5.setText("Organization");
         add(jLabel5);
-        jLabel5.setBounds(250, 400, 90, 22);
+        jLabel5.setBounds(260, 350, 90, 22);
 
         organizationJComboBox.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         organizationJComboBox.setForeground(new java.awt.Color(51, 153, 255));
@@ -180,19 +182,19 @@ public class ManageUserAccount extends javax.swing.JPanel {
             }
         });
         add(organizationJComboBox);
-        organizationJComboBox.setBounds(400, 400, 310, 28);
+        organizationJComboBox.setBounds(410, 350, 310, 28);
 
         jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(51, 153, 255));
         jLabel4.setText("Role");
         add(jLabel4);
-        jLabel4.setBounds(310, 460, 30, 22);
+        jLabel4.setBounds(320, 410, 30, 22);
 
         roleJComboBox.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         roleJComboBox.setForeground(new java.awt.Color(51, 153, 255));
         roleJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         add(roleJComboBox);
-        roleJComboBox.setBounds(400, 460, 310, 28);
+        roleJComboBox.setBounds(410, 410, 310, 28);
 
         jLabel10.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(51, 153, 255));
@@ -203,6 +205,22 @@ public class ManageUserAccount extends javax.swing.JPanel {
         jLabel8.setText("—————————————————————————————————————————————————");
         add(jLabel8);
         jLabel8.setBounds(110, 80, 735, 18);
+
+        jLabel3.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel3.setText("Phone");
+        add(jLabel3);
+        jLabel3.setBounds(310, 590, 70, 22);
+
+        phoneJTextField.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        phoneJTextField.setForeground(new java.awt.Color(51, 153, 255));
+        phoneJTextField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                phoneJTextFieldKeyPressed(evt);
+            }
+        });
+        add(phoneJTextField);
+        phoneJTextField.setBounds(410, 590, 310, 28);
     }// </editor-fold>//GEN-END:initComponents
 
     private void createUserJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createUserJButtonActionPerformed
@@ -218,10 +236,19 @@ public class ManageUserAccount extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Please input the Password.");
             return;
         }
+        if(phoneJTextField.getText().equals("")){
+            JOptionPane.showMessageDialog(this, "Please input the Phone.");
+            return;
+        }
+        if(phoneJTextField.getText().length()!=16){
+            JOptionPane.showMessageDialog(this, "Please input the correct type in Phone.");
+            return;
+        }
+        String phone = phoneJTextField.getText();
         Organization organization = (Organization) organizationJComboBox.getSelectedItem();
         Role role = (Role) roleJComboBox.getSelectedItem();
         
-        organization.getUserAccountDirectory().createUserAccount(userName, password, role);
+        organization.getUserAccountDirectory().createUserAccount(userName, password, phone,role);
         DB4OUtil.getInstance().storeSystem(system);
         
         popData();
@@ -234,11 +261,20 @@ public class ManageUserAccount extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_organizationJComboBoxActionPerformed
 
+    private void phoneJTextFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_phoneJTextFieldKeyPressed
+        // TODO add your handling code here:
+        if(phoneJTextField.getText().length()==3)
+            phoneJTextField.setText(phoneJTextField.getText()+" - ");
+        if(phoneJTextField.getText().length()==9)
+            phoneJTextField.setText(phoneJTextField.getText()+" - ");
+    }//GEN-LAST:event_phoneJTextFieldKeyPressed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton createUserJButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel8;
@@ -246,6 +282,7 @@ public class ManageUserAccount extends javax.swing.JPanel {
     private javax.swing.JTextField nameJTextField;
     private javax.swing.JComboBox organizationJComboBox;
     private javax.swing.JTextField passwordJTextField;
+    private javax.swing.JTextField phoneJTextField;
     private javax.swing.JComboBox roleJComboBox;
     private javax.swing.JTable userJTable;
     // End of variables declaration//GEN-END:variables

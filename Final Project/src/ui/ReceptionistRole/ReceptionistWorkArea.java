@@ -41,6 +41,8 @@ public class ReceptionistWorkArea extends javax.swing.JPanel {
         this.business = business;
         this.course = course;
         nameLabel.setText(account.getUsername());
+        jLabel5.setText(course.getBuyerphone());
+        jLabel3.setText(course.getSellerphone());
     }
 
     /**
@@ -63,6 +65,10 @@ public class ReceptionistWorkArea extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         nameLabel = new javax.swing.JLabel();
         jButton8 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
 
         setLayout(null);
@@ -92,7 +98,7 @@ public class ReceptionistWorkArea extends javax.swing.JPanel {
                 jButton6ActionPerformed(evt);
             }
         });
-        SideBar.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 530, 210, -1));
+        SideBar.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 640, 210, -1));
 
         jButton5.setBackground(new java.awt.Color(255, 255, 255));
         jButton5.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
@@ -103,7 +109,7 @@ public class ReceptionistWorkArea extends javax.swing.JPanel {
                 jButton5ActionPerformed(evt);
             }
         });
-        SideBar.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 210, -1));
+        SideBar.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 400, 210, -1));
 
         jButton3.setBackground(new java.awt.Color(255, 255, 255));
         jButton3.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
@@ -114,7 +120,7 @@ public class ReceptionistWorkArea extends javax.swing.JPanel {
                 jButton3ActionPerformed(evt);
             }
         });
-        SideBar.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 210, -1));
+        SideBar.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 210, -1));
 
         jButton7.setBackground(new java.awt.Color(255, 255, 255));
         jButton7.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
@@ -125,12 +131,12 @@ public class ReceptionistWorkArea extends javax.swing.JPanel {
                 jButton7ActionPerformed(evt);
             }
         });
-        SideBar.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 210, -1));
+        SideBar.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 480, 210, -1));
 
         jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Hello,");
-        SideBar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 32, -1, -1));
+        jLabel1.setText("Seller phone:");
+        SideBar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
 
         nameLabel.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         nameLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -146,7 +152,27 @@ public class ReceptionistWorkArea extends javax.swing.JPanel {
                 jButton8ActionPerformed(evt);
             }
         });
-        SideBar.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, 210, -1));
+        SideBar.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 560, 210, -1));
+
+        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Hello,");
+        SideBar.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 32, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("phone");
+        SideBar.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 260, 210, -1));
+
+        jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Buyer phone:");
+        SideBar.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
+
+        jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("phone");
+        SideBar.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 170, 210, -1));
 
         jSplitPane1.setLeftComponent(SideBar);
 
@@ -206,6 +232,10 @@ public class ReceptionistWorkArea extends javax.swing.JPanel {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSplitPane jSplitPane1;

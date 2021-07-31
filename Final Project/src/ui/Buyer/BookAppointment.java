@@ -7,6 +7,7 @@ package ui.Buyer;
 
 import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
+import Business.UserAccount.UserAccount;
 import Business.WorkQueue.AbstractQuestion;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -19,14 +20,16 @@ public class BookAppointment extends javax.swing.JPanel {
     public JPanel container;
     public EcoSystem business;
     private AbstractQuestion course;
+    private UserAccount userAccount;
 
     /**
      * Creates new form BookAppointmentJPanel
      */
-    public BookAppointment(JPanel userProcessContainer, EcoSystem business, AbstractQuestion course) {
+    public BookAppointment(JPanel userProcessContainer, EcoSystem business, UserAccount account,AbstractQuestion course) {
         initComponents();
         this.container = userProcessContainer;
         this.business = business;
+        this.userAccount = account;
         this.course = course;
     }
     
@@ -115,6 +118,7 @@ public class BookAppointment extends javax.swing.JPanel {
         course.setBookyear(jComboBox1.getSelectedItem().toString());
         course.setBookmonth(jComboBox2.getSelectedItem().toString());
         course.setBookdate(jComboBox3.getSelectedItem().toString());
+        course.setBuyerphone(userAccount.getPhone());
 
         DB4OUtil.getInstance().storeSystem(business);
         JOptionPane.showMessageDialog(this, "Saved.");

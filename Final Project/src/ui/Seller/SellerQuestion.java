@@ -43,6 +43,7 @@ public class SellerQuestion extends javax.swing.JPanel {
     }
 
     private void initFiles(){
+        contentPanel.removeAll();
 
         contentPanel.setLayout(new GridLayout(0,1));
 
@@ -110,7 +111,9 @@ public class SellerQuestion extends javax.swing.JPanel {
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jTextArea1.setForeground(new java.awt.Color(51, 153, 255));
+        jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
+        jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout sidePanelLayout = new javax.swing.GroupLayout(sidePanel);
@@ -198,7 +201,7 @@ public class SellerQuestion extends javax.swing.JPanel {
         business.getWorkQueue().getWorkRequestList().add(question);
         DB4OUtil.getInstance().storeSystem(business);
         JOptionPane.showMessageDialog(this, "Saved");
-        updateUI();
+        initFiles();
         //enterprise.getWorkQueue().getWorkRequestList().add(question);
 
         /*Organization org = null;

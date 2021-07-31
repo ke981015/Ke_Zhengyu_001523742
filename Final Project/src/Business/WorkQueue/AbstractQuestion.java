@@ -48,6 +48,7 @@ public abstract class AbstractQuestion {
     private Double humidity;
     private Double Formaldehyde;
     private Double area;
+    private Double area2;
     private String address1;
     private String address2;
     private String Orientation;
@@ -539,6 +540,14 @@ public abstract class AbstractQuestion {
 
     public void setBookdate(String bookdate) {
         this.bookdate = bookdate;
+    }
+
+    public Double getArea2() {
+        return area2;
+    }
+
+    public void setArea2(Double area2) {
+        this.area2 = area2;
     }
  
 

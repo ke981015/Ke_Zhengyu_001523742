@@ -50,7 +50,7 @@ public class BuyerHome extends javax.swing.JPanel {
 
         for (AbstractQuestion request : business.getWorkQueue().getWorkRequestList()){
             if(request.getState()!=null){
-                ListingsCell cell = new ListingsCell(userProcessContainer,userAccount,organization,enterprise,business,request);
+                ListingsCell cell = new ListingsCell(userProcessContainer,userAccount,organization,enterprise,business,request);             
                 contentPanel.add(cell);
             }
         }

@@ -45,17 +45,11 @@ public class ViewHousingInfo extends javax.swing.JPanel {
         txtState.setText(course.getState()); 
         txtCity.setText(course.getCity());    
         txtAd1.setText(course.getAddress1());
-        txtAd2.setText(course.getAddress2());
         txtArea.setText(String.valueOf(course.getArea()));  
-        txtOri.setText(course.getOrientation());
+        txtArea2.setText(String.valueOf(course.getArea2())); 
         txtBed.setText(String.valueOf(course.getBedroom()));
-        txtLiving.setText(String.valueOf(course.getLivingroom()));
         txtBath.setText(String.valueOf(course.getBathroom()));
-        txtFl.setText(String.valueOf(course.getFloor()));
-        if(course.isElevator()==true)
-            txtEle.setText("YES");
-        else
-            txtEle.setText("NO");
+        txtArea2.setText(String.valueOf(course.getFloor()));
         txtRent.setText(String.valueOf(course.getRent()));
         
         contentPanel.setLayout(new GridLayout(1,0));        
@@ -92,8 +86,6 @@ public class ViewHousingInfo extends javax.swing.JPanel {
         txtState = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
         txtAd1 = new javax.swing.JTextField();
-        jLabel19 = new javax.swing.JLabel();
-        txtAd2 = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
         txtRent = new javax.swing.JTextField();
         jLabel21 = new javax.swing.JLabel();
@@ -101,20 +93,13 @@ public class ViewHousingInfo extends javax.swing.JPanel {
         jLabel22 = new javax.swing.JLabel();
         txtArea = new javax.swing.JTextField();
         jLabel23 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        txtOri = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         txtBed = new javax.swing.JTextField();
-        txtLiving = new javax.swing.JTextField();
         txtBath = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        txtFl = new javax.swing.JTextField();
+        txtArea2 = new javax.swing.JTextField();
         jLabel24 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        txtEle = new javax.swing.JTextField();
         jLabel25 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         contentPanel = new javax.swing.JPanel();
@@ -144,140 +129,94 @@ public class ViewHousingInfo extends javax.swing.JPanel {
         jLabel18.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(51, 153, 255));
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel18.setText("Address line1:");
-        add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, -1, -1));
+        jLabel18.setText("Address:");
+        add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 160, -1, -1));
 
         txtAd1.setEditable(false);
         txtAd1.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         txtAd1.setForeground(new java.awt.Color(51, 153, 255));
         add(txtAd1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 160, 402, -1));
 
-        jLabel19.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(51, 153, 255));
-        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel19.setText("Address line2:");
-        add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 220, -1, -1));
-
-        txtAd2.setEditable(false);
-        txtAd2.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
-        txtAd2.setForeground(new java.awt.Color(51, 153, 255));
-        add(txtAd2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 220, 402, -1));
-
         jLabel20.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(51, 153, 255));
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel20.setText("Expected rent:");
-        add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 400, 120, -1));
+        add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 370, 120, -1));
 
         txtRent.setEditable(false);
         txtRent.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         txtRent.setForeground(new java.awt.Color(51, 153, 255));
-        add(txtRent, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 400, 132, -1));
+        add(txtRent, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 370, 132, -1));
 
         jLabel21.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(51, 153, 255));
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel21.setText("Area:");
-        add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 89, -1));
+        add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 89, -1));
 
         txtCity.setEditable(false);
         txtCity.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         txtCity.setForeground(new java.awt.Color(51, 153, 255));
-        add(txtCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 100, -1));
+        add(txtCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 100, -1));
 
         jLabel22.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(51, 153, 255));
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel22.setText("City:");
-        add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 49, -1));
+        add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, 49, -1));
 
         txtArea.setEditable(false);
         txtArea.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         txtArea.setForeground(new java.awt.Color(51, 153, 255));
-        add(txtArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 280, 100, -1));
+        add(txtArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 100, -1));
 
         jLabel23.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(51, 153, 255));
         jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel23.setText("m^2");
-        add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 280, -1, -1));
-
-        jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(51, 153, 255));
-        jLabel4.setText("Orientation:");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 90, -1));
-
-        txtOri.setEditable(false);
-        txtOri.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
-        txtOri.setForeground(new java.awt.Color(51, 153, 255));
-        add(txtOri, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 100, -1));
+        jLabel23.setText("sqft");
+        add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(51, 153, 255));
         jLabel6.setText("Unit type:");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 280, 91, -1));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 250, 91, -1));
 
         jLabel11.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(51, 153, 255));
         jLabel11.setText("bedroom");
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 280, -1, -1));
-
-        jLabel12.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(51, 153, 255));
-        jLabel12.setText("living room");
-        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 280, -1, -1));
+        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 250, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(51, 153, 255));
         jLabel9.setText("bathroom");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 280, -1, -1));
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 250, -1, -1));
 
         txtBed.setEditable(false);
         txtBed.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         txtBed.setForeground(new java.awt.Color(51, 153, 255));
-        add(txtBed, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 280, 32, -1));
-
-        txtLiving.setEditable(false);
-        txtLiving.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
-        txtLiving.setForeground(new java.awt.Color(51, 153, 255));
-        add(txtLiving, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 280, 32, -1));
+        add(txtBed, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 250, 32, -1));
 
         txtBath.setEditable(false);
         txtBath.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         txtBath.setForeground(new java.awt.Color(51, 153, 255));
-        add(txtBath, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 280, 32, -1));
+        add(txtBath, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 250, 32, -1));
 
-        jLabel7.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(51, 153, 255));
-        jLabel7.setText("Floor:");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 400, -1, -1));
-
-        txtFl.setEditable(false);
-        txtFl.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
-        txtFl.setForeground(new java.awt.Color(51, 153, 255));
-        add(txtFl, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, 100, -1));
+        txtArea2.setEditable(false);
+        txtArea2.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        txtArea2.setForeground(new java.awt.Color(51, 153, 255));
+        add(txtArea2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, 100, -1));
 
         jLabel24.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(51, 153, 255));
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel24.setText("F");
-        add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 400, 20, -1));
-
-        jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(51, 153, 255));
-        jLabel5.setText("Elevator:");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, 79, -1));
-
-        txtEle.setEditable(false);
-        txtEle.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
-        txtEle.setForeground(new java.awt.Color(51, 153, 255));
-        add(txtEle, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 340, 100, -1));
+        jLabel24.setText("sqft lot");
+        add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 400, 60, -1));
 
         jLabel25.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(51, 153, 255));
         jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel25.setText("$ (every year)");
-        add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 400, 112, -1));
+        jLabel25.setText("$ ");
+        add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 370, 30, -1));
 
         contentPanel.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -302,33 +241,24 @@ public class ViewHousingInfo extends javax.swing.JPanel {
     private javax.swing.JPanel contentPanel;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField txtAd1;
-    private javax.swing.JTextField txtAd2;
     private javax.swing.JTextField txtArea;
+    private javax.swing.JTextField txtArea2;
     private javax.swing.JTextField txtBath;
     private javax.swing.JTextField txtBed;
     private javax.swing.JTextField txtCity;
-    private javax.swing.JTextField txtEle;
-    private javax.swing.JTextField txtFl;
-    private javax.swing.JTextField txtLiving;
-    private javax.swing.JTextField txtOri;
     private javax.swing.JTextField txtRent;
     private javax.swing.JTextField txtState;
     // End of variables declaration//GEN-END:variables
