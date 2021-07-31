@@ -5,14 +5,20 @@
  */
 package ui.AirQualityInspector;
 
+import ui.InspectorRole.*;
+import ui.Buyer.*;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Global;
 import Business.Organization.Organization;
+import Business.Router;
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.AbstractQuestion;
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import ui.components.ListingsCell;
 
 
@@ -74,7 +80,9 @@ public class AirQualityInspectorHome extends javax.swing.JPanel {
         line = new javax.swing.JSeparator();
 
         setBackground(new java.awt.Color(255, 255, 255));
-        setMinimumSize(new java.awt.Dimension(1024, 768));
+        setMaximumSize(new java.awt.Dimension(1500, 1000));
+        setMinimumSize(new java.awt.Dimension(1500, 1000));
+        setPreferredSize(new java.awt.Dimension(1500, 1000));
 
         contentPanel.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -82,11 +90,11 @@ public class AirQualityInspectorHome extends javax.swing.JPanel {
         contentPanel.setLayout(contentPanelLayout);
         contentPanelLayout.setHorizontalGroup(
             contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 834, Short.MAX_VALUE)
+            .addGap(0, 1191, Short.MAX_VALUE)
         );
         contentPanelLayout.setVerticalGroup(
             contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1998, Short.MAX_VALUE)
+            .addGap(0, 2008, Short.MAX_VALUE)
         );
 
         scrollPanel.setViewportView(contentPanel);
@@ -121,16 +129,16 @@ public class AirQualityInspectorHome extends javax.swing.JPanel {
         sidePanelLayout.setHorizontalGroup(
             sidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(sidePanelLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(logoutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 30, Short.MAX_VALUE))
-            .addGroup(sidePanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(sidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(sidePanelLayout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addContainerGap(81, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(nameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)))
+            .addGroup(sidePanelLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(logoutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         sidePanelLayout.setVerticalGroup(
             sidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -155,8 +163,8 @@ public class AirQualityInspectorHome extends javax.swing.JPanel {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 627, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(line))
-                    .addComponent(scrollPanel))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(scrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1252, Short.MAX_VALUE))
+                .addContainerGap(74, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -166,9 +174,9 @@ public class AirQualityInspectorHome extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(line, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(scrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1999, Short.MAX_VALUE)
-                .addContainerGap(39, Short.MAX_VALUE))
-            .addComponent(sidePanel, javax.swing.GroupLayout.DEFAULT_SIZE, 2133, Short.MAX_VALUE)
+                .addComponent(scrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 892, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(sidePanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1000, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

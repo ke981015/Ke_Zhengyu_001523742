@@ -94,8 +94,8 @@ public class Deal extends javax.swing.JPanel {
         jLabel24.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(51, 153, 255));
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel24.setText("$ (every year)");
-        add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 250, 120, -1));
+        jLabel24.setText("$ ");
+        add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 250, 30, -1));
 
         jComboBox1.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jComboBox1.setForeground(new java.awt.Color(51, 153, 255));

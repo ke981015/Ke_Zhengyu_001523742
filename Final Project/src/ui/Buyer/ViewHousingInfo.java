@@ -49,7 +49,6 @@ public class ViewHousingInfo extends javax.swing.JPanel {
         txtArea2.setText(String.valueOf(course.getArea2())); 
         txtBed.setText(String.valueOf(course.getBedroom()));
         txtBath.setText(String.valueOf(course.getBathroom()));
-        txtArea2.setText(String.valueOf(course.getFloor()));
         txtRent.setText(String.valueOf(course.getRent()));
         
         contentPanel.setLayout(new GridLayout(1,0));        
@@ -109,7 +108,7 @@ public class ViewHousingInfo extends javax.swing.JPanel {
 
         jLabel10.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(51, 153, 255));
-        jLabel10.setText("Listing Info");
+        jLabel10.setText("Housing Info");
         add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 45, -1, -1));
 
         jLabel8.setText("—————————————————————————————————————————————————");
@@ -124,7 +123,7 @@ public class ViewHousingInfo extends javax.swing.JPanel {
         txtState.setEditable(false);
         txtState.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         txtState.setForeground(new java.awt.Color(51, 153, 255));
-        add(txtState, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, 100, -1));
+        add(txtState, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, 130, -1));
 
         jLabel18.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(51, 153, 255));
@@ -157,7 +156,7 @@ public class ViewHousingInfo extends javax.swing.JPanel {
         txtCity.setEditable(false);
         txtCity.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         txtCity.setForeground(new java.awt.Color(51, 153, 255));
-        add(txtCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 100, -1));
+        add(txtCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 130, -1));
 
         jLabel22.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(51, 153, 255));

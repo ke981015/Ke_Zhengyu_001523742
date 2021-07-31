@@ -70,6 +70,7 @@ public class ReceptionistWorkArea extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
 
         setLayout(null);
 
@@ -178,6 +179,13 @@ public class ReceptionistWorkArea extends javax.swing.JPanel {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(null);
+
+        jLabel6.setFont(new java.awt.Font("Comic Sans MS", 1, 60)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel6.setText("            HousingBuy");
+        jPanel2.add(jLabel6);
+        jLabel6.setBounds(0, 300, 970, 120);
+
         jSplitPane1.setRightComponent(jPanel2);
 
         add(jSplitPane1);
@@ -236,6 +244,7 @@ public class ReceptionistWorkArea extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSplitPane jSplitPane1;
