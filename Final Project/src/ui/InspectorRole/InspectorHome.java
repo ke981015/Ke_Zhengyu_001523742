@@ -51,8 +51,10 @@ public class InspectorHome extends javax.swing.JPanel {
 
         for (AbstractQuestion request : business.getWorkQueue().getWorkRequestList()){
             if(request.getState()!=null){
-                ListingsCell cell = new ListingsCell(userProcessContainer,userAccount,organization,enterprise,business,request);
-                contentPanel.add(cell);
+                if(request.isDone()== false){
+                    ListingsCell cell = new ListingsCell(userProcessContainer,userAccount,organization,enterprise,business,request);
+                    contentPanel.add(cell);
+                }
             }
         }
         
