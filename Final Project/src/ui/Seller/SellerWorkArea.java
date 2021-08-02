@@ -90,7 +90,7 @@ public class SellerWorkArea extends javax.swing.JPanel {
         jButton3.setBackground(new java.awt.Color(255, 255, 255));
         jButton3.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jButton3.setForeground(new java.awt.Color(51, 153, 255));
-        jButton3.setText("New Housing");
+        jButton3.setText("New House");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);

@@ -41,8 +41,8 @@ public class ManageOrganization extends javax.swing.JPanel {
         if(enterprise.getEnterpriseType().getValue().equals(EnterpriseType.Purchase.getValue()))
         {
            for (Type type : Organization.Type.values()){
-                if (type.getValue().equals(Type.Buyer.getValue()))
-                    organizationJComboBox.addItem(type);
+                /*if (type.getValue().equals(Type.Buyer.getValue()))
+                    organizationJComboBox.addItem(type);*/
                 if (type.getValue().equals(Type.Receptionist.getValue()))
                     organizationJComboBox.addItem(type);
             } 
@@ -50,8 +50,8 @@ public class ManageOrganization extends javax.swing.JPanel {
         if(enterprise.getEnterpriseType().getValue().equals(EnterpriseType.UploadHousingInfo.getValue()))
         {
            for (Type type : Organization.Type.values()){
-                if (type.getValue().equals(Type.Seller.getValue()))
-                    organizationJComboBox.addItem(type);
+                /*if (type.getValue().equals(Type.Seller.getValue()))
+                    organizationJComboBox.addItem(type);*/
                 if (type.getValue().equals(Type.Inspector.getValue()))
                     organizationJComboBox.addItem(type);
             } 

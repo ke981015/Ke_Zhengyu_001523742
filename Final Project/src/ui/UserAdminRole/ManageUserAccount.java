@@ -85,7 +85,6 @@ public class ManageUserAccount extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         userJTable = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
-        passwordJTextField = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         organizationJComboBox = new javax.swing.JComboBox();
         jLabel4 = new javax.swing.JLabel();
@@ -94,6 +93,7 @@ public class ManageUserAccount extends javax.swing.JPanel {
         jLabel8 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         phoneJTextField = new javax.swing.JTextField();
+        passwordJPasswordField = new javax.swing.JPasswordField();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
@@ -162,11 +162,6 @@ public class ManageUserAccount extends javax.swing.JPanel {
         add(jLabel2);
         jLabel2.setBounds(290, 530, 70, 22);
 
-        passwordJTextField.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
-        passwordJTextField.setForeground(new java.awt.Color(51, 153, 255));
-        add(passwordJTextField);
-        passwordJTextField.setBounds(410, 530, 310, 28);
-
         jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(51, 153, 255));
         jLabel5.setText("Organization");
@@ -221,11 +216,16 @@ public class ManageUserAccount extends javax.swing.JPanel {
         });
         add(phoneJTextField);
         phoneJTextField.setBounds(410, 590, 310, 28);
+
+        passwordJPasswordField.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
+        passwordJPasswordField.setForeground(new java.awt.Color(51, 153, 255));
+        add(passwordJPasswordField);
+        passwordJPasswordField.setBounds(410, 530, 310, 28);
     }// </editor-fold>//GEN-END:initComponents
 
     private void createUserJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createUserJButtonActionPerformed
         String userName = nameJTextField.getText();
-        String password = passwordJTextField.getText();
+        String password = String.valueOf(passwordJPasswordField.getPassword());
         
         if(userName.equals("")){
             JOptionPane.showMessageDialog(this, "Please input the Username.");
@@ -281,7 +281,7 @@ public class ManageUserAccount extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField nameJTextField;
     private javax.swing.JComboBox organizationJComboBox;
-    private javax.swing.JTextField passwordJTextField;
+    private javax.swing.JPasswordField passwordJPasswordField;
     private javax.swing.JTextField phoneJTextField;
     private javax.swing.JComboBox roleJComboBox;
     private javax.swing.JTable userJTable;

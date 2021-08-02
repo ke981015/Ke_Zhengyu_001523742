@@ -45,7 +45,7 @@ public class ListingsCell extends javax.swing.JPanel {
         this.userAccount = account;
         this.business = business;
 
-        titleLabel.setText(course.getCity());
+        titleLabel.setText(course.getAddress1()+", "+course.getCity());
         path = course.getPath();
         ImageIcon icon = new ImageIcon(path[0]);
         img2.setIcon(icon);

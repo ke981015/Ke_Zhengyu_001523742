@@ -46,7 +46,7 @@ public class AccountantHome extends javax.swing.JPanel {
         contentPanel.setLayout(new GridLayout(0,2));
 
         for (AbstractQuestion request : business.getWorkQueue().getWorkRequestList()){
-            if(request.isDone()== true){
+            if(request.isDone()== true && request.getDealyear().equals(jComboBox1.getSelectedItem().toString())){
                 DealCell cell = new DealCell(userProcessContainer,userAccount,organization,enterprise,business,request);
                 contentPanel.add(cell);
             }

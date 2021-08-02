@@ -81,7 +81,7 @@ public class HousingInfo extends javax.swing.JPanel {
 
         jLabel10.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(51, 153, 255));
-        jLabel10.setText("Create a new housing");
+        jLabel10.setText("Create a new house");
         add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 45, -1, -1));
 
         jLabel8.setText("—————————————————————————————————————————————————");

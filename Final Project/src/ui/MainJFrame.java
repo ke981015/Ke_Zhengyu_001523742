@@ -286,7 +286,8 @@ public class MainJFrame extends javax.swing.JFrame {
                 layout.next(container);
             }
         }
-        
+        userNameJTextField.setText("");
+        passwordField.setText("");
         
     }//GEN-LAST:event_loginJButtonActionPerformed
 

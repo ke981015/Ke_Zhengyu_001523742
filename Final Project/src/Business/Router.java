@@ -5,12 +5,6 @@ import java.awt.*;
 import java.util.LinkedList;
 import java.util.Stack;
 
-/**
- * use to control navigation and manage views
- *
- * @author Joseph Yuanhao Li
- * @date 4/28/21 13:17
- */
 public class Router {
     private static Router instance = null;
 
