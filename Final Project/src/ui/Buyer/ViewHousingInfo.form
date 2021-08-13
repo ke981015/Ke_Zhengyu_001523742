@@ -124,11 +124,11 @@
           <Color blue="ff" green="99" red="33" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="4"/>
-        <Property name="text" type="java.lang.String" value="Expected rent:"/>
+        <Property name="text" type="java.lang.String" value="Expected money:"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="360" y="370" width="120" height="-1"/>
+          <AbsoluteConstraints x="350" y="370" width="130" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>

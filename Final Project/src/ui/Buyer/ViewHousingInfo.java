@@ -139,8 +139,8 @@ public class ViewHousingInfo extends javax.swing.JPanel {
         jLabel20.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(51, 153, 255));
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel20.setText("Expected rent:");
-        add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 370, 120, -1));
+        jLabel20.setText("Expected money:");
+        add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 370, 130, -1));
 
         txtRent.setEditable(false);
         txtRent.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
