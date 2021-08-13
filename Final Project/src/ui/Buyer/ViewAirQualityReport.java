@@ -55,11 +55,13 @@ public class ViewAirQualityReport extends javax.swing.JPanel {
     }
     
     private void initCourses(){
-        jLabel3.setText(course.getTemperature().toString()+" °C");
-        jLabel4.setText(course.getHumidity().toString()+" %RH");
-        jLabel6.setText(course.getFormaldehyde().toString()+" mg/m³");
-               
-        updateUI();
+        if(course.getTemperature()!=null){
+            jLabel3.setText(course.getTemperature().toString()+" °C");
+            jLabel4.setText(course.getHumidity().toString()+" %RH");
+            jLabel6.setText(course.getFormaldehyde().toString()+" mg/m³");
+
+            updateUI();
+        }
     }
     
 
@@ -113,7 +115,7 @@ public class ViewAirQualityReport extends javax.swing.JPanel {
 
         jLabel6.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(51, 153, 255));
-        jLabel6.setText("jLabel6");
+        jLabel6.setText("mg/m³");
 
         jLabel7.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(51, 153, 255));
@@ -125,7 +127,7 @@ public class ViewAirQualityReport extends javax.swing.JPanel {
 
         jLabel9.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(51, 153, 255));
-        jLabel9.setText("≤0.10mg/m^3");
+        jLabel9.setText("≤0.10mg/m³");
 
         jLabel11.setFont(new java.awt.Font("Comic Sans MS", 1, 15)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(51, 153, 255));

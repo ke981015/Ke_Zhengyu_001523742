@@ -182,7 +182,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="33" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jLabel6"/>
+        <Property name="text" type="java.lang.String" value="mg/m&#xb3;"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
@@ -215,7 +215,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="99" red="33" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="&#x2264;0.10mg/m^3"/>
+        <Property name="text" type="java.lang.String" value="&#x2264;0.10mg/m&#xb3;"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel11">
